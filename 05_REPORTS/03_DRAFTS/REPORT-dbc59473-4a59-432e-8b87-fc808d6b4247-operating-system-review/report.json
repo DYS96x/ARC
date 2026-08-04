@@ -1,0 +1,14 @@
+{
+  "id": "REPORT-dbc59473-4a59-432e-8b87-fc808d6b4247",
+  "title": "Operating System Review",
+  "slug": "operating-system-review",
+  "clientId": "CLIENT-64ebda9d-2e5e-4943-83f2-26f8f132d59e",
+  "clientName": "Infrastructure Test Client",
+  "clientSlug": "infrastructure-test-client",
+  "status": "Draft",
+  "classification": "Internal",
+  "createdAt": "2026-08-04T01:05:47.757Z",
+  "updatedAt": "2026-08-04T01:05:47.757Z",
+  "workspacePath": "C:\\ARC\\05_REPORTS\\03_DRAFTS\\REPORT-dbc59473-4a59-432e-8b87-fc808d6b4247-operating-system-review",
+  "sourcePath": "C:\\ARC\\05_REPORTS\\03_DRAFTS\\REPORT-dbc59473-4a59-432e-8b87-fc808d6b4247-operating-system-review\\REPORT.md"
+}

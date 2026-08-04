@@ -1,0 +1,10 @@
+{
+  "id": "CLIENT-64ebda9d-2e5e-4943-83f2-26f8f132d59e",
+  "name": "Infrastructure Test Client",
+  "slug": "infrastructure-test-client",
+  "status": "Active",
+  "classification": "Internal",
+  "createdAt": "2026-08-04T00:50:13.022Z",
+  "updatedAt": "2026-08-04T00:50:13.022Z",
+  "workspacePath": "C:\\ARC\\04_CLIENTS\\ACTIVE\\infrastructure-test-client"
+}

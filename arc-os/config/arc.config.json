@@ -1,0 +1,17 @@
+{
+    "restrictedDirectory":  "03_RESTRICTED",
+    "docsApplication":  "arc-docs",
+    "logDirectory":  "02_INTERNAL\\OPERATIONS\\LOGS",
+    "reportsDirectory":  "05_REPORTS",
+    "studio":  "6AME 9ESIGN",
+    "internalDirectory":  "02_INTERNAL",
+    "publicDirectory":  "00_PUBLIC",
+    "platform":  "HOLY ARC",
+    "clientsDirectory":  "04_CLIENTS",
+    "partnerDirectory":  "01_PARTNER",
+    "ecosystem":  "DYS96 ECOSYSTEM",
+    "intelligenceSystem":  "VOID",
+    "workspace":  "C:\\ARC",
+    "versionFile":  "VERSION",
+    "productsDirectory":  "06_PRODUCTS"
+}

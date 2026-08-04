@@ -1,0 +1,10 @@
+{
+  "id": "CLIENT-ec939055-d71b-47ca-9200-0437552c06d5",
+  "name": "Example Client Two",
+  "slug": "example-client-two",
+  "status": "Active",
+  "classification": "Internal",
+  "createdAt": "2026-08-04T00:43:25.864Z",
+  "updatedAt": "2026-08-04T00:43:25.864Z",
+  "workspacePath": "C:\\ARC\\04_CLIENTS\\ACTIVE\\example-client-two"
+}

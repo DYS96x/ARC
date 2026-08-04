@@ -94,7 +94,7 @@ A system must learn from outcomes.
 
 # Principle 05 — Bidirectional Reality Flow
 
-Every ARC system contains two connected movements.
+Every ARC system contains connected movements.
 
 Creation moves forward.
 
