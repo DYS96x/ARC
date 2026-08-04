@@ -107,14 +107,16 @@ export class IntelligenceEngine {
 
 
 
-  /**
-   * Validate intelligence against reality outcome
-   */
-  validateOutcome(
+   validateOutcome(
     intelligence: IntelligenceOutput,
     outcome: {
+      id: string;
+      actionId: string;
+      result: string;
       success: boolean;
       impact: number;
+      learning: string;
+      createdAt: Date;
     }
   ): string {
 
