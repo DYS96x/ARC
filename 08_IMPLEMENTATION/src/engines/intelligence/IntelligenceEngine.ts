@@ -60,30 +60,10 @@ export class IntelligenceEngine {
   }
 
 
-  /**
-   * Retrieve intelligence output
-   */
-  getOutput(
-    id: string
-  ): IntelligenceOutput | undefined {
-
-
-    return this.outputs.find(
-      output => output.id === id
-    );
-
-  }
-
 
   /**
-   * Return all intelligence
+   * Generate intelligence from knowledge
    */
-  getAll(): IntelligenceOutput[] {
-
-    return this.outputs;
-
-  }
-
   generateFromKnowledge(
     knowledge: {
       id: string;
@@ -124,5 +104,70 @@ export class IntelligenceEngine {
     return output;
 
   }
+
+
+
+  /**
+   * Validate intelligence against reality outcome
+   */
+  validateOutcome(
+    intelligence: IntelligenceOutput,
+    outcome: {
+      success: boolean;
+      impact: number;
+    }
+  ): string {
+
+
+    if (
+      outcome.success &&
+      outcome.impact >= intelligence.confidence
+    ) {
+
+      return "confirmed";
+
+    }
+
+
+    if (
+      outcome.impact >= 0.4
+    ) {
+
+      return "partial";
+
+    }
+
+
+    return "rejected";
+
+  }
+
+
+
+  /**
+   * Retrieve intelligence output
+   */
+  getOutput(
+    id: string
+  ): IntelligenceOutput | undefined {
+
+
+    return this.outputs.find(
+      output => output.id === id
+    );
+
+  }
+
+
+
+  /**
+   * Return all intelligence
+   */
+  getAll(): IntelligenceOutput[] {
+
+    return this.outputs;
+
+  }
+
 
 }
