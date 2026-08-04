@@ -1,4 +1,5 @@
 import { KnowledgeIntegrationEngine } from "./KnowledgeIntegrationEngine";
+import { KnowledgeType } from "./KnowledgeType";
 
 
 describe("Knowledge Integration Engine", () => {
@@ -13,15 +14,25 @@ describe("Knowledge Integration Engine", () => {
       engine.createRelationship(
         {
           id: "KNOW-001",
-          type: "observation",
-          content: "Reality signal",
-          createdAt: new Date()
+          type: KnowledgeType.Observation,
+          title: "Reality signal",
+          description: "Observed reality input",
+          source: "Observation Engine",
+          confidence: 0.8,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          relationships: []
         },
         {
           id: "KNOW-002",
-          type: "learning",
-          content: "New understanding",
-          createdAt: new Date()
+          type: KnowledgeType.Learning,
+          title: "New understanding",
+          description: "Learning created from evidence",
+          source: "Knowledge System",
+          confidence: 0.7,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          relationships: []
         }
       );
 
