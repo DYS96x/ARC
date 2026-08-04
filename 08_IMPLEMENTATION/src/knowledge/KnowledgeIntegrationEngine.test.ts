@@ -4,6 +4,7 @@ import { KnowledgeType } from "./KnowledgeType";
 
 describe("Knowledge Integration Engine", () => {
 
+
   it("creates relationships between knowledge objects", () => {
 
     const engine =
@@ -40,10 +41,12 @@ describe("Knowledge Integration Engine", () => {
     expect(relationship.from)
       .toBe("KNOW-001");
 
+
     expect(relationship.to)
       .toBe("KNOW-002");
 
   });
+
 
 
   it("creates patterns from relationships", () => {
@@ -78,35 +81,71 @@ describe("Knowledge Integration Engine", () => {
 
   });
 
-});
-
-it("creates learning knowledge from outcome", () => {
-
-  const engine =
-    new KnowledgeIntegrationEngine();
 
 
-  const learning =
-    engine.createLearningFromOutcome({
-      id: "OUTCOME-001",
-      actionId: "ACTION-001",
-      result: "System improved",
-      success: true,
-      impact: 0.9,
-      learning: "Improvement validated through reality",
-      createdAt: new Date()
-    });
+  it("creates learning knowledge from outcome", () => {
+
+    const engine =
+      new KnowledgeIntegrationEngine();
 
 
-  expect(learning.type)
-    .toBe(KnowledgeType.Learning);
+    const learning =
+      engine.createLearningFromOutcome({
+        id: "OUTCOME-001",
+        actionId: "ACTION-001",
+        result: "System improved",
+        success: true,
+        impact: 0.9,
+        learning: "Improvement validated through reality",
+        createdAt: new Date()
+      });
 
 
-  expect(learning.source)
-    .toBe("Outcome Engine");
+    expect(learning.type)
+      .toBe(KnowledgeType.Learning);
 
 
-  expect(learning.confidence)
-    .toBe(0.9);
+    expect(learning.source)
+      .toBe("Outcome Engine");
+
+
+    expect(learning.confidence)
+      .toBe(0.9);
+
+  });
+
+
+
+  it("creates rule knowledge from validated patterns", () => {
+
+    const engine =
+      new KnowledgeIntegrationEngine();
+
+
+    const rule =
+      engine.createRuleFromPattern({
+        id: "PATTERN-001",
+        name: "Repeated behaviour",
+        relationships: [
+          "REL-001",
+          "REL-002"
+        ],
+        confidence: 0.9,
+        createdAt: new Date()
+      });
+
+
+    expect(rule.type)
+      .toBe(KnowledgeType.Rule);
+
+
+    expect(rule.source)
+      .toBe("Pattern Evolution");
+
+
+    expect(rule.confidence)
+      .toBe(0.9);
+
+  });
 
 });

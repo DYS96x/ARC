@@ -80,6 +80,43 @@ export class KnowledgeIntegrationEngine {
 
       relationships: []
     };
+
+  }
+
+
+  createRuleFromPattern(
+    pattern: Pattern
+  ): Knowledge {
+
+    return {
+
+      id: `KNOW-${Date.now()}`,
+
+      type: KnowledgeType.Rule,
+
+      title:
+        pattern.name,
+
+      description:
+        "Rule created from validated pattern",
+
+      source:
+        "Pattern Evolution",
+
+      confidence:
+        pattern.confidence,
+
+      createdAt:
+        new Date(),
+
+      updatedAt:
+        new Date(),
+
+      relationships:
+        pattern.relationships
+
+    };
+
   }
 
 }
