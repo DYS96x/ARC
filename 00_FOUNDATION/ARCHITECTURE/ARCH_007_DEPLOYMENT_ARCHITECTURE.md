@@ -279,3 +279,184 @@ The following violate this architecture:
 # Final Principle
 
 > Deployment is not the end of architecture. It is the moment architecture meets reality.
+
+---
+
+# Relationship Audit
+
+## Known Relationships
+
+Architecture ↔ Deployment
+
+Evidence:
+
+Deployment translates designed capabilities into operating reality while preserving security, reliability, and traceability.
+
+Relationship type:
+
+Design ↔ Reality Implementation
+
+---
+
+Development ↔ Validation
+
+Evidence:
+
+Development creates capability while validation confirms behaviour before release.
+
+Relationship type:
+
+Creation ↔ Verification
+
+---
+
+Validation ↔ Deployment
+
+Evidence:
+
+Validated changes become approved releases.
+
+Relationship type:
+
+Verification ↔ Release Authority
+
+---
+
+Deployment ↔ Production Environment
+
+Evidence:
+
+Deployment introduces controlled capability into the environment where real users and systems operate.
+
+Relationship type:
+
+Release ↔ Operation
+
+---
+
+ARC OS ↔ Deployment
+
+Evidence:
+
+ARC OS owns deployment execution, automation, runtime operations, and release processes.
+
+Relationship type:
+
+Execution Capability ↔ Deployment Control
+
+---
+
+System Owners ↔ Deployment
+
+Evidence:
+
+System owners validate capability, approve releases, and maintain outcome responsibility.
+
+Relationship type:
+
+Ownership ↔ Release Accountability
+
+---
+
+Production Environment ↔ Reality
+
+Evidence:
+
+Production generates measurable outcomes, operational signals, failures, and feedback.
+
+Relationship type:
+
+Operation ↔ Reality Feedback
+
+---
+
+Observation ↔ Improvement
+
+Evidence:
+
+Deployment observations create learning that improves future releases and architecture.
+
+Relationship type:
+
+Measurement ↔ Evolution
+
+---
+
+# Unknown Relationship Gaps
+
+## Deployment → Architecture Evolution
+
+Investigation:
+
+How operational experience changes future architectural decisions.
+
+Question:
+
+What deployment signals trigger architectural change?
+
+---
+
+## Infrastructure → Capability Design
+
+Investigation:
+
+How infrastructure limitations influence future system capabilities.
+
+Question:
+
+When should infrastructure constraints become architecture decisions?
+
+---
+
+## Production Feedback → Development Priority
+
+Investigation:
+
+How real-world usage determines improvement priorities.
+
+Question:
+
+What signals decide which improvements are most valuable?
+
+---
+
+## Rollback → Learning
+
+Investigation:
+
+How failed deployments become permanent system knowledge.
+
+Question:
+
+How does recovery history improve future reliability?
+
+---
+
+# Diagram Changes
+
+## Remove
+
+Pipeline interpretation:
+
+```text
+Development
+
+↓
+
+Validation
+
+↓
+
+Deployment
+
+↓
+
+Operation
+
+↓
+
+Observation
+
+↓
+
+Improvement
