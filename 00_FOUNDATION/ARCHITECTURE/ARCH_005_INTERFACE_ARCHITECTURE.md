@@ -343,3 +343,164 @@ Architecture passes when:
 # Final Principle
 
 > Interfaces are where humans experience architecture. Good interfaces make complex systems understandable without hiding their truth.
+
+---
+
+# Relationship Audit
+
+## Known Relationships
+
+Human ↔ Interface Layer
+
+Evidence:
+
+Human interfaces provide access, communication, understanding, control, and feedback.
+
+Relationship type:
+
+Human Intent ↔ System Capability
+
+---
+
+Interface Layer ↔ ARC Capabilities
+
+Evidence:
+
+Interfaces connect users and systems to memory, workflow, intelligence, execution, and governance capabilities.
+
+Relationship type:
+
+Connection ↔ Capability
+
+---
+
+Interface ↔ Context
+
+Evidence:
+
+Interfaces preserve current objectives, relevant history, user intent, system state, and next actions.
+
+Relationship type:
+
+Interaction ↔ Context Preservation
+
+---
+
+Developer Interface ↔ ARC Architecture
+
+Evidence:
+
+Developer interfaces expose APIs, SDKs, documentation, contracts, versioning, and development capabilities.
+
+Relationship type:
+
+Engineering Access ↔ System Extension
+
+---
+
+Intelligence Interface ↔ VOID
+
+Evidence:
+
+Intelligence interfaces connect context with reasoning, recommendations, confidence, and limitations.
+
+Relationship type:
+
+Context ↔ Intelligence
+
+---
+
+System Interface ↔ ARC Systems
+
+Evidence:
+
+System interfaces allow communication through services, events, messages, and data exchange while preserving identity, permissions, contracts, and validation.
+
+Relationship type:
+
+System Communication ↔ Controlled Capability Exchange
+
+---
+
+External Interface ↔ Outside Systems
+
+Evidence:
+
+External interfaces connect ARC with partners, platforms, and third-party services through trust boundaries and agreements.
+
+Relationship type:
+
+External Relationship ↔ Governed Exchange
+
+---
+
+# Unknown Relationship Gaps
+
+## Human Intent → Interface Understanding
+
+Investigation:
+
+How accurately does an interface capture what a user actually needs?
+
+Question:
+
+How does ARC detect when the interface interpretation differs from human intent?
+
+---
+
+## Interface Complexity → Cognitive Load
+
+Investigation:
+
+How does ARC measure whether an interface reduces or increases mental effort?
+
+Question:
+
+What signals determine whether an interface is improving understanding?
+
+---
+
+## Intelligence Output → Human Decision
+
+Investigation:
+
+How do recommendations become useful decisions without removing human responsibility?
+
+Question:
+
+What relationship defines trust between intelligence and decision-making?
+
+---
+
+## External Interface → Ecosystem Evolution
+
+Investigation:
+
+How do external relationships create future ARC capability improvements?
+
+Question:
+
+When does an external interaction become internal knowledge?
+
+---
+
+# Diagram Changes
+
+## Remove
+
+Pipeline interpretation:
+
+```text
+Interface
+
+↓
+
+Relationship
+
+↓
+
+Capability
+
+↓
+
+Outcome
