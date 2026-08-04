@@ -1,52 +1,44 @@
-import { IntelligenceEvolutionEngine } from "./IntelligenceEvolutionEngine";
+import { PatternEvolutionEngine } from "../../knowledge/patterns/PatternEvolutionEngine";
 
 
-describe("Intelligence Evolution Engine", () => {
+export class IntelligenceEvolutionEngine {
 
 
-  it("strengthens knowledge when intelligence is confirmed", () => {
+  private patternEvolution =
+    new PatternEvolutionEngine();
 
 
-    const engine =
-      new IntelligenceEvolutionEngine();
+  evolve(
+    pattern: {
+      confidence: number;
+    },
+    validation: string
+  ) {
 
 
-    const result =
-      engine.evolve(
-        {
-          confidence: 0.5
-        },
-        "confirmed"
+    if (validation === "confirmed") {
+
+      return this.patternEvolution.strengthen(
+        pattern as any,
+        0.2
       );
 
-
-    expect(result.confidence)
-      .toBe(0.7);
-
-  });
+    }
 
 
+    if (validation === "rejected") {
 
-  it("weakens knowledge when intelligence is rejected", () => {
-
-
-    const engine =
-      new IntelligenceEvolutionEngine();
-
-
-    const result =
-      engine.evolve(
-        {
-          confidence: 0.8
-        },
-        "rejected"
+      return this.patternEvolution.weaken(
+        pattern as any,
+        0.2
       );
 
-
-    expect(result.confidence)
-      .toBe(0.6);
-
-  });
+    }
 
 
-});
+    return pattern;
+
+  }
+
+
+}
