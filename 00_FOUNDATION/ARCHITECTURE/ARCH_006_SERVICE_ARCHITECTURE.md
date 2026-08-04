@@ -352,3 +352,201 @@ Architecture passes when:
 # Final Principle
 
 > Services are the muscles of ARC. Systems define responsibility; services provide controlled capability.
+
+---
+
+# Relationship Audit
+
+## Known Relationships
+
+Interface Layer ↔ Service Layer
+
+Evidence:
+
+Interfaces provide access to services through controlled communication.
+
+Services transform requests into reusable system capabilities.
+
+Relationship type:
+
+Interaction ↔ Capability
+
+---
+
+Service Layer ↔ Core System Capabilities
+
+Evidence:
+
+Services expose controlled functions from memory, workflow, intelligence, governance, execution, and security systems.
+
+Relationship type:
+
+Capability Access ↔ System Responsibility
+
+---
+
+Memory Services ↔ ARC
+
+Evidence:
+
+Memory services provide access to persistent ecosystem memory, relationships, and history.
+
+Relationship type:
+
+Service Capability ↔ Persistent Knowledge
+
+---
+
+Workflow Services ↔ WOS
+
+Evidence:
+
+Workflow services manage active state, progress, dependencies, and session restoration.
+
+Relationship type:
+
+Service Capability ↔ Operational Context
+
+---
+
+Intelligence Services ↔ VOID
+
+Evidence:
+
+Intelligence services provide analysis, patterns, recommendations, and confidence without executing decisions.
+
+Relationship type:
+
+Reasoning Capability ↔ Intelligence System
+
+---
+
+Governance Services ↔ HOLY ARC
+
+Evidence:
+
+Governance services support decision records, reviews, amendments, and compliance checks.
+
+Relationship type:
+
+Governance Capability ↔ Constitutional Authority
+
+---
+
+Execution Services ↔ ARC OS
+
+Evidence:
+
+Execution services perform approved automation, validation, runtime operations, and deployment actions.
+
+Relationship type:
+
+Capability Execution ↔ Operational System
+
+---
+
+Security Services ↔ All Systems
+
+Evidence:
+
+Security services provide identity validation, permissions, access control, and audit capability.
+
+Relationship type:
+
+Protection Capability ↔ System Trust
+
+---
+
+# Unknown Relationship Gaps
+
+## Service Capability → System Evolution
+
+Investigation:
+
+How service performance and usage influence future architecture decisions.
+
+Question:
+
+When does a service become a new architectural capability?
+
+---
+
+## Interface Demand → Service Creation
+
+Investigation:
+
+How repeated user or system requirements create new services.
+
+Question:
+
+What signals determine when a new service boundary should exist?
+
+---
+
+## Service Interaction → Hidden Dependency
+
+Investigation:
+
+How ARC detects unhealthy coupling between services.
+
+Question:
+
+What relationship patterns indicate a boundary failure?
+
+---
+
+## Service Outcome → Knowledge Layer
+
+Investigation:
+
+How service execution results become reusable ecosystem knowledge.
+
+Question:
+
+When does an operational result become a learning artifact?
+
+---
+
+# Diagram Changes
+
+## Remove
+
+Pipeline interpretation:
+
+```text
+Interface
+
+↓
+
+Service
+
+↓
+
+System Capability
+
+↓
+
+Outcome
+
+                         Interface Layer
+                                ↕
+                         Service Layer
+                                ↕
+        ┌───────────────────────┼───────────────────────┐
+        ↕                       ↕                       ↕
+     Memory                 Intelligence             Execution
+        ↕                       ↕                       ↕
+       ARC                    VOID                  ARC OS
+
+
+                    Governance ↔ Security
+                         ↕
+                      HOLY ARC
+
+
+                         ↕
+                    Data / Knowledge
+
+                         ↺
+
+                   Outcome Feedback
