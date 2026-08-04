@@ -84,4 +84,45 @@ export class IntelligenceEngine {
 
   }
 
+  generateFromKnowledge(
+    knowledge: {
+      id: string;
+      type: string;
+      title: string;
+      description: string;
+      source?: string;
+      confidence: number;
+      createdAt: Date;
+      updatedAt: Date;
+      relationships: string[];
+    }
+  ): IntelligenceOutput {
+
+
+    const output: IntelligenceOutput = {
+
+      id: crypto.randomUUID(),
+
+      request:
+        `Analyse knowledge: ${knowledge.title}`,
+
+      recommendation:
+        "Knowledge supports action",
+
+      confidence:
+        knowledge.confidence,
+
+      createdAt:
+        new Date()
+
+    };
+
+
+    this.outputs.push(output);
+
+
+    return output;
+
+  }
+
 }
