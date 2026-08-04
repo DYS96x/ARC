@@ -1,60 +1,108 @@
-﻿# ADR-XXXX
-
-## Title
+﻿# ADR-XXXX — Title
 
 ## Status
 
-Proposed | Accepted | Superseded | Deprecated
+Accepted / Proposed / Superseded
 
-## Date
-
-YYYY-MM-DD
-
-## Owner
+---
 
 ## Context
 
-What problem or opportunity led to this decision?
+What reality are we responding to?
+
+What problem exists?
+
+What relationships have been observed?
+
+What assumptions are currently being challenged?
 
 ---
 
 ## Decision
 
-Describe the chosen approach.
+What system relationship are we choosing?
+
+Why does this relationship create value?
+
+What evidence supports this decision?
+
+---
+
+## Known Relationships
+
+What connections are currently understood?
+
+Example:
+
+A ↔ B
+
+Relationship confidence:
+
+- High
+- Medium
+- Low
+
+Evidence:
+
+---
+
+## Unknown Relationship Gaps
+
+What relationships are not yet understood?
+
+Example:
+
+A → ?
+
+What needs investigation?
+
+What evidence would reveal the missing relationship?
 
 ---
 
 ## Alternatives Considered
 
-Option A
+What other approaches were evaluated?
 
-Option B
-
-Option C
-
-Explain why they were not selected.
+Why were they accepted or rejected?
 
 ---
 
 ## Consequences
 
-Positive:
+What changes because of this decision?
 
--
+### Positive
 
-Negative:
+- 
 
--
+### Negative
 
-Risks:
+- 
 
--
+---
+
+## Reality Feedback
+
+How will we know if this decision survives contact with reality?
+
+What signals indicate success?
+
+What signals require adjustment?
+
+---
+
+## Evolution Path
+
+How can this decision change as knowledge improves?
+
+What future discoveries may alter this architecture?
 
 ---
 
 ## Related Documents
 
-List relevant ARC documents.
+-
 
 ---
 

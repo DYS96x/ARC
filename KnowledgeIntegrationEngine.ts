@@ -56,6 +56,7 @@ export class KnowledgeIntegrationEngine {
   ): Knowledge {
 
     return {
+
       id: `KNOW-${Date.now()}`,
 
       type: KnowledgeType.Learning,
@@ -79,7 +80,9 @@ export class KnowledgeIntegrationEngine {
         new Date(),
 
       relationships: []
+
     };
+
   }
 
 }

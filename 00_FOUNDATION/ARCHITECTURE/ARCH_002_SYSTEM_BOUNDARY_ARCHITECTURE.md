@@ -323,3 +323,172 @@ Architecture passes when:
 # Final Principle
 
 > Strong architectures are not built by removing boundaries. They are built by connecting clear boundaries.
+
+---
+
+# Relationship Audit
+
+## Known Relationships
+
+HOLY ARC ↔ ARC
+
+Evidence:
+
+HOLY ARC defines constitutional governance, laws, standards, contracts, and architectural authority.
+
+ARC preserves ecosystem memory, knowledge, relationships, and history.
+
+Relationship type:
+
+Governance ↔ Memory
+
+---
+
+ARC ↔ ARC OS
+
+Evidence:
+
+ARC provides knowledge and historical context.
+
+ARC OS performs controlled execution using approved capabilities.
+
+Relationship type:
+
+Memory ↔ Execution
+
+---
+
+ARC OS ↔ WOS
+
+Evidence:
+
+ARC OS performs operational actions.
+
+WOS maintains current workflow state, progress, dependencies, and resume capability.
+
+Relationship type:
+
+Execution ↔ Context
+
+---
+
+WOS ↔ ARC
+
+Evidence:
+
+WOS maintains temporary working state while ARC preserves permanent ecosystem history.
+
+Relationship type:
+
+Temporary Context ↔ Persistent Memory
+
+---
+
+CAF ↔ Organisations / Systems
+
+Evidence:
+
+CAF discovers, assesses, analyses gaps, and produces recommendations.
+
+Relationship type:
+
+Assessment ↔ Understanding
+
+---
+
+VOID ↔ ARC
+
+Evidence:
+
+VOID uses knowledge, history, and relationships to provide analysis, reasoning, prediction, and recommendations.
+
+Relationship type:
+
+Intelligence ↔ Knowledge
+
+---
+
+Sprint OS ↔ ARC OS
+
+Evidence:
+
+Sprint OS converts approved improvements into measurable changes.
+
+ARC OS executes approved operational changes.
+
+Relationship type:
+
+Improvement ↔ Execution
+
+---
+
+# Unknown Relationship Gaps
+
+## HOLY ARC → Operational Evolution
+
+Investigation:
+
+How constitutional changes safely propagate through evolving systems.
+
+Question:
+
+How does ARC preserve stability while allowing principles to evolve?
+
+---
+
+## VOID → Reality Validation
+
+Investigation:
+
+How intelligence recommendations are measured against real outcomes.
+
+Question:
+
+How does prediction accuracy improve over time?
+
+---
+
+## CAF → Sprint OS
+
+Investigation:
+
+How discovered organisational gaps become prioritised improvement actions.
+
+Question:
+
+What relationship transforms assessment into execution?
+
+---
+
+## WOS → Learning Systems
+
+Investigation:
+
+How temporary workflow state contributes to long-term knowledge.
+
+Question:
+
+When does context become permanent learning?
+
+---
+
+# Diagram Changes
+
+## Remove
+
+Current interpretation:
+
+```text
+HOLY ARC
+   ↓
+ARC
+   ↓
+ARC OS
+   ↓
+WOS
+   ↓
+CAF
+   ↓
+VOID
+   ↓
+Sprint OS

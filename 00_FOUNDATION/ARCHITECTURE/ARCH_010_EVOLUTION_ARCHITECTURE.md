@@ -13,21 +13,176 @@ Classification: Internal
 
 ---
 
-# Purpose
-
-Define the mechanism through which ARC improves over time.
-
-Evolution enables:
-
-- Adaptation
-- Learning
-- Improvement
-- Controlled change
-- Future capability growth
 
 ---
 
-# Core Principle
+# Relationship Audit
+
+## Known Relationships
+
+Reality ↔ Observation
+
+Evidence:
+
+Reality creates conditions, signals, and outcomes that ARC observes.
+
+Relationship type:
+
+Reality ↔ Discovery
+
+---
+
+Observation ↔ Evidence
+
+Evidence:
+
+Observations become evidence when they gain context, traceability, ownership, and validation.
+
+Relationship type:
+
+Observation ↔ Validation
+
+---
+
+Evidence ↔ Learning
+
+Evidence:
+
+Validated evidence creates knowledge, patterns, and lessons that improve future decisions.
+
+Relationship type:
+
+Evidence ↔ Understanding
+
+---
+
+Learning ↔ Change
+
+Evidence:
+
+Learning creates approved improvements, capability evolution, and architectural changes.
+
+Relationship type:
+
+Knowledge ↔ Evolution
+
+---
+
+Change ↔ Validation
+
+Evidence:
+
+Changes require measurement, observation, and reality validation.
+
+Relationship type:
+
+Implementation ↔ Verification
+
+---
+
+ARC Memory ↔ Evolution
+
+Evidence:
+
+ARC preserves previous versions, historical decisions, knowledge gained, and evolution records.
+
+Relationship type:
+
+History ↔ Future Capability
+
+---
+
+VOID ↔ Evolution
+
+Evidence:
+
+VOID supports pattern discovery, analysis, prediction, and recommendations that inform future improvements.
+
+Relationship type:
+
+Intelligence ↔ Evolution
+
+---
+
+ARC OS ↔ Evolution
+
+Evidence:
+
+ARC OS supports implementation, migration, deployment, and validation of approved changes.
+
+Relationship type:
+
+Execution ↔ Transformation
+
+---
+
+HOLY ARC ↔ Evolution
+
+Evidence:
+
+HOLY ARC governs constitutional evolution, principle changes, law amendments, and architecture direction.
+
+Relationship type:
+
+Governance ↔ Long-Term Direction
+
+---
+
+# Unknown Relationship Gaps
+
+## Learning → Architectural Principle
+
+Investigation:
+
+How does repeated learning become a permanent ARC law or principle?
+
+Question:
+
+What evidence threshold converts knowledge into constitutional change?
+
+---
+
+## Reality Pressure → Change Priority
+
+Investigation:
+
+How ARC determines which changes matter most.
+
+Question:
+
+What relationship decides between urgent improvement and long-term capability?
+
+---
+
+## Old Architecture → New Architecture
+
+Investigation:
+
+How previous structures remain valuable while new structures emerge.
+
+Question:
+
+How does ARC evolve without losing historical identity?
+
+---
+
+## Prediction → Reality Validation
+
+Investigation:
+
+How predicted improvements are measured against actual outcomes.
+
+Question:
+
+How does ARC improve prediction accuracy over time?
+
+---
+
+# Diagram Changes
+
+## Remove
+
+Pipeline interpretation:
 
 ```text
 Reality
@@ -55,297 +210,3 @@ Validation
 ↓
 
 Improved Reality
-```
-
----
-
-# Evolution Model
-
-ARC evolves through:
-
-```text
-Discover
-
-↓
-
-Challenge
-
-↓
-
-Understand
-
-↓
-
-Design
-
-↓
-
-Implement
-
-↓
-
-Measure
-
-↓
-
-Learn
-
-↓
-
-Improve
-```
-
----
-
-# Evolution Responsibilities
-
-## HOLY ARC
-
-Owns:
-
-- Constitutional evolution
-- Principle changes
-- Law amendments
-- Architecture direction
-
----
-
-## ARC
-
-Preserves:
-
-- Previous versions
-- Historical decisions
-- Knowledge gained
-- Evolution records
-
----
-
-## ARC OS
-
-Supports:
-
-- Implementation
-- Migration
-- Deployment
-- Validation
-
----
-
-## VOID
-
-Supports:
-
-- Pattern discovery
-- Analysis
-- Prediction
-- Recommendations
-
----
-
-## Systems
-
-Own:
-
-- Capability improvement
-- Internal optimisation
-- Performance evolution
-
----
-
-# Change Classification
-
-ARC recognises:
-
----
-
-## Patch Evolution
-
-Small clarification.
-
-Examples:
-
-- Documentation improvements
-- Minor corrections
-- Non-structural changes
-
----
-
-## Capability Evolution
-
-Improves existing capability.
-
-Examples:
-
-- New features
-- Better workflows
-- Improved services
-
----
-
-## Structural Evolution
-
-Changes architecture or responsibility.
-
-Examples:
-
-- New systems
-- Ownership changes
-- Major redesigns
-
----
-
-# Evolution Process
-
-Every significant change follows:
-
-```text
-Proposal
-
-↓
-
-Evidence
-
-↓
-
-Impact Assessment
-
-↓
-
-Approval
-
-↓
-
-Implementation
-
-↓
-
-Observation
-
-↓
-
-Validation
-
-↓
-
-Knowledge Update
-```
-
----
-
-# Preservation Rules
-
-Evolution must preserve:
-
-- Identity
-- Ownership
-- History
-- Relationships
-- Evidence
-- Accountability
-
-Change builds on the past.
-
-It does not erase it.
-
----
-
-# Feedback Architecture
-
-Evolution depends on:
-
-```text
-System Behaviour
-
-↓
-
-Observation
-
-↓
-
-Feedback
-
-↓
-
-Learning
-
-↓
-
-Improvement
-```
-
----
-
-# Architecture Evolution
-
-Architecture changes require:
-
-- Evidence
-- Impact analysis
-- Review
-- Migration planning
-- Validation
-
-Architecture does not change because of trends.
-
-Architecture changes because reality demands improvement.
-
----
-
-# Knowledge Evolution
-
-Every evolution cycle should create:
-
-- New knowledge
-- Updated patterns
-- Improved methods
-- Better decisions
-
-Knowledge compounds.
-
----
-
-# Evolution Security
-
-Changes require:
-
-- Identity
-- Authority
-- Approval
-- History
-
----
-
-# Evolution Quality Criteria
-
-Architecture passes when:
-
-✓ Change is controlled
-
-✓ Evidence supports evolution
-
-✓ History remains intact
-
-✓ Systems improve
-
-✓ Capability increases
-
-✓ Trust is preserved
-
----
-
-# Violations
-
-The following violate this architecture:
-
-- Silent structural changes
-- Lost history
-- Unapproved ownership changes
-- Removing evidence
-- Optimising short-term outcomes against long-term capability
-
----
-
-# Final Principle
-
-> Evolution is not abandoning the original system. Evolution is the system learning how to become better while remaining itself.

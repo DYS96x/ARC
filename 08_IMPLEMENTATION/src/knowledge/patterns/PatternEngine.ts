@@ -11,19 +11,30 @@ export class PatternEngine {
       return null;
     }
 
+    const confidence =
+      relationships.reduce(
+        (total, relationship) =>
+          total + relationship.strength,
+        0
+      ) / relationships.length;
+
+
     return {
-      id: "PATTERN-001",
-      name: "Emerging Relationship Pattern",
-      relationships: relationships.map(
-        relationship => relationship.id
-      ),
-      confidence:
-        relationships.reduce(
-          (total, relationship) =>
-            total + relationship.strength,
-          0
-        ) / relationships.length,
-      createdAt: new Date()
+      id: `PATTERN-${Date.now()}`,
+
+      name:
+        "Discovered relationship pattern",
+
+      relationships:
+        relationships.map(
+          relationship => relationship.id
+        ),
+
+      confidence,
+
+      createdAt:
+        new Date()
     };
   }
+
 }

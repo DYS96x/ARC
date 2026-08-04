@@ -1,62 +1,185 @@
-﻿# ADR-0001
-
-## Title
-
-Systems Before Technology
+﻿# ADR-0001 — Systems Before Technology
 
 ## Status
 
 Accepted
 
-## Owner
-
-ARC
+---
 
 ## Context
 
-Many software projects begin with technology choices before understanding the underlying problem.
+Many software projects begin with technology choices before understanding the underlying system.
 
-This often results in unnecessary complexity, poor alignment with business needs, and expensive redesign.
+This creates solutions that optimise implementation before understanding reality.
+
+Common outcomes include:
+
+- Unnecessary complexity
+- Poor alignment between systems and users
+- Hidden dependencies
+- Expensive redesign
+- Technology choices based on assumptions rather than evidence
+
+ARC recognises that systems are living networks of relationships.
+
+Before technology is selected, ARC must understand:
+
+- System purpose
+- User needs
+- Environmental constraints
+- Known relationships
+- Unknown relationship gaps
+- Feedback mechanisms
+
+Reality is the final authority.
 
 ---
 
 ## Decision
 
-ARC will always design systems before selecting technology.
+ARC will design systems before selecting technology.
 
-Technology is an implementation detail.
+Technology is an implementation capability, not the foundation of understanding.
 
-Systems define behaviour.
+The relationship order is:
 
-Technology enables behaviour.
+Reality
+
+↕
+
+Observation
+
+↕
+
+Relationships
+
+↕
+
+System Understanding
+
+↕
+
+Architecture
+
+↕
+
+Technology
+
+Technology must support validated system relationships.
+
+---
+
+## Known Relationships
+
+The following relationships are understood:
+
+System Purpose ↔ Architecture
+
+Architecture ↔ Technology
+
+Technology ↔ Implementation
+
+Implementation ↔ Reality Feedback
+
+These relationships are validated through testing and observation.
+
+---
+
+## Unknown Relationship Gaps
+
+ARC recognises that not all relationships are immediately visible.
+
+Examples:
+
+System Behaviour → ?
+
+User Experience → ?
+
+Technology Impact → ?
+
+These gaps are discovery targets.
+
+Unknown relationships must be investigated before major decisions are locked.
 
 ---
 
 ## Alternatives Considered
 
-Technology-first development.
+### Technology-first development
 
-Feature-first development.
+Rejected.
 
-Tool-driven architecture.
+Reason:
 
-These approaches were rejected because they optimise implementation before understanding reality.
+Technology choices may create solutions before the actual system problem is understood.
+
+---
+
+### Feature-first development
+
+Rejected.
+
+Reason:
+
+Features without system relationships create isolated capabilities.
+
+---
+
+### Tool-driven architecture
+
+Rejected.
+
+Reason:
+
+Tools should serve architecture, not define it.
 
 ---
 
 ## Consequences
 
-Positive
+### Positive
 
-- Better long-term architecture
+- Stronger long-term architecture
 - Reduced technical debt
-- Technology independence
-- Better client outcomes
+- Better technology alignment
+- Clearer system relationships
+- Improved adaptability
+- Greater discovery capability
 
-Negative
+### Negative
 
 - Longer discovery phase
-- Greater upfront design effort
+- Increased upfront analysis
+- Requires continuous learning
+- May reveal unknown complexity earlier
+
+---
+
+## Reality Feedback
+
+This decision is validated through:
+
+- User outcomes
+- System performance
+- Implementation feedback
+- New relationship discoveries
+- Reduction of unnecessary complexity
+
+If reality contradicts assumptions, architecture must adapt.
+
+---
+
+## Evolution Path
+
+This ADR evolves as ARC discovers new relationships between:
+
+- People
+- Systems
+- Technology
+- Knowledge
+- Reality
+
+Future evidence may improve or change this decision.
 
 ---
 

@@ -79,3 +79,34 @@ describe("Knowledge Integration Engine", () => {
   });
 
 });
+
+it("creates learning knowledge from outcome", () => {
+
+  const engine =
+    new KnowledgeIntegrationEngine();
+
+
+  const learning =
+    engine.createLearningFromOutcome({
+      id: "OUTCOME-001",
+      actionId: "ACTION-001",
+      result: "System improved",
+      success: true,
+      impact: 0.9,
+      learning: "Improvement validated through reality",
+      createdAt: new Date()
+    });
+
+
+  expect(learning.type)
+    .toBe(KnowledgeType.Learning);
+
+
+  expect(learning.source)
+    .toBe("Outcome Engine");
+
+
+  expect(learning.confidence)
+    .toBe(0.9);
+
+});
