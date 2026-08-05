@@ -11,6 +11,7 @@ import { RelationshipGraph } from "./relationships/RelationshipGraph";
 import { EventBus } from "./events/EventBus";
 import { StateManager } from "./state/StateManager";
 import { ContractValidator } from "./contracts/ContractValidator";
+import { ARCRuntime } from "./ARCRuntime";
 
 
 export class ARC {
@@ -27,6 +28,9 @@ export class ARC {
   public state: StateManager;
 
   public contracts: ContractValidator;
+
+  public runtime: ARCRuntime;
+
 
 
   constructor() {
@@ -48,6 +52,21 @@ export class ARC {
 
     this.contracts =
       new ContractValidator();
+
+    this.runtime =
+      new ARCRuntime();
+
+  }
+
+
+
+  processReality(
+    input: string
+  ) {
+
+    return this.runtime.process(
+      input
+    );
 
   }
 
