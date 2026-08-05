@@ -33,7 +33,7 @@ export class WorldRelationshipEngine {
   ) {
 
 
-    const relationship = {
+    const relationship: WorldRelationship = {
 
       sourceId,
 
