@@ -44,10 +44,20 @@ describe(
 
 
         expect(
+          result.impact
+        )
+        .toBe(
+          "UNKNOWN"
+        );
+
+
+
+        expect(
           result.confidence
         )
-        .toBe(0.5);
-
+        .toBe(
+          0.5
+        );
 
 
       }

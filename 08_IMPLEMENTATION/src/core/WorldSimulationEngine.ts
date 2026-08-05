@@ -41,7 +41,6 @@ export class WorldSimulationEngine {
 
   ) {
 
-
     this.state =
       state;
 
@@ -52,7 +51,6 @@ export class WorldSimulationEngine {
 
     this.memory =
       memory;
-
 
   }
 
