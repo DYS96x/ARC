@@ -3,9 +3,25 @@ import { KnowledgeType } from "./KnowledgeType";
 import { Outcome } from "./Outcome";
 import { Relationship } from "./Relationship";
 import { Pattern } from "./patterns/Pattern";
+import { EventBus } from "../core/events/EventBus";
 
 
 export class KnowledgeIntegrationEngine {
+
+
+  private events: EventBus;
+
+
+  constructor(
+    events?: EventBus
+  ) {
+
+    this.events =
+      events ?? new EventBus();
+
+  }
+
+
 
   createRelationship(
     knowledgeA: Knowledge,
@@ -13,23 +29,44 @@ export class KnowledgeIntegrationEngine {
   ): Relationship {
 
     return {
-      id: `REL-${Date.now()}`,
-      from: knowledgeA.id,
-      to: knowledgeB.id,
-      type: "connected",
-      strength: 0.5,
-      createdAt: new Date()
+
+      id:
+        `REL-${Date.now()}`,
+
+      from:
+        knowledgeA.id,
+
+      to:
+        knowledgeB.id,
+
+      type:
+        "connected",
+
+      strength:
+        0.5,
+
+      createdAt:
+        new Date()
+
     };
+
   }
+
 
 
   createPattern(
     relationships: Relationship[]
   ): Pattern | null {
 
-    if (relationships.length < 2) {
+
+    if (
+      relationships.length < 2
+    ) {
+
       return null;
+
     }
+
 
     const confidence =
       relationships.reduce(
@@ -39,26 +76,44 @@ export class KnowledgeIntegrationEngine {
       ) / relationships.length;
 
 
+
     return {
-      id: `PATTERN-${Date.now()}`,
-      name: "Integrated knowledge pattern",
-      relationships: relationships.map(
-        relationship => relationship.id
-      ),
+
+      id:
+        `PATTERN-${Date.now()}`,
+
+      name:
+        "Integrated knowledge pattern",
+
+      relationships:
+        relationships.map(
+          relationship =>
+            relationship.id
+        ),
+
       confidence,
-      createdAt: new Date()
+
+      createdAt:
+        new Date()
+
     };
+
   }
+
 
 
   createLearningFromOutcome(
     outcome: Outcome
   ): Knowledge {
 
-    return {
-      id: `KNOW-${Date.now()}`,
 
-      type: KnowledgeType.Learning,
+    const knowledge: Knowledge = {
+
+      id:
+        `KNOW-${Date.now()}`,
+
+      type:
+        KnowledgeType.Learning,
 
       title:
         "Learning generated from outcome",
@@ -79,9 +134,38 @@ export class KnowledgeIntegrationEngine {
         new Date(),
 
       relationships: []
+
     };
 
+
+
+    this.events.publish({
+
+      id:
+        `EVENT-${Date.now()}`,
+
+      type:
+        "knowledge.created",
+
+      sourceId:
+        knowledge.id,
+
+      payload:
+        {
+          ...knowledge
+        },
+
+      timestamp:
+        new Date()
+
+    });
+
+
+
+    return knowledge;
+
   }
+
 
 
   createRuleFromPattern(
@@ -90,9 +174,11 @@ export class KnowledgeIntegrationEngine {
 
     return {
 
-      id: `KNOW-${Date.now()}`,
+      id:
+        `KNOW-${Date.now()}`,
 
-      type: KnowledgeType.Rule,
+      type:
+        KnowledgeType.Rule,
 
       title:
         pattern.name,

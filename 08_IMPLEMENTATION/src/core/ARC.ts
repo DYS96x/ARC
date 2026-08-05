@@ -31,17 +31,23 @@ export class ARC {
 
   constructor() {
 
-    this.identity = new IdentityService();
+    this.identity =
+      new IdentityService();
 
-    this.objects = new ObjectRegistry();
+    this.objects =
+      new ObjectRegistry();
 
-    this.relationships = new RelationshipGraph();
+    this.relationships =
+      new RelationshipGraph();
 
-    this.events = new EventBus();
+    this.events =
+      new EventBus();
 
-    this.state = new StateManager();
+    this.state =
+      new StateManager();
 
-    this.contracts = new ContractValidator();
+    this.contracts =
+      new ContractValidator();
 
   }
 

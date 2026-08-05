@@ -5,6 +5,8 @@
  * and decision support.
  */
 
+import { EventBus } from "../../core/events/EventBus";
+
 
 export interface IntelligenceOutput {
 
@@ -21,10 +23,26 @@ export interface IntelligenceOutput {
 }
 
 
+
 export class IntelligenceEngine {
 
 
+  private events: EventBus;
+
+
   private outputs: IntelligenceOutput[] = [];
+
+
+
+  constructor(
+    events?: EventBus
+  ) {
+
+    this.events =
+      events ?? new EventBus();
+
+  }
+
 
 
   /**
@@ -39,7 +57,8 @@ export class IntelligenceEngine {
 
     const output: IntelligenceOutput = {
 
-      id: crypto.randomUUID(),
+      id:
+        crypto.randomUUID(),
 
       request,
 
@@ -47,7 +66,8 @@ export class IntelligenceEngine {
 
       confidence,
 
-      createdAt: new Date()
+      createdAt:
+        new Date()
 
     };
 
@@ -55,9 +75,34 @@ export class IntelligenceEngine {
     this.outputs.push(output);
 
 
+
+    this.events.publish({
+
+      id:
+        `EVENT-${Date.now()}`,
+
+      type:
+        "intelligence.generated",
+
+      sourceId:
+        output.id,
+
+      payload:
+        {
+          ...output
+        },
+
+      timestamp:
+        new Date()
+
+    });
+
+
+
     return output;
 
   }
+
 
 
 
@@ -81,7 +126,8 @@ export class IntelligenceEngine {
 
     const output: IntelligenceOutput = {
 
-      id: crypto.randomUUID(),
+      id:
+        crypto.randomUUID(),
 
       request:
         `Analyse knowledge: ${knowledge.title}`,
@@ -101,13 +147,38 @@ export class IntelligenceEngine {
     this.outputs.push(output);
 
 
+
+    this.events.publish({
+
+      id:
+        `EVENT-${Date.now()}`,
+
+      type:
+        "intelligence.generated",
+
+      sourceId:
+        output.id,
+
+      payload:
+        {
+          ...output
+        },
+
+      timestamp:
+        new Date()
+
+    });
+
+
+
     return output;
 
   }
 
 
 
-   validateOutcome(
+
+  validateOutcome(
     intelligence: IntelligenceOutput,
     outcome: {
       id: string;
@@ -146,6 +217,7 @@ export class IntelligenceEngine {
 
 
 
+
   /**
    * Retrieve intelligence output
    */
@@ -159,6 +231,7 @@ export class IntelligenceEngine {
     );
 
   }
+
 
 
 

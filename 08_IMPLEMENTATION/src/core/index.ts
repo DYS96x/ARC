@@ -78,4 +78,3 @@ export type {
   Contract,
   ContractType
 } from "./contracts/Contract";
-
