@@ -7,7 +7,8 @@ export class DecisionFeedbackEngine {
 
   constructor() {
 
-    this.feedback = [];
+    this.feedback =
+      [];
 
   }
 
