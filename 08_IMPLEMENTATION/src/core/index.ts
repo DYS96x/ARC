@@ -78,3 +78,50 @@ export type {
   Contract,
   ContractType
 } from "./contracts/Contract";
+
+
+// World Model
+
+export {
+  WorldStateEngine
+} from "./WorldStateEngine";
+
+export type {
+  WorldEntity
+} from "./WorldStateEngine";
+
+
+export {
+  WorldRelationshipEngine
+} from "./WorldRelationshipEngine";
+
+export type {
+  WorldRelationship
+} from "./WorldRelationshipEngine";
+
+
+export {
+  WorldEventMemory
+} from "./WorldEventMemory";
+
+export type {
+  WorldEvent
+} from "./WorldEventMemory";
+
+
+export {
+  WorldSimulationEngine
+} from "./WorldSimulationEngine";
+
+export type {
+  SimulationResult
+} from "./WorldSimulationEngine";
+
+
+export {
+  ConsequenceEngine
+} from "./ConsequenceEngine";
+
+export type {
+  Consequence
+} from "./ConsequenceEngine";
