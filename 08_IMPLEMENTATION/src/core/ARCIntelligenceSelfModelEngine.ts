@@ -15,13 +15,11 @@ export class ARCIntelligenceSelfModelEngine {
   private models: IntelligenceModel[];
 
 
-
   constructor() {
 
     this.models = [];
 
   }
-
 
 
   createModel(
@@ -52,7 +50,6 @@ export class ARCIntelligenceSelfModelEngine {
     return model;
 
   }
-
 
 
   getModels():
