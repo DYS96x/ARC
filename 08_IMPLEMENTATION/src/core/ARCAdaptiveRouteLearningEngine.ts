@@ -79,9 +79,7 @@ export class ARCAdaptiveRouteLearningEngine {
   }
 
 
-  getRoutes():
-
-  LearnedRoute[] {
+  getRoutes(): LearnedRoute[] {
 
     return this.routes;
 
