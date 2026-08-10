@@ -1,4 +1,4 @@
-import { TruthLockEngine } from "./TruthLockEngine";
+﻿import { TruthLockEngine } from "./TruthLockEngine";
 
 
 describe("Truth Lock Engine", () => {
@@ -49,7 +49,7 @@ describe("Truth Lock Engine", () => {
 
 
     expect(result)
-      .toBe("rejected");
+      .toBe("invalidated");
 
 
   });

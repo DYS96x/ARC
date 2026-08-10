@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ARC Intelligence Engine
  *
  * Provides reasoning, recommendations
@@ -211,7 +211,7 @@ export class IntelligenceEngine {
     }
 
 
-    return "rejected";
+    return "invalidated";
 
   }
 

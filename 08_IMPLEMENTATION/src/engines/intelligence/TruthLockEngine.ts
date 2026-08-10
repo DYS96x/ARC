@@ -1,4 +1,4 @@
-export class TruthLockEngine {
+﻿export class TruthLockEngine {
 
 
   lock(
@@ -19,7 +19,7 @@ export class TruthLockEngine {
     }
 
 
-    return "rejected";
+    return "invalidated";
 
   }
 

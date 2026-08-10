@@ -1,4 +1,4 @@
-import { PatternEvolutionEngine } from "../../knowledge/patterns/PatternEvolutionEngine";
+﻿import { PatternEvolutionEngine } from "../../knowledge/patterns/PatternEvolutionEngine";
 
 
 export class IntelligenceEvolutionEngine {
@@ -26,7 +26,7 @@ export class IntelligenceEvolutionEngine {
     }
 
 
-    if (validation === "rejected") {
+    if (validation === "invalidated") {
 
       return this.patternEvolution.weaken(
         pattern as any,
