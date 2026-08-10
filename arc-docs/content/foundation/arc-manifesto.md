@@ -10,15 +10,21 @@ We study reality, discover how systems behave, validate what is true, and design
 
 ## Mission
 
-Design the systems behind modern organisations and ambitious digital platforms.
+ARC exists to design systems that improve reality.
 
-ARC helps organisations discover, design, validate, build, and evolve systems that are clear, intelligent, secure, and capable of improving over time.
+We discover truth before creating solutions.
+
+We reduce complexity, increase capability, create understanding, strengthen organisations, and leave every system better than we found it.
 
 ---
 
 ## Vision
 
-To become a globally recognised Systems Studio known for designing intelligent organisations, digital platforms, trusted infrastructure, and future-facing systems.
+To become the world's most trusted Systems Studio.
+
+Known not simply for the systems we build,
+
+but for designing systems that continue improving long after they are delivered.
 
 ---
 
@@ -53,23 +59,49 @@ Technology is selected only after the system has been understood, challenged, an
 
 ---
 
-## ARC Portfolio
+## ARC Ecosystem
 
-### HOLY ARC
+ARC exists within an ecosystem of distinct systems, platforms, and experiences.
 
-The methodology used to discover, design, validate, and evolve systems.
+Each has its own responsibility.
 
 ### VOID
 
-The intelligence and knowledge layer.
+VOID exists to reduce the distance between perception and reality.
+
+It protects evidence, classifies signals, preserves knowledge, supports cognition, and helps systems remain aligned with observed reality.
+
+VOID does not determine what reality should be.
+
+Reality remains the authority.
+
+### HOLY ARC
+
+HOLY ARC is a living ecosystem for discovering, developing, and celebrating meaningful human potential.
+
+It transforms signals into experiences where people, communities, and worlds can evolve together.
+
+HOLY ARC provides experience and purpose.
 
 ### FACEXOFF
 
-The flagship consumer platform and living world system.
+FACEXOFF is the first experience within HOLY ARC.
+
+It provides a living environment where participation, signals, discovery, progression, community, and legacy can become visible through interaction with the world.
 
 ### GLASS
 
-The trust, integrity, and evidence system.
+GLASS is the trust, integrity, and evidence system.
+
+It exists to strengthen confidence in systems where evidence, verification, fairness, and accountability matter.
+
+---
+
+These systems may interact.
+
+They do not lose their individual responsibilities through integration.
+
+Clear boundaries allow the ecosystem to evolve without collapsing distinct systems into one another.
 
 ---
 
