@@ -1,102 +1,54 @@
-export interface IntelligenceExecution {
-
-
+﻿export interface IntelligenceExecutionRecord {
   route: string;
-
   engines: string[];
-
   outcome: string;
-
   score: number;
-
-
 }
-
-
 
 export class ARCIntelligenceExecutionMonitor {
 
-
-  private executions:
-    IntelligenceExecution[];
-
-
+  private records:
+    IntelligenceExecutionRecord[];
 
   constructor() {
-
-    this.executions = [];
-
+    this.records = [];
   }
 
-
-
-  recordExecution(
-
+  recordExecutionOutcome(
     route: string,
-
     engines: string[],
-
     outcome: string,
-
     score: number
+  ): IntelligenceExecutionRecord {
 
-  ): IntelligenceExecution {
+    const record:
+      IntelligenceExecutionRecord = {
+        route,
+        engines,
+        outcome,
+        score
+      };
 
-
-    const execution: IntelligenceExecution = {
-
-
-      route,
-
-      engines,
-
-      outcome,
-
-      score
-
-
-    };
-
-
-    this.executions.push(
-      execution
+    this.records.push(
+      record
     );
 
-
-    return execution;
-
-
+    return record;
   }
 
+  getRecords():
+    IntelligenceExecutionRecord[] {
 
-
-  getExecutions():
-
-    IntelligenceExecution[] {
-
-    return this.executions;
-
+    return this.records;
   }
-
-
 
   findByRoute(
-
     route: string
+  ): IntelligenceExecutionRecord[] {
 
-  ): IntelligenceExecution[] {
-
-
-    return this.executions.filter(
-
-      execution =>
-
-        execution.route === route
-
+    return this.records.filter(
+      record =>
+        record.route === route
     );
-
-
   }
-
-
 }

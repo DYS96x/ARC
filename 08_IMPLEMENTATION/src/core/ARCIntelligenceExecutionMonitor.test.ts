@@ -1,82 +1,51 @@
-import { ARCIntelligenceExecutionMonitor } from "./ARCIntelligenceExecutionMonitor";
-
+﻿import {
+  ARCIntelligenceExecutionMonitor
+} from "./ARCIntelligenceExecutionMonitor";
 
 describe(
   "ARC Intelligence Execution Monitor",
   () => {
 
-
     it(
-      "records intelligence execution outcomes",
+      "records observed execution outcomes without performing execution",
       () => {
-
 
         const monitor =
           new ARCIntelligenceExecutionMonitor();
 
-
-
         const result =
-          monitor.recordExecution(
-
+          monitor.recordExecutionOutcome(
             "WORLD-CHANGE-ROUTE",
-
             [
-
               "WORLD",
-
               "DECISION",
-
               "FEEDBACK"
-
             ],
-
             "SUCCESS",
-
             0.92
-
           );
 
+        expect(result.route)
+          .toBe(
+            "WORLD-CHANGE-ROUTE"
+          );
 
+        expect(result.outcome)
+          .toBe(
+            "SUCCESS"
+          );
 
-        expect(
-          result.route
-        )
-        .toBe(
-          "WORLD-CHANGE-ROUTE"
-        );
-
-
-
-        expect(
-          result.outcome
-        )
-        .toBe(
-          "SUCCESS"
-        );
-
-
+        expect(result.score)
+          .toBe(
+            0.92
+          );
 
         expect(
-          result.score
+          monitor.getRecords().length
         )
-        .toBe(
-          0.92
-        );
-
-
-
-        expect(
-          monitor.getExecutions().length
-        )
-        .toBe(1);
-
-
+          .toBe(1);
       }
-
     );
 
-
   }
-
 );
