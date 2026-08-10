@@ -1,4 +1,4 @@
-export interface WorldAction {
+﻿export interface WorldAction {
 
 
   decision: string;

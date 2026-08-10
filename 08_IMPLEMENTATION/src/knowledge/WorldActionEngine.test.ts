@@ -1,4 +1,4 @@
-import { WorldActionEngine } from "./WorldActionEngine";
+﻿import { WorldActionEngine } from "./WorldActionEngine";
 
 
 describe(
@@ -7,7 +7,7 @@ describe(
 
 
     it(
-      "executes actions from decisions",
+      "applies world actions from decisions without claiming execution authority",
       () => {
 
 
