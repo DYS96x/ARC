@@ -1,212 +1,103 @@
-# ARCH_010 — Evolution Architecture
+﻿# ARCH_010 â€” Evolution Architecture
 
-Version: 1.0.0  
-Status: Draft  
-Authority: HOLY ARC Architecture  
+Version: 1.0.0
+Status: Active
+Authority: ARC Constitution
 Classification: Internal
 
 ---
 
 # Architecture Definition
 
-> Evolution architecture defines how ARC systems safely adapt to changing reality while preserving identity, responsibility, history and trust.
+> Evolution Architecture defines how ARC systems change safely in response to reality while preserving identity, responsibility, history, trust, and future capability.
+
+Evolution is not unrestricted change.
+
+Evolution is governed improvement.
 
 ---
 
+# Purpose
+
+ARC systems are designed to evolve.
+
+Technology changes.
+
+Requirements change.
+
+Organisations change.
+
+Evidence changes.
+
+Reality reveals new constraints.
+
+The Evolution Architecture ensures ARC can respond without losing:
+
+- constitutional integrity
+- architectural coherence
+- responsibility ownership
+- historical knowledge
+- security
+- reversibility
+- trust
 
 ---
 
-# Relationship Audit
+# Core Principle
 
-## Known Relationships
+Every change must improve the system without destroying the ability to understand how the system arrived there.
 
-Reality ↔ Observation
+Evolution must remain:
 
-Evidence:
-
-Reality creates conditions, signals, and outcomes that ARC observes.
-
-Relationship type:
-
-Reality ↔ Discovery
-
----
-
-Observation ↔ Evidence
-
-Evidence:
-
-Observations become evidence when they gain context, traceability, ownership, and validation.
-
-Relationship type:
-
-Observation ↔ Validation
+- evidence-driven
+- observable
+- governed
+- reversible where practical
+- documented
+- measurable
+- reconstructable
 
 ---
 
-Evidence ↔ Learning
+# Authority
 
-Evidence:
+Reality is the final external validator.
 
-Validated evidence creates knowledge, patterns, and lessons that improve future decisions.
+The ARC Constitution is the highest governing authority inside ARC.
 
-Relationship type:
+Architecture evolves beneath the Constitution.
 
-Evidence ↔ Understanding
+Implementation evolves beneath Architecture.
 
----
+No implementation may silently redefine architecture.
 
-Learning ↔ Change
-
-Evidence:
-
-Learning creates approved improvements, capability evolution, and architectural changes.
-
-Relationship type:
-
-Knowledge ↔ Evolution
+No architecture may silently redefine constitutional principles.
 
 ---
 
-Change ↔ Validation
+# Evolution Model
 
-Evidence:
-
-Changes require measurement, observation, and reality validation.
-
-Relationship type:
-
-Implementation ↔ Verification
-
----
-
-ARC Memory ↔ Evolution
-
-Evidence:
-
-ARC preserves previous versions, historical decisions, knowledge gained, and evolution records.
-
-Relationship type:
-
-History ↔ Future Capability
-
----
-
-VOID ↔ Evolution
-
-Evidence:
-
-VOID supports pattern discovery, analysis, prediction, and recommendations that inform future improvements.
-
-Relationship type:
-
-Intelligence ↔ Evolution
-
----
-
-ARC OS ↔ Evolution
-
-Evidence:
-
-ARC OS supports implementation, migration, deployment, and validation of approved changes.
-
-Relationship type:
-
-Execution ↔ Transformation
-
----
-
-HOLY ARC ↔ Evolution
-
-Evidence:
-
-HOLY ARC governs constitutional evolution, principle changes, law amendments, and architecture direction.
-
-Relationship type:
-
-Governance ↔ Long-Term Direction
-
----
-
-# Unknown Relationship Gaps
-
-## Learning → Architectural Principle
-
-Investigation:
-
-How does repeated learning become a permanent ARC law or principle?
-
-Question:
-
-What evidence threshold converts knowledge into constitutional change?
-
----
-
-## Reality Pressure → Change Priority
-
-Investigation:
-
-How ARC determines which changes matter most.
-
-Question:
-
-What relationship decides between urgent improvement and long-term capability?
-
----
-
-## Old Architecture → New Architecture
-
-Investigation:
-
-How previous structures remain valuable while new structures emerge.
-
-Question:
-
-How does ARC evolve without losing historical identity?
-
----
-
-## Prediction → Reality Validation
-
-Investigation:
-
-How predicted improvements are measured against actual outcomes.
-
-Question:
-
-How does ARC improve prediction accuracy over time?
-
----
-
-# Diagram Changes
-
-## Remove
-
-Pipeline interpretation:
+Evolution is a continuous relationship between reality, learning, architecture, and implementation.
 
 ```text
 Reality
-
-↓
-
+   â†•
 Observation
-
-↓
-
+   â†•
 Evidence
-
-↓
-
+   â†•
+Knowledge
+   â†•
 Learning
-
-↓
-
-Change
-
-↓
-
-Validation
-
-↓
-
-Improved Reality
+   â†•
+Change Proposal
+   â†•
+Architecture Review
+   â†•
+Implementation
+   â†•
+Measurement
+   â†•
+Outcome
+   â†•
+Reality
