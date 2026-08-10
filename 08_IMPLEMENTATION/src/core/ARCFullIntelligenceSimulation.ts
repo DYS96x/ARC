@@ -3,10 +3,26 @@
   ARCGovernanceInput
 } from "../cycle/ARCCycleOrchestrator";
 
-import { RealityValidationEngine } from "../knowledge/RealityValidationEngine";
-import { ConfidenceEvolutionEngine } from "../knowledge/ConfidenceEvolutionEngine";
-import { DecisionIntelligenceEngine } from "../knowledge/DecisionIntelligenceEngine";
-import { DecisionMemoryContext } from "../knowledge/DecisionMemoryIntegration";
+import {
+  RealityValidationEngine
+} from "../knowledge/RealityValidationEngine";
+
+import {
+  ConfidenceEvolutionEngine
+} from "../knowledge/ConfidenceEvolutionEngine";
+
+import {
+  DecisionIntelligenceEngine
+} from "../knowledge/DecisionIntelligenceEngine";
+
+import {
+  DecisionMemoryContext
+} from "../knowledge/DecisionMemoryIntegration";
+
+import {
+  ARCOutcomeRecorder,
+  ARCObservedOutcome
+} from "./ARCOutcomeRecorder";
 
 export class ARCFullIntelligenceSimulation {
 
@@ -22,6 +38,9 @@ export class ARCFullIntelligenceSimulation {
   private decision:
     DecisionIntelligenceEngine;
 
+  private outcomes:
+    ARCOutcomeRecorder;
+
   constructor() {
 
     this.cycle =
@@ -35,6 +54,9 @@ export class ARCFullIntelligenceSimulation {
 
     this.decision =
       new DecisionIntelligenceEngine();
+
+    this.outcomes =
+      new ARCOutcomeRecorder();
   }
 
   run(
@@ -69,25 +91,35 @@ export class ARCFullIntelligenceSimulation {
   }
 
   recordOutcome(
-    decision: string,
-    outcome: boolean
+    observedOutcome: ARCObservedOutcome
   ) {
+
+    const recorded =
+      this.outcomes.record(
+        observedOutcome
+      );
 
     const validation =
       this.validation.validate(
-        decision,
-        outcome
+        recorded.decision,
+        recorded.success
       );
 
     const confidence =
       this.confidence.update(
-        decision,
+        recorded.decision,
         validation.confidenceAdjustment
       );
 
     return {
+      outcome:
+        recorded,
       validation,
       confidence
     };
+  }
+
+  getRecordedOutcomes() {
+    return this.outcomes.getOutcomes();
   }
 }

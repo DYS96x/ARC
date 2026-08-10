@@ -1,4 +1,6 @@
-﻿import { ARCFullIntelligenceSimulation } from "./ARCFullIntelligenceSimulation";
+﻿import {
+  ARCFullIntelligenceSimulation
+} from "./ARCFullIntelligenceSimulation";
 
 describe(
   "ARC Full Intelligence Simulation",
@@ -64,17 +66,30 @@ describe(
     );
 
     it(
-      "learns only after an explicit reality outcome is recorded",
+      "learns only from a recorded observed reality outcome",
       () => {
 
         const arc =
           new ARCFullIntelligenceSimulation();
 
         const result =
-          arc.recordOutcome(
-            "ACTION-A",
-            true
-          );
+          arc.recordOutcome({
+            decision:
+              "ACTION-A",
+            action:
+              "APPLY CHANGE",
+            result:
+              "Reality confirmed expected behaviour",
+            success:
+              true,
+            observedAt:
+              new Date()
+          });
+
+        expect(
+          result.outcome.success
+        )
+          .toBe(true);
 
         expect(
           result.validation.success
@@ -90,21 +105,39 @@ describe(
           result.confidence.attempts
         )
           .toBe(1);
+
+        expect(
+          arc.getRecordedOutcomes().length
+        )
+          .toBe(1);
       }
     );
 
     it(
-      "reduces confidence when explicit reality contradicts the decision",
+      "reduces confidence from a recorded contradictory reality outcome",
       () => {
 
         const arc =
           new ARCFullIntelligenceSimulation();
 
         const result =
-          arc.recordOutcome(
-            "ACTION-A",
-            false
-          );
+          arc.recordOutcome({
+            decision:
+              "ACTION-A",
+            action:
+              "APPLY CHANGE",
+            result:
+              "Reality contradicted expectation",
+            success:
+              false,
+            observedAt:
+              new Date()
+          });
+
+        expect(
+          result.outcome.success
+        )
+          .toBe(false);
 
         expect(
           result.validation.success
