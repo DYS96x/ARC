@@ -11,7 +11,7 @@ export class ActionEngine {
       id: `ACTION-${Date.now()}`,
       decisionId: decision.id,
       description:
-        `Execute decision: ${decision.description}`,
+        `Action proposed from decision: ${decision.description}`,
       expectedOutcome:
         decision.expectedOutcome,
       createdAt:
