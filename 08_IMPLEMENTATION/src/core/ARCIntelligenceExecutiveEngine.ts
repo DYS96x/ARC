@@ -1,99 +1,67 @@
+﻿import type {
+  GovernanceDecisionStatus
+} from "./ARCIntelligenceGovernanceEngine";
+
 export interface ExecutiveObjective {
-
   objective: string;
-
   priority: number;
-
+  governanceStatus: GovernanceDecisionStatus;
   status: "PENDING" | "EXECUTED";
-
 }
-
 
 export class ARCIntelligenceExecutiveEngine {
 
-
   private objectives: ExecutiveObjective[];
 
-
   constructor() {
-
     this.objectives = [];
-
   }
 
-
   addObjective(
-
     objective: string,
-
-    priority: number
-
+    priority: number,
+    governanceStatus: GovernanceDecisionStatus
   ): ExecutiveObjective {
 
-
     const item: ExecutiveObjective = {
-
       objective,
-
       priority,
-
+      governanceStatus,
       status: "PENDING"
-
     };
-
 
     this.objectives.push(item);
 
-
     return item;
-
   }
 
-
-
   executeNextObjective():
-
-  ExecutiveObjective | undefined {
-
+    ExecutiveObjective | undefined {
 
     const next =
-
       this.objectives
-
-      .sort(
-
-        (a, b) =>
-
-          b.priority - a.priority
-
-      )[0];
-
-
+        .filter(
+          item =>
+            item.status === "PENDING" &&
+            item.governanceStatus === "APPROVED"
+        )
+        .sort(
+          (a, b) =>
+            b.priority - a.priority
+        )[0];
 
     if (!next) {
-
       return undefined;
-
     }
-
-
 
     next.status = "EXECUTED";
 
-
     return next;
-
   }
-
-
 
   getObjectives():
-
-  ExecutiveObjective[] {
+    ExecutiveObjective[] {
 
     return this.objectives;
-
   }
-
-
 }
