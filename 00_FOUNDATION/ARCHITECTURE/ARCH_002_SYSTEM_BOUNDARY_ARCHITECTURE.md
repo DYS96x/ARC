@@ -1,7 +1,7 @@
 ﻿# ARCH_002 — System Boundary Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -9,222 +9,381 @@ Classification: Internal
 
 # Architecture Definition
 
-> Every ARC system must maintain a clear responsibility boundary while supporting governed relationships with other systems.
+> Every ARC system must maintain a clear primary responsibility while supporting governed relationships with other systems.
 
 Boundaries preserve capability.
+
+Relationships create cooperation.
+
+Ownership remains explicit.
 
 ---
 
 # Purpose
 
-Define the ownership and separation rules between ARC ecosystem systems.
+System Boundary Architecture defines how responsibilities are separated across ARC without preventing collaboration.
 
-This architecture prevents:
+It exists to prevent:
 
-- Responsibility drift
-- Duplicate ownership
-- Hidden dependencies
-- Governance failures
-
----
-
-# System Boundary Model
-
-```text
-HOLY ARC
-
-Governance
-
-⇅
-
-ARC
-
-Memory
-
-⇅
-
-ARC OS
-
-Execution
-
-⇅
-
-WOS
-
-Context
-
-⇅
-
-CAF
-
-Assessment
-
-⇅
-
-VOID
-
-Intelligence
-
-⇅
-
-Sprint OS
-
-Improvement
-```
+- responsibility drift
+- duplicate ownership
+- hidden dependencies
+- architectural ambiguity
+- silent authority transfer
+- unnecessary system creation
 
 ---
 
-# System Ownership
+# Core Principle
 
-## HOLY ARC
+One primary responsibility should have one clear owner.
 
-Primary Responsibility:
+Systems may collaborate.
 
-Constitutional governance.
+Systems may exchange context.
 
-Owns:
+Systems may share evidence.
 
-- Constitution
-- Laws
-- Standards
-- Contracts
-- Architectural authority
+Systems may request capability.
 
-Does not:
-
-- Execute
-- Store operational memory
-- Manage workflows
+None of these automatically transfer ownership.
 
 ---
 
-## ARC
+# ARC Boundary Model
 
-Primary Responsibility:
+ARC is a Systems Studio.
 
-Persistent ecosystem memory.
+Its architecture contains multiple responsibilities and capabilities.
 
-Owns:
+The core ARC platform architecture is organised around:
 
-- Entities
-- Engagements
-- Artifacts
+- Identity
+- Security
 - Knowledge
-- Relationships
-- History
+- Workflow
+- Intelligence
+- Analytics
 
-Does not:
+These capabilities operate inside the ARC constitutional environment.
 
-- Execute operations
-- Govern decisions
-- Manage live workflow
+External or adjacent systems may integrate with ARC without becoming ARC constitutional owners.
+
+Examples include:
+
+- VOID
+- HOLY ARC
+- FACEXOFF
+- GLASS
+- clients
+- external platforms
+- infrastructure
+- institutions
 
 ---
 
-## ARC OS
+# Core ARC Responsibilities
+
+## ARC Constitution
 
 Primary Responsibility:
 
-Controlled execution.
+Govern ARC's constitutional identity, authority, principles, and hierarchy.
 
 Owns:
 
-- Automation
-- Runtime systems
-- Infrastructure
-- Validation
-- Operational actions
+- constitutional identity
+- permanent principles
+- authority hierarchy
+- amendment rules
+- foundational responsibility
 
 Does not:
 
-- Define governance
-- Own knowledge meaning
-- Decide strategy
+- execute runtime operations
+- own every implementation detail
+- replace architecture
+- replace product responsibility
 
 ---
 
-## WOS
+## Identity
 
 Primary Responsibility:
 
-Live workflow context.
+Establish who or what is acting.
 
 Owns:
 
-- Current state
-- Progress
-- Dependencies
-- Resume capability
+- users
+- organisations
+- teams
+- roles
+- permissions
+- sessions
+- service identities
+- AI identities
 
 Does not:
 
-- Replace memory
-- Execute actions
-- Own permanent knowledge
+- determine business workflow
+- replace security policy
+- own knowledge meaning
 
 ---
 
-## CAF
+## Security
 
 Primary Responsibility:
 
-Organisational understanding.
+Determine whether actions and access are permitted.
 
 Owns:
 
-- Discovery
-- Assessment
-- Gap analysis
-- Recommendations
+- access policy
+- risk controls
+- security boundaries
+- audit requirements
+- incident response
+- trust decisions
 
 Does not:
 
-- Execute improvements
-- Govern organisations
-- Replace strategy owners
+- own identity itself
+- own workflow state
+- create business purpose
 
 ---
+
+## Knowledge
+
+Primary Responsibility:
+
+Preserve validated organisational knowledge and context.
+
+Owns:
+
+- knowledge objects
+- sources
+- relationships
+- version history
+- confidence
+- organisational memory
+- historical context
+
+Does not:
+
+- execute workflow
+- approve access
+- own analytics outcomes
+
+---
+
+## Workflow
+
+Primary Responsibility:
+
+Coordinate work through explicit state and ownership.
+
+Owns:
+
+- tasks
+- states
+- approvals
+- transitions
+- escalations
+- ownership
+- process history
+- next actions
+
+Does not:
+
+- redefine knowledge
+- bypass security
+- create constitutional authority
+
+---
+
+## Intelligence
+
+Primary Responsibility:
+
+Create understanding and decision support from trusted context.
+
+Owns:
+
+- reasoning
+- recommendations
+- predictions
+- summaries
+- agents
+- decision support
+- intelligence outputs
+
+Does not:
+
+- bypass security
+- silently modify operational truth
+- automatically authorise high-impact action
+- replace human accountability
+
+---
+
+## Analytics
+
+Primary Responsibility:
+
+Make system behaviour and outcomes measurable.
+
+Owns:
+
+- events
+- metrics
+- dashboards
+- trends
+- forecasts
+- health indicators
+- outcome measurement
+
+Does not:
+
+- own operational truth
+- replace the systems producing the underlying facts
+- silently redefine source data
+
+---
+
+# External and Adjacent Systems
 
 ## VOID
 
-Primary Responsibility:
+Primary Relationship:
 
-Intelligence support.
+Reality alignment and cognition support.
 
-Owns:
+VOID may support ARC through:
 
-- Analysis
-- Reasoning
-- Prediction
-- Recommendation
+- signal classification
+- evidence comparison
+- false-pattern detection
+- knowledge compression
+- contextual analysis
+- perception-versus-reality checking
 
-Does not:
+VOID does not:
 
-- Approve decisions
-- Execute actions
-- Define truth
+- silently redefine ARC constitutional authority
+- automatically approve ARC changes
+- replace ARC's Intelligence Engine
+- define reality itself
+
+Reality remains the validator.
 
 ---
 
-## Sprint OS
+## HOLY ARC
 
-Primary Responsibility:
+Primary Relationship:
 
-Improvement delivery.
+Human-potential ecosystem and experience layer.
 
-Owns:
+HOLY ARC may produce:
 
-- Sprint cycles
-- Tasks
-- Reviews
-- Measurements
-- Lessons
+- participation signals
+- discovery
+- experience outcomes
+- community behaviour
+- world-state feedback
+- human opportunity signals
 
-Does not:
+HOLY ARC does not:
 
-- Diagnose organisations
-- Govern architecture
-- Replace execution infrastructure
+- govern ARC's Constitution
+- own ARC architecture
+- automatically authorise ARC implementation
+- replace ARC's internal systems
+
+---
+
+## FACEXOFF
+
+Primary Relationship:
+
+Consumer experience within the broader ecosystem.
+
+FACEXOFF may produce:
+
+- user behaviour
+- participation evidence
+- system demand
+- performance evidence
+- experience outcomes
+
+FACEXOFF does not gain ARC constitutional authority through integration.
+
+---
+
+## GLASS
+
+Primary Relationship:
+
+Trust, integrity, evidence, and verification.
+
+GLASS may strengthen:
+
+- verification
+- evidence quality
+- accountability
+- integrity
+- trust decisions
+
+GLASS does not replace ARC Security or Governance responsibilities unless an explicit architectural boundary assigns that responsibility.
+
+---
+
+# Operational Capabilities
+
+Some concepts previously treated as independent top-level systems are better understood as operational capabilities or methodologies.
+
+These include:
+
+- ARC OS
+- WOS
+- CAF
+- Sprint OS
+
+Their exact responsibilities may remain valuable.
+
+Their existence does not automatically require equal constitutional system status.
+
+Each must pass the Architecture Test before receiving independent ownership.
+
+---
+
+# Architecture Test
+
+A capability deserves independent system status only when:
+
+- it owns a distinct primary responsibility
+- that responsibility cannot be absorbed elsewhere without creating ambiguity
+- independent authority is required
+- it requires its own lifecycle
+- its removal changes the architecture materially
+- its boundaries can be governed clearly
+- its existence reduces rather than increases complexity
+
+If these conditions are not met, classify the concept as:
+
+- capability
+- protocol
+- methodology
+- workflow
+- service
+- object
+- implementation
+- application
+
+Not every important concept requires system status.
 
 ---
 
@@ -232,7 +391,7 @@ Does not:
 
 ## Rule 001
 
-One primary responsibility per system.
+One primary responsibility per owner.
 
 ---
 
@@ -260,235 +419,27 @@ Every dependency requires a defined relationship.
 
 ---
 
+## Rule 006
+
+Integration does not create constitutional authority.
+
+---
+
+## Rule 007
+
+Implementation location does not determine responsibility ownership.
+
+---
+
+## Rule 008
+
+Historical naming does not override current architecture.
+
+---
+
 # Boundary Failure Examples
 
 Incorrect:
 
 ```text
-VOID changes governance rules
-```
-
-Correct:
-
-```text
-VOID recommends.
-
-HOLY ARC decides.
-```
-
----
-
-Incorrect:
-
-```text
-WOS becomes permanent memory.
-```
-
-Correct:
-
-```text
-WOS tracks current state.
-
-ARC preserves history.
-```
-
----
-
-Incorrect:
-
-```text
-ARC OS creates business strategy.
-```
-
-Correct:
-
-```text
-ARC OS executes approved strategy.
-```
-
----
-
-# Validation Criteria
-
-Architecture passes when:
-
-- Every system has one primary owner.
-- Responsibilities do not overlap.
-- Communication remains possible.
-- Boundaries remain visible.
-- Evolution remains controlled.
-
----
-
-# Final Principle
-
-> Strong architectures are not built by removing boundaries. They are built by connecting clear boundaries.
-
----
-
-# Relationship Audit
-
-## Known Relationships
-
-HOLY ARC ↔ ARC
-
-Evidence:
-
-HOLY ARC defines constitutional governance, laws, standards, contracts, and architectural authority.
-
-ARC preserves ecosystem memory, knowledge, relationships, and history.
-
-Relationship type:
-
-Governance ↔ Memory
-
----
-
-ARC ↔ ARC OS
-
-Evidence:
-
-ARC provides knowledge and historical context.
-
-ARC OS performs controlled execution using approved capabilities.
-
-Relationship type:
-
-Memory ↔ Execution
-
----
-
-ARC OS ↔ WOS
-
-Evidence:
-
-ARC OS performs operational actions.
-
-WOS maintains current workflow state, progress, dependencies, and resume capability.
-
-Relationship type:
-
-Execution ↔ Context
-
----
-
-WOS ↔ ARC
-
-Evidence:
-
-WOS maintains temporary working state while ARC preserves permanent ecosystem history.
-
-Relationship type:
-
-Temporary Context ↔ Persistent Memory
-
----
-
-CAF ↔ Organisations / Systems
-
-Evidence:
-
-CAF discovers, assesses, analyses gaps, and produces recommendations.
-
-Relationship type:
-
-Assessment ↔ Understanding
-
----
-
-VOID ↔ ARC
-
-Evidence:
-
-VOID uses knowledge, history, and relationships to provide analysis, reasoning, prediction, and recommendations.
-
-Relationship type:
-
-Intelligence ↔ Knowledge
-
----
-
-Sprint OS ↔ ARC OS
-
-Evidence:
-
-Sprint OS converts approved improvements into measurable changes.
-
-ARC OS executes approved operational changes.
-
-Relationship type:
-
-Improvement ↔ Execution
-
----
-
-# Unknown Relationship Gaps
-
-## HOLY ARC → Operational Evolution
-
-Investigation:
-
-How constitutional changes safely propagate through evolving systems.
-
-Question:
-
-How does ARC preserve stability while allowing principles to evolve?
-
----
-
-## VOID → Reality Validation
-
-Investigation:
-
-How intelligence recommendations are measured against real outcomes.
-
-Question:
-
-How does prediction accuracy improve over time?
-
----
-
-## CAF → Sprint OS
-
-Investigation:
-
-How discovered organisational gaps become prioritised improvement actions.
-
-Question:
-
-What relationship transforms assessment into execution?
-
----
-
-## WOS → Learning Systems
-
-Investigation:
-
-How temporary workflow state contributes to long-term knowledge.
-
-Question:
-
-When does context become permanent learning?
-
----
-
-# Diagram Changes
-
-## Remove
-
-Current interpretation:
-
-```text
-HOLY ARC
-   ↓
-ARC
-   ↓
-ARC OS
-   ↓
-WOS
-   ↓
-CAF
-   ↓
-VOID
-   ↓
-Sprint OS
+VOID changes ARC constitutional rules.
