@@ -1,10 +1,10 @@
-export interface StrategicDecision {
+﻿export interface StrategicDecision {
 
   context: string;
 
   priority: number;
 
-  approved: boolean;
+  recommended: boolean;
 
   route: string;
 
@@ -35,7 +35,7 @@ export class ARCStrategicIntelligenceSimulation {
 
     priority: number,
 
-    approved: boolean,
+    recommended: boolean,
 
     route: string,
 
@@ -51,7 +51,7 @@ export class ARCStrategicIntelligenceSimulation {
 
       priority,
 
-      approved,
+      recommended,
 
       route,
 

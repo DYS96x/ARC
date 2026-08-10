@@ -1,4 +1,4 @@
-import { ARCStrategicIntelligenceSimulation } from "./ARCStrategicIntelligenceSimulation";
+﻿import { ARCStrategicIntelligenceSimulation } from "./ARCStrategicIntelligenceSimulation";
 
 
 describe(
@@ -7,7 +7,7 @@ describe(
 
 
     it(
-      "completes a strategic intelligence cycle",
+      "completes a strategic intelligence cycle without granting governance authority",
       () => {
 
 
@@ -41,7 +41,7 @@ describe(
 
 
         expect(
-          decision?.approved
+          decision?.recommended
         )
         .toBe(
           true
