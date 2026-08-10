@@ -1,10 +1,10 @@
-import { DecisionIntelligenceBridge } from "./DecisionIntelligenceBridge";
+﻿import { DecisionIntelligenceBridge } from "./DecisionIntelligenceBridge";
 
 
 describe("Decision Intelligence Bridge", () => {
 
 
-  it("uses memory intelligence before decision evaluation", () => {
+  it("uses memory intelligence before producing a non-governance decision recommendation", () => {
 
 
     const bridge =
@@ -63,7 +63,7 @@ risk:
     expect(
       result.result
     )
-    .toBe("approved");
+    .toBe("recommended");
 
 
   });

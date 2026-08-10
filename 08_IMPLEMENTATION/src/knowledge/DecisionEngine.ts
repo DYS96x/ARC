@@ -1,4 +1,4 @@
-import { Signal } from "./Signal";
+﻿import { Signal } from "./Signal";
 import { Decision } from "./Decision";
 
 
@@ -48,7 +48,7 @@ export class DecisionEngine {
       decision.risk <= 0.2
     ) {
 
-      return "approved";
+      return "recommended";
 
     }
 

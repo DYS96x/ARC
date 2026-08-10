@@ -1,4 +1,4 @@
-import { DecisionEngine } from "./DecisionEngine";
+﻿import { DecisionEngine } from "./DecisionEngine";
 
 
 describe("Decision Engine", () => {
@@ -48,7 +48,7 @@ describe("Decision Engine", () => {
 
 
 
-  it("evaluates decision confidence", () => {
+  it("recommends a decision from strong evidence without granting approval", () => {
 
 
     const engine =
@@ -81,7 +81,7 @@ describe("Decision Engine", () => {
       })
 
     )
-    .toBe("approved");
+    .toBe("recommended");
 
 
   });
