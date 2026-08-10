@@ -1,8 +1,8 @@
-# ARCH_007 — Deployment Architecture
+﻿# ARCH_007 — Deployment Architecture
 
-Version: 1.0.0  
-Status: Draft  
-Authority: HOLY ARC Architecture  
+Version: 1.0.0
+Status: Draft
+Authority: ARC Constitution
 Classification: Internal
 
 ---

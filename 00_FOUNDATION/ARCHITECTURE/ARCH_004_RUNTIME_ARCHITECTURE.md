@@ -1,8 +1,8 @@
-# ARCH_004 — Runtime Architecture
+﻿# ARCH_004 — Runtime Architecture
 
-Version: 1.0.0  
-Status: Draft  
-Authority: HOLY ARC Architecture  
+Version: 1.0.0
+Status: Draft
+Authority: ARC Constitution
 Classification: Internal
 
 ---

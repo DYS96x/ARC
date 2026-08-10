@@ -1,8 +1,8 @@
-# ARCH_006 — Service Architecture
+﻿# ARCH_006 — Service Architecture
 
-Version: 1.0.0  
-Status: Draft  
-Authority: HOLY ARC Architecture  
+Version: 1.0.0
+Status: Draft
+Authority: ARC Constitution
 Classification: Internal
 
 ---

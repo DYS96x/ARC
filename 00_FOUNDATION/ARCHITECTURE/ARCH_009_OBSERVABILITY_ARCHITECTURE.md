@@ -1,8 +1,8 @@
-# ARCH_009 — Observability Architecture
+﻿# ARCH_009 — Observability Architecture
 
-Version: 1.0.0  
-Status: Draft  
-Authority: HOLY ARC Architecture  
+Version: 1.0.0
+Status: Draft
+Authority: ARC Constitution
 Classification: Internal
 
 ---

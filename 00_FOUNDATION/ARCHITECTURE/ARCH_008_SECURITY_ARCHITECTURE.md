@@ -1,8 +1,8 @@
-# ARCH_008 — Security Architecture
+﻿# ARCH_008 — Security Architecture
 
-Version: 1.0.0  
-Status: Draft  
-Authority: HOLY ARC Architecture  
+Version: 1.0.0
+Status: Draft
+Authority: ARC Constitution
 Classification: Internal
 
 ---
