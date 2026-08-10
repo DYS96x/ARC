@@ -131,7 +131,9 @@ Intelligence may support understanding and decision-making.
 
 It does not automatically receive authority to approve or execute actions.
 
----# 4. System Interface
+---
+
+# 4. System Interface
 
 Purpose:
 
@@ -196,7 +198,9 @@ Interfaces expose capability.
 
 They do not redefine responsibility or authority.
 
----# Interface Responsibilities
+---
+
+# Interface Responsibilities
 
 Every interface must define:
 
