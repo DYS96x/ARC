@@ -1,22 +1,22 @@
-import { ARCIntelligenceSelfGovernanceEngine } from "./ARCIntelligenceSelfGovernanceEngine";
+﻿import { ARCIntelligenceConstraintEngine } from "./ARCIntelligenceConstraintEngine";
 
 
 describe(
-  "ARC Intelligence Self Governance Engine",
+  "ARC Intelligence Constraint Engine",
   () => {
 
 
     it(
-      "creates governance rules and filters decisions",
+      "stores and retrieves intelligence constraints without granting authority",
       () => {
 
 
         const engine =
-          new ARCIntelligenceSelfGovernanceEngine();
+          new ARCIntelligenceConstraintEngine();
 
 
 
-        engine.addRule(
+        engine.addConstraint(
 
           "PROTECT SYSTEM INTEGRITY",
 
@@ -25,7 +25,7 @@ describe(
         );
 
 
-        engine.addRule(
+        engine.addConstraint(
 
           "OPTIMISE PERFORMANCE",
 
@@ -36,7 +36,7 @@ describe(
 
 
         const decision =
-          engine.evaluateDecision(
+          engine.findConstraint(
 
             "PROTECT SYSTEM INTEGRITY"
 
@@ -61,7 +61,7 @@ describe(
 
 
         expect(
-          engine.getRules().length
+          engine.getConstraints().length
         )
         .toBe(
           2
