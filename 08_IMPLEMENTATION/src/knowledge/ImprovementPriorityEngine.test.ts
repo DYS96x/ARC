@@ -1,4 +1,4 @@
-import { AutonomousPriorityEngine } from "./AutonomousPriorityEngine";
+﻿import { ImprovementPriorityEngine } from "./ImprovementPriorityEngine";
 
 
 describe(
@@ -12,7 +12,7 @@ describe(
 
 
         const engine =
-          new AutonomousPriorityEngine();
+          new ImprovementPriorityEngine();
 
 
 

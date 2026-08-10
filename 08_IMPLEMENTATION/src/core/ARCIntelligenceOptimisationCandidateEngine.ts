@@ -1,4 +1,4 @@
-export interface OptimisationCandidate {
+﻿export interface OptimisationCandidate {
 
   name: string;
 
@@ -7,7 +7,7 @@ export interface OptimisationCandidate {
 }
 
 
-export class ARCIntelligenceAutonomousOptimisationEngine {
+export class ARCIntelligenceOptimisationCandidateEngine {
 
 
   private optimisations: OptimisationCandidate[];

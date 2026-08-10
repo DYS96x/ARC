@@ -1,4 +1,4 @@
-export interface ImprovementPriority {
+﻿export interface ImprovementPriority {
 
 
   system: string;
@@ -12,7 +12,7 @@ export interface ImprovementPriority {
 
 
 
-export class AutonomousPriorityEngine {
+export class ImprovementPriorityEngine {
 
 
   private priorities:

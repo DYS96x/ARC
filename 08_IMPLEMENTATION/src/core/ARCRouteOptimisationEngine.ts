@@ -1,4 +1,4 @@
-export interface RoutePerformance {
+﻿export interface RoutePerformance {
 
   route: string;
 
@@ -7,7 +7,7 @@ export interface RoutePerformance {
 }
 
 
-export class ARCAutonomousRouteOptimisationEngine {
+export class ARCRouteOptimisationEngine {
 
 
   private routes: RoutePerformance[];

@@ -1,4 +1,4 @@
-import { ARCIntelligenceAutonomousOptimisationEngine } from "./ARCIntelligenceAutonomousOptimisationEngine";
+﻿import { ARCIntelligenceOptimisationCandidateEngine } from "./ARCIntelligenceOptimisationCandidateEngine";
 
 
 describe(
@@ -12,7 +12,7 @@ describe(
 
 
         const engine =
-          new ARCIntelligenceAutonomousOptimisationEngine();
+          new ARCIntelligenceOptimisationCandidateEngine();
 
 
 

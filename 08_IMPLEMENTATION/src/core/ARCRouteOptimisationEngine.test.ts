@@ -1,4 +1,4 @@
-import { ARCAutonomousRouteOptimisationEngine } from "./ARCAutonomousRouteOptimisationEngine";
+﻿import { ARCRouteOptimisationEngine } from "./ARCRouteOptimisationEngine";
 
 
 describe(
@@ -12,7 +12,7 @@ describe(
 
 
         const engine =
-          new ARCAutonomousRouteOptimisationEngine();
+          new ARCRouteOptimisationEngine();
 
 
         engine.evaluateRoute(
