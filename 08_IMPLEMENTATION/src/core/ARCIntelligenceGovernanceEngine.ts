@@ -1,93 +1,65 @@
-export interface LearnedRoute {
+﻿export type GovernanceDecisionStatus =
+  | "APPROVED"
+  | "REJECTED"
+  | "ESCALATE";
 
-  route: string;
-
-  successRate: number;
-
-  attempts: number;
-
+export interface GovernanceRequest {
+  recommendation: string;
+  confidence: number;
+  hasAuthority: boolean;
+  hasPermission: boolean;
+  requiresApproval: boolean;
+  approvalGranted: boolean;
 }
 
+export interface GovernanceDecision {
+  recommendation: string;
+  confidence: number;
+  status: GovernanceDecisionStatus;
+  reason: string;
+}
 
-export class ARCAdaptiveRouteLearningEngine {
+export class ARCIntelligenceGovernanceEngine {
 
+  evaluate(
+    request: GovernanceRequest
+  ): GovernanceDecision {
 
-  private routes: LearnedRoute[];
-
-
-  constructor() {
-
-    this.routes = [];
-
-  }
-
-
-  learnRoute(
-
-    route: string,
-
-    success: boolean
-
-  ): LearnedRoute {
-
-
-    let existing =
-      this.routes.find(
-        item =>
-          item.route === route
-      );
-
-
-    if (!existing) {
-
-
-      existing = {
-
-        route,
-
-        successRate: success ? 1 : 0,
-
-        attempts: 1
-
+    if (!request.hasAuthority) {
+      return {
+        recommendation: request.recommendation,
+        confidence: request.confidence,
+        status: "REJECTED",
+        reason: "AUTHORITY_REQUIRED"
       };
-
-
-      this.routes.push(existing);
-
-      return existing;
-
     }
 
+    if (!request.hasPermission) {
+      return {
+        recommendation: request.recommendation,
+        confidence: request.confidence,
+        status: "REJECTED",
+        reason: "PERMISSION_REQUIRED"
+      };
+    }
 
-    const successfulAttempts =
-      existing.successRate *
-      existing.attempts;
+    if (
+      request.requiresApproval &&
+      !request.approvalGranted
+    ) {
+      return {
+        recommendation: request.recommendation,
+        confidence: request.confidence,
+        status: "ESCALATE",
+        reason: "APPROVAL_REQUIRED"
+      };
+    }
 
-
-    existing.attempts += 1;
-
-
-    existing.successRate =
-      (
-        successfulAttempts +
-        (success ? 1 : 0)
-      )
-      /
-      existing.attempts;
-
-
-    return existing;
-
+    return {
+      recommendation: request.recommendation,
+      confidence: request.confidence,
+      status: "APPROVED",
+      reason: "GOVERNANCE_SATISFIED"
+    };
   }
-
-
-  getRoutes():
-
-  LearnedRoute[] {
-
-    return this.routes;
-
-  }
-
-
 }
