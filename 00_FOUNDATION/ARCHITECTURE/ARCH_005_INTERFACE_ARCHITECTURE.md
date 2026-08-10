@@ -1,7 +1,7 @@
 ﻿# ARCH_005 — Interface Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -107,36 +107,31 @@ Developer interfaces require:
 
 Purpose:
 
-Connect human/system context with intelligence capability.
+Connect human and system context with governed intelligence capabilities.
 
-Example:
+Intelligence interfaces may support:
 
-```text
-Context
-
-↓
-
-VOID
-
-↓
-
-Reasoning
-
-↓
-
-Recommendation
-```
+- Analysis
+- Reasoning
+- Pattern recognition
+- Recommendations
+- Predictions
+- Explanation
 
 Intelligence interfaces must expose:
 
 - Input context
 - Confidence
 - Limitations
-- Output reasoning
+- Relevant evidence
+- Output reasoning where appropriate
+- Responsibility boundaries
 
----
+Intelligence may support understanding and decision-making.
 
-# 4. System Interface
+It does not automatically receive authority to approve or execute actions.
+
+---# 4. System Interface
 
 Purpose:
 
@@ -180,33 +175,28 @@ External interfaces require:
 
 # Interface Architecture Model
 
-```text
-                 User
+User / System / Developer
+        ↕
+Interface Layer
+        ↕
+ARC Capabilities
 
-                  ⇅
+- Identity
+- Security
+- Knowledge
+- Workflow
+- Intelligence
+- Analytics
+- Execution
 
-             Interface Layer
+        ↕
+Reality
 
-                  ⇅
+Interfaces expose capability.
 
-        ┌───────────────────┐
+They do not redefine responsibility or authority.
 
-        ARC Capabilities
-
-        ├── Memory
-        ├── Workflow
-        ├── Intelligence
-        ├── Execution
-        └── Governance
-
-                  ⇅
-
-               Reality
-```
-
----
-
-# Interface Responsibilities
+---# Interface Responsibilities
 
 Every interface must define:
 
@@ -398,19 +388,17 @@ Engineering Access ↔ System Extension
 
 ---
 
-Intelligence Interface ↔ VOID
+### Intelligence Interface ↔ Intelligence Capability
 
 Evidence:
 
-Intelligence interfaces connect context with reasoning, recommendations, confidence, and limitations.
+Intelligence interfaces connect context with reasoning, recommendations, confidence, limitations, and relevant evidence.
 
 Relationship type:
 
 Context ↔ Intelligence
 
----
-
-System Interface ↔ ARC Systems
+---System Interface ↔ ARC Systems
 
 Evidence:
 
