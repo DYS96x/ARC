@@ -1,7 +1,7 @@
 ﻿# ARCH_006 — Service Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -110,13 +110,13 @@ Observability
 
 # Memory Services
 
-Owner:
+Responsibility:
 
-ARC
+Knowledge and Memory
 
 Purpose:
 
-Provide access to persistent ecosystem memory.
+Provide controlled access to durable knowledge, relationships, evidence, and history.
 
 Capabilities:
 
@@ -134,9 +134,9 @@ Does not:
 
 # Workflow Services
 
-Owner:
+Responsibility:
 
-WOS
+Workflow
 
 Purpose:
 
@@ -157,9 +157,9 @@ Does not:
 
 # Intelligence Services
 
-Owner:
+Responsibility:
 
-VOID
+Intelligence
 
 Purpose:
 
@@ -180,9 +180,9 @@ Does not:
 
 # Governance Services
 
-Owner:
+Responsibility:
 
-HOLY ARC
+Governance
 
 Purpose:
 
@@ -203,9 +203,9 @@ Does not:
 
 # Execution Services
 
-Owner:
+Responsibility:
 
-ARC OS
+Execution
 
 Purpose:
 
@@ -225,6 +225,10 @@ Does not:
 ---
 
 # Security Services
+
+Responsibility:
+
+Security
 
 Purpose:
 
@@ -359,13 +363,13 @@ Architecture passes when:
 
 ## Known Relationships
 
-Interface Layer ↔ Service Layer
+### Interface Layer ↔ Service Layer
 
 Evidence:
 
-Interfaces provide access to services through controlled communication.
+Interfaces provide controlled access to services.
 
-Services transform requests into reusable system capabilities.
+Services expose reusable capabilities.
 
 Relationship type:
 
@@ -373,87 +377,87 @@ Interaction ↔ Capability
 
 ---
 
-Service Layer ↔ Core System Capabilities
+### Service Layer ↔ Core Capabilities
 
 Evidence:
 
-Services expose controlled functions from memory, workflow, intelligence, governance, execution, and security systems.
+Services expose controlled functions from knowledge, workflow, intelligence, governance, execution, and security responsibilities.
 
 Relationship type:
 
-Capability Access ↔ System Responsibility
+Capability Access ↔ Responsibility
 
 ---
 
-Memory Services ↔ ARC
+### Memory Services ↔ Knowledge Responsibility
 
 Evidence:
 
-Memory services provide access to persistent ecosystem memory, relationships, and history.
+Memory services provide controlled access to durable knowledge, relationships, evidence, and history.
 
 Relationship type:
 
-Service Capability ↔ Persistent Knowledge
+Service Capability ↔ Durable Knowledge
 
 ---
 
-Workflow Services ↔ WOS
+### Workflow Services ↔ Workflow Responsibility
 
 Evidence:
 
-Workflow services manage active state, progress, dependencies, and session restoration.
+Workflow services manage active state, progress, dependencies, ownership, and process transitions.
 
 Relationship type:
 
-Service Capability ↔ Operational Context
+Service Capability ↔ Process State
 
 ---
 
-Intelligence Services ↔ VOID
+### Intelligence Services ↔ Intelligence Responsibility
 
 Evidence:
 
-Intelligence services provide analysis, patterns, recommendations, and confidence without executing decisions.
+Intelligence services provide analysis, reasoning, recommendations, predictions, and confidence without automatically executing decisions.
 
 Relationship type:
 
-Reasoning Capability ↔ Intelligence System
+Service Capability ↔ Decision Support
 
 ---
 
-Governance Services ↔ HOLY ARC
+### Governance Services ↔ Governance Responsibility
 
 Evidence:
 
-Governance services support decision records, reviews, amendments, and compliance checks.
+Governance services support decision records, reviews, approvals, amendments, and compliance checks.
 
 Relationship type:
 
-Governance Capability ↔ Constitutional Authority
+Governance Capability ↔ Controlled Authority
 
 ---
 
-Execution Services ↔ ARC OS
+### Execution Services ↔ Execution Responsibility
 
 Evidence:
 
-Execution services perform approved automation, validation, runtime operations, and deployment actions.
+Execution services perform approved automation, validation, runtime operations, and controlled actions.
 
 Relationship type:
 
-Capability Execution ↔ Operational System
+Capability Execution ↔ Authorised Action
 
 ---
 
-Security Services ↔ All Systems
+### Security Services ↔ All Services
 
 Evidence:
 
-Security services provide identity validation, permissions, access control, and audit capability.
+Security services provide identity validation, permissions, access control, and audit capability across service boundaries.
 
 Relationship type:
 
-Protection Capability ↔ System Trust
+Protection Capability ↔ Trust
 
 ---
 
@@ -475,7 +479,7 @@ When does a service become a new architectural capability?
 
 Investigation:
 
-How repeated user or system requirements create new services.
+How repeated human or system requirements create new services.
 
 Question:
 
@@ -495,58 +499,39 @@ What relationship patterns indicate a boundary failure?
 
 ---
 
-## Service Outcome → Knowledge Layer
+## Service Outcome → Knowledge
 
 Investigation:
 
-How service execution results become reusable ecosystem knowledge.
+How service execution results become reusable knowledge.
 
 Question:
 
 When does an operational result become a learning artifact?
 
 ---
+# Diagram Rule
 
-# Diagram Changes
+Do not represent Service Architecture as ownership by legacy named systems.
 
-## Remove
+Use responsibility-based capability relationships:
 
-Pipeline interpretation:
+Interface Layer
+↕
+Service Layer
+↕
+Core Responsibilities
 
-```text
-Interface
+- Knowledge and Memory
+- Workflow
+- Intelligence
+- Governance
+- Execution
+- Security
 
-↓
+↕
+Data / Evidence / Outcomes
 
-Service
+Services expose controlled capability.
 
-↓
-
-System Capability
-
-↓
-
-Outcome
-
-                         Interface Layer
-                                ↕
-                         Service Layer
-                                ↕
-        ┌───────────────────────┼───────────────────────┐
-        ↕                       ↕                       ↕
-     Memory                 Intelligence             Execution
-        ↕                       ↕                       ↕
-       ARC                    VOID                  ARC OS
-
-
-                    Governance ↔ Security
-                         ↕
-                      HOLY ARC
-
-
-                         ↕
-                    Data / Knowledge
-
-                         ↺
-
-                   Outcome Feedback
+They do not redefine responsibility or constitutional authority.
