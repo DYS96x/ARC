@@ -6,7 +6,7 @@ export interface ExecutiveObjective {
   objective: string;
   priority: number;
   governanceStatus: GovernanceDecisionStatus;
-  status: "PENDING" | "EXECUTED";
+  status: "PENDING" | "SELECTED";
 }
 
 export class ARCIntelligenceExecutiveEngine {
@@ -35,7 +35,7 @@ export class ARCIntelligenceExecutiveEngine {
     return item;
   }
 
-  executeNextObjective():
+  selectNextObjective():
     ExecutiveObjective | undefined {
 
     const next =
@@ -54,7 +54,7 @@ export class ARCIntelligenceExecutiveEngine {
       return undefined;
     }
 
-    next.status = "EXECUTED";
+    next.status = "SELECTED";
 
     return next;
   }

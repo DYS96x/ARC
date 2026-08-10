@@ -7,7 +7,7 @@ describe(
   () => {
 
     it(
-      "does not execute a higher priority rejected objective",
+      "selects an approved objective without claiming execution authority",
       () => {
 
         const engine =
@@ -25,19 +25,19 @@ describe(
           "APPROVED"
         );
 
-        const action =
-          engine.executeNextObjective();
+        const selected =
+          engine.selectNextObjective();
 
-        expect(action?.objective)
+        expect(selected?.objective)
           .toBe(
             "APPROVED LOWER PRIORITY ACTION"
           );
 
-        expect(action?.governanceStatus)
+        expect(selected?.governanceStatus)
           .toBe("APPROVED");
 
-        expect(action?.status)
-          .toBe("EXECUTED");
+        expect(selected?.status)
+          .toBe("SELECTED");
 
         const rejected =
           engine.getObjectives().find(
@@ -52,7 +52,7 @@ describe(
     );
 
     it(
-      "does not execute an objective awaiting approval",
+      "does not select an objective awaiting approval",
       () => {
 
         const engine =
@@ -64,10 +64,10 @@ describe(
           "ESCALATE"
         );
 
-        const action =
-          engine.executeNextObjective();
+        const selected =
+          engine.selectNextObjective();
 
-        expect(action)
+        expect(selected)
           .toBeUndefined();
 
         expect(
@@ -102,22 +102,22 @@ describe(
           "REJECTED"
         );
 
-        const action =
-          engine.executeNextObjective();
+        const selected =
+          engine.selectNextObjective();
 
-        expect(action?.objective)
+        expect(selected?.objective)
           .toBe(
             "APPROVED HIGH PRIORITY"
           );
 
-        expect(action?.priority)
+        expect(selected?.priority)
           .toBe(0.90);
 
-        expect(action?.governanceStatus)
+        expect(selected?.governanceStatus)
           .toBe("APPROVED");
 
-        expect(action?.status)
-          .toBe("EXECUTED");
+        expect(selected?.status)
+          .toBe("SELECTED");
       }
     );
 
