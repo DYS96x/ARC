@@ -1,7 +1,7 @@
 ﻿# ARCH_003 — Data Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -224,37 +224,69 @@ Learning
 
 ---
 
-# Ownership Rules
+# Data Responsibility Model
 
-## ARC owns:
+Data authority follows responsibility, provenance, and governance.
 
-- Persistence
+ARC does not assign permanent ownership of canonical data architecture to individual products, engines, or implementations.
+
+## ARC governs:
+
 - Identity
-- Relationships
+- Data integrity
+- Relationship integrity
+- Knowledge integrity
 - History
+- Provenance
+- Access boundaries
+- Data governance
 
 ---
 
-## Systems own:
+## Originating systems are responsible for:
 
 - Meaning of their outputs
 - Operational context
+- Source attribution
 - Generated evidence
+- Validation metadata
 
 ---
 
-## VOID owns:
+## Intelligence systems are responsible for:
 
-- Reasoning outputs
+- Reasoning provenance
+- Analysis outputs
+- Recommendations
+- Confidence
+- Explanation
+- Model or process context where required
+
+Intelligence outputs do not become truth merely because an intelligence system produced them.
 
 ---
 
-## ARC OS owns:
+## Execution systems are responsible for:
 
-- Execution records
+- Action records
+- Execution context
+- Outcomes
+- Failures
+- Audit evidence
+
+Execution records become part of ARC history without transferring constitutional authority to the executing system.
 
 ---
 
+## Reality remains authoritative
+
+Stored data represents observations, evidence, knowledge, decisions, actions, and history.
+
+It does not replace reality.
+
+When stored understanding conflicts with validated reality, the system must preserve the history of the conflict and evolve its knowledge.
+
+---
 # Data Relationship Model
 
 ```text
