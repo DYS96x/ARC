@@ -1,7 +1,7 @@
 ﻿# ARCH_007 — Deployment Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -141,39 +141,94 @@ Feedback
 
 # Deployment Responsibilities
 
-## ARC OS
+Deployment responsibility is separated by function.
 
-Owns:
+## Release Governance
 
-- Deployment execution
-- Automation
-- Runtime operations
-- Release processes
+Responsible for:
+
+- Release approval
+- Change authority
+- Risk acceptance
+- Release constraints
+- Escalation requirements
+
+Governance determines whether deployment may occur.
+
+It does not perform deployment.
 
 ---
 
 ## System Owners
 
-Own:
+Responsible for:
 
 - Capability validation
-- Release approval
+- Release readiness
 - Outcome responsibility
+- Compatibility assessment
+- Operational acceptance
+
+System ownership creates accountability.
+
+It does not automatically grant unrestricted deployment authority.
 
 ---
 
-## HOLY ARC
+## Execution Capability
 
-Owns:
+Responsible for:
 
-- Constitutional alignment
+- Authorised deployment execution
+- Deployment automation
+- Runtime transition
+- Release orchestration
+- Controlled rollback
+- Execution records
 
-Does not:
+Execution capability performs approved deployment actions.
 
-- Perform deployment
+It does not approve its own authority.
 
 ---
 
+## Security
+
+Responsible for:
+
+- Identity validation
+- Permission enforcement
+- Security controls
+- Secret protection
+- Audit requirements
+
+Security applies throughout the deployment lifecycle.
+
+---
+
+## Observation and Evidence
+
+Responsible for:
+
+- Deployment telemetry
+- Operational evidence
+- Failure signals
+- Release outcomes
+- Recovery evidence
+
+Observation measures what occurred.
+
+It does not redefine operational truth.
+
+---
+
+## Reality
+
+Production outcomes determine whether the deployed capability actually behaves as expected.
+
+Reality remains the final external validator.
+
+---
 # Version Management
 
 Every deployed capability requires:
@@ -334,18 +389,17 @@ Release ↔ Operation
 
 ---
 
-ARC OS ↔ Deployment
+### Execution Capability ↔ Deployment
 
 Evidence:
 
-ARC OS owns deployment execution, automation, runtime operations, and release processes.
+Execution capability performs authorised deployment actions, automation, runtime transitions, release orchestration, and controlled rollback.
 
 Relationship type:
 
-Execution Capability ↔ Deployment Control
+Authorised Execution ↔ Deployment Control
 
 ---
-
 System Owners ↔ Deployment
 
 Evidence:
@@ -432,31 +486,32 @@ How does recovery history improve future reliability?
 
 ---
 
-# Diagram Changes
+# Diagram Rule
 
-## Remove
+Do not represent Deployment Architecture as a one-way release pipeline.
 
-Pipeline interpretation:
+Deployment contains governed relationships between:
 
-```text
+Change
+↕
 Development
-
-↓
-
+↕
 Validation
-
-↓
-
-Deployment
-
-↓
-
-Operation
-
-↓
-
+↕
+Approval
+↕
+Execution
+↕
+Production
+↕
 Observation
+↕
+Recovery
+↕
+Learning
+↕
+Reality
 
-↓
+Deployment direction does not automatically represent authority.
 
-Improvement
+Approval, execution, security, ownership, observation, and recovery remain separate responsibilities.
