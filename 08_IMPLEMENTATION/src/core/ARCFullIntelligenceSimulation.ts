@@ -51,12 +51,9 @@ export class ARCFullIntelligenceSimulation {
     const decisionContext:
       DecisionMemoryContext =
       {
-        relevantMemories:
-          [],
-        averageConfidence:
-          0.8,
-        averageImpact:
-          0.7
+        relevantMemories: [],
+        averageConfidence: 0.8,
+        averageImpact: 0.7
       };
 
     const recommendation =
@@ -65,23 +62,31 @@ export class ARCFullIntelligenceSimulation {
         decisionContext
       );
 
-    const result =
+    return {
+      experience,
+      recommendation
+    };
+  }
+
+  recordOutcome(
+    decision: string,
+    outcome: boolean
+  ) {
+
+    const validation =
       this.validation.validate(
-        recommendation.option,
-        true
+        decision,
+        outcome
       );
 
     const confidence =
       this.confidence.update(
-        recommendation.option,
-        result.confidenceAdjustment
+        decision,
+        validation.confidenceAdjustment
       );
 
     return {
-      experience,
-      recommendation,
-      validation:
-        result,
+      validation,
       confidence
     };
   }
