@@ -1,7 +1,7 @@
-import { ConfidenceEvolutionEngine } from "./ConfidenceEvolutionEngine";
+﻿import { ConfidenceEvolutionEngine } from "./ConfidenceEvolutionEngine";
 
 
-export class ConfidenceDecisionEngine {
+export class ConfidenceRankingEngine {
 
 
   private confidence: ConfidenceEvolutionEngine;
@@ -19,7 +19,7 @@ export class ConfidenceDecisionEngine {
 
 
 
-  choose(
+  rank(
     decisions: string[]
   ) {
 

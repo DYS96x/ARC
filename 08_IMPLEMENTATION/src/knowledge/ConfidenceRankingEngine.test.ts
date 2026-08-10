@@ -1,14 +1,14 @@
-import { ConfidenceDecisionEngine } from "./ConfidenceDecisionEngine";
+﻿import { ConfidenceRankingEngine } from "./ConfidenceRankingEngine";
 import { ConfidenceEvolutionEngine } from "./ConfidenceEvolutionEngine";
 
 
 describe(
-  "Confidence Decision Engine",
+  "Confidence Ranking Engine",
   () => {
 
 
     it(
-      "selects decisions using confidence history",
+      "ranks decision candidates using confidence history without granting authority",
       () => {
 
 
@@ -25,14 +25,14 @@ describe(
 
 
         const engine =
-          new ConfidenceDecisionEngine(
+          new ConfidenceRankingEngine(
             evolution
           );
 
 
 
         const result =
-          engine.choose([
+          engine.rank([
 
             "ACTION-A",
 
