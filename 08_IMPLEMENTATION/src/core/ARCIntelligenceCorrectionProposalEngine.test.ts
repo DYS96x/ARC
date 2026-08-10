@@ -1,23 +1,23 @@
-import { ARCIntelligenceSelfCorrectionEngine } from "./ARCIntelligenceSelfCorrectionEngine";
+﻿import { ARCIntelligenceCorrectionProposalEngine } from "./ARCIntelligenceCorrectionProposalEngine";
 
 
 describe(
-  "ARC Intelligence Self Correction Engine",
+  "ARC Intelligence Correction Proposal Engine",
   () => {
 
 
     it(
-      "creates correction actions from capability weaknesses",
+      "creates correction proposals without executing them",
       () => {
 
 
         const engine =
-          new ARCIntelligenceSelfCorrectionEngine();
+          new ARCIntelligenceCorrectionProposalEngine();
 
 
 
         const correction =
-          engine.createCorrection(
+          engine.createProposal(
 
             "MEMORY SYSTEM",
 
@@ -54,7 +54,7 @@ describe(
 
 
         expect(
-          engine.getCorrections().length
+          engine.getProposals().length
         )
         .toBe(
           1

@@ -1,4 +1,4 @@
-export interface IntelligenceImprovement {
+﻿export interface IntelligenceImprovementProposal {
 
   capability: string;
 
@@ -9,10 +9,10 @@ export interface IntelligenceImprovement {
 }
 
 
-export class ARCIntelligenceSelfImprovementEngine {
+export class ARCIntelligenceImprovementProposalEngine {
 
 
-  private improvements: IntelligenceImprovement[];
+  private improvements: IntelligenceImprovementProposal[];
 
 
   constructor() {
@@ -22,16 +22,16 @@ export class ARCIntelligenceSelfImprovementEngine {
   }
 
 
-  createImprovement(
+  createProposal(
 
     capability: string,
 
     issue: string
 
-  ): IntelligenceImprovement {
+  ): IntelligenceImprovementProposal {
 
 
-    const improvement: IntelligenceImprovement = {
+    const improvement: IntelligenceImprovementProposal = {
 
       capability,
 
@@ -52,9 +52,9 @@ export class ARCIntelligenceSelfImprovementEngine {
   }
 
 
-  getImprovements():
+  getProposals():
 
-  IntelligenceImprovement[] {
+  IntelligenceImprovementProposal[] {
 
     return this.improvements;
 

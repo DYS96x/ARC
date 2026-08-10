@@ -1,23 +1,23 @@
-import { ARCIntelligenceSelfImprovementEngine } from "./ARCIntelligenceSelfImprovementEngine";
+﻿import { ARCIntelligenceImprovementProposalEngine } from "./ARCIntelligenceImprovementProposalEngine";
 
 
 describe(
-  "ARC Intelligence Self Improvement Engine",
+  "ARC Intelligence Improvement Proposal Engine",
   () => {
 
 
     it(
-      "creates improvement proposals from capability weaknesses",
+      "creates improvement proposals without granting authority",
       () => {
 
 
         const engine =
-          new ARCIntelligenceSelfImprovementEngine();
+          new ARCIntelligenceImprovementProposalEngine();
 
 
 
         const improvement =
-          engine.createImprovement(
+          engine.createProposal(
 
             "ADAPTIVE_ROUTING",
 
@@ -46,7 +46,7 @@ describe(
 
 
         expect(
-          engine.getImprovements().length
+          engine.getProposals().length
         )
         .toBe(
           1

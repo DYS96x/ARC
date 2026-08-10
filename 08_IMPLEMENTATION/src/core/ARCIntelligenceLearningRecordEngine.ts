@@ -1,4 +1,4 @@
-export interface IntelligenceLearning {
+﻿export interface IntelligenceLearning {
 
   capability: string;
 
@@ -10,7 +10,7 @@ export interface IntelligenceLearning {
 
 
 
-export class ARCIntelligenceSelfLearningEngine {
+export class ARCIntelligenceLearningRecordEngine {
 
 
   private learnings: IntelligenceLearning[];

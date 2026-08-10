@@ -1,18 +1,18 @@
-import { ARCIntelligenceSelfLearningEngine } from "./ARCIntelligenceSelfLearningEngine";
+﻿import { ARCIntelligenceLearningRecordEngine } from "./ARCIntelligenceLearningRecordEngine";
 
 
 describe(
-  "ARC Intelligence Self Learning Engine",
+  "ARC Intelligence Learning Record Engine",
   () => {
 
 
     it(
-      "learns improvement patterns from correction outcomes",
+      "records learning evidence without granting authority",
       () => {
 
 
         const engine =
-          new ARCIntelligenceSelfLearningEngine();
+          new ARCIntelligenceLearningRecordEngine();
 
 
 

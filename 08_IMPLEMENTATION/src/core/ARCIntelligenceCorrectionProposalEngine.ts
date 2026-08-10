@@ -1,4 +1,4 @@
-export interface CorrectionAction {
+﻿export interface CorrectionProposal {
 
   capability: string;
 
@@ -10,10 +10,10 @@ export interface CorrectionAction {
 
 
 
-export class ARCIntelligenceSelfCorrectionEngine {
+export class ARCIntelligenceCorrectionProposalEngine {
 
 
-  private corrections: CorrectionAction[];
+  private corrections: CorrectionProposal[];
 
 
 
@@ -25,7 +25,7 @@ export class ARCIntelligenceSelfCorrectionEngine {
 
 
 
-  createCorrection(
+  createProposal(
 
     capability: string,
 
@@ -33,10 +33,10 @@ export class ARCIntelligenceSelfCorrectionEngine {
 
     priority: number
 
-  ): CorrectionAction {
+  ): CorrectionProposal {
 
 
-    const correction: CorrectionAction = {
+    const correction: CorrectionProposal = {
 
       capability,
 
@@ -56,9 +56,9 @@ export class ARCIntelligenceSelfCorrectionEngine {
 
 
 
-  getCorrections():
+  getProposals():
 
-  CorrectionAction[] {
+  CorrectionProposal[] {
 
     return this.corrections;
 
