@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ARC Core Runtime
  *
  * Central container connecting
@@ -12,6 +12,7 @@ import { EventBus } from "./events/EventBus";
 import { StateManager } from "./state/StateManager";
 import { ContractValidator } from "./contracts/ContractValidator";
 import { ARCRuntime } from "./ARCRuntime";
+import { ARCGovernanceInput } from "../cycle/ARCCycleOrchestrator";
 
 
 export class ARC {
@@ -61,14 +62,15 @@ export class ARC {
 
 
   processReality(
-    input: string
-  ) {
+  input: string,
+  governanceInput: ARCGovernanceInput
+) {
 
-    return this.runtime.process(
-      input
-    );
-
-  }
+  return this.runtime.process(
+    input,
+    governanceInput
+  );
+}
 
 
 }

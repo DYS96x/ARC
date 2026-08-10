@@ -1,245 +1,127 @@
-import { EventBus } from "../core/events/EventBus";
+﻿import { EventBus } from "../core/events/EventBus";
+import {
+  ARCIntelligenceGovernanceEngine,
+  GovernanceDecisionStatus
+} from "../core/ARCIntelligenceGovernanceEngine";
 
+export interface ARCGovernanceInput {
+  confidence: number;
+  hasAuthority: boolean;
+  hasPermission: boolean;
+  requiresApproval: boolean;
+  approvalGranted: boolean;
+}
 
 export class ARCCycleOrchestrator {
 
-
   private events: EventBus;
 
-
+  private governance:
+    ARCIntelligenceGovernanceEngine;
 
   constructor() {
 
     this.events =
       new EventBus();
 
+    this.governance =
+      new ARCIntelligenceGovernanceEngine();
   }
-
-
 
   process(
-    reality: string
+    reality: string,
+    governanceInput: ARCGovernanceInput
   ) {
 
-
     const observation = {
-
       observed:
         reality
-
     };
 
-
     this.events.publish({
-
-  id:
-    crypto.randomUUID(),
-
-  type:
-    "ObservationCreated",
-
-  sourceId:
-    "ARC-CYCLE",
-
-  payload:
-    observation,
-
-  timestamp:
-    new Date()
-
-});
-
-    this.events.publish({
-
-  id:
-    crypto.randomUUID(),
-
-  type:
-    "ObservationCreated",
-
-  sourceId:
-    "ARC-CYCLE",
-
-  payload:
-    observation,
-
-  timestamp:
-    new Date()
-
-});
+      id:
+        crypto.randomUUID(),
+      type:
+        "ObservationCreated",
+      sourceId:
+        "ARC-CYCLE",
+      payload:
+        observation,
+      timestamp:
+        new Date()
+    });
 
     const knowledge = {
-
       observation,
-
       created:
         true
-
     };
 
     this.events.publish({
-
-  id:
-    crypto.randomUUID(),
-
-  type:
-    "KnowledgeCreated",
-
-  sourceId:
-    "ARC-CYCLE",
-
-  payload:
-    knowledge,
-
-  timestamp:
-    new Date()
-
-});
-
-    this.events.publish({
-
-  id:
-    crypto.randomUUID(),
-
-  type:
-    "KnowledgeCreated",
-
-  sourceId:
-    "ARC-CYCLE",
-
-  payload:
-    knowledge,
-
-  timestamp:
-    new Date()
-
-});
+      id:
+        crypto.randomUUID(),
+      type:
+        "KnowledgeCreated",
+      sourceId:
+        "ARC-CYCLE",
+      payload:
+        knowledge,
+      timestamp:
+        new Date()
+    });
 
     const decision = {
-
       knowledge,
-
       created:
         true
-
     };
 
     this.events.publish({
+      id:
+        crypto.randomUUID(),
+      type:
+        "DecisionCreated",
+      sourceId:
+        "ARC-CYCLE",
+      payload:
+        decision,
+      timestamp:
+        new Date()
+    });
 
-  id:
-    crypto.randomUUID(),
-
-  type:
-    "DecisionCreated",
-
-  sourceId:
-    "ARC-CYCLE",
-
-  payload:
-    decision,
-
-  timestamp:
-    new Date()
-
-});
-
+    const governance =
+      this.governance.evaluate({
+        recommendation:
+          "PROCESS REALITY DECISION",
+        confidence:
+          governanceInput.confidence,
+        hasAuthority:
+          governanceInput.hasAuthority,
+        hasPermission:
+          governanceInput.hasPermission,
+        requiresApproval:
+          governanceInput.requiresApproval,
+        approvalGranted:
+          governanceInput.approvalGranted
+      });
 
     const action = {
-
       decision,
-
-      executed:
-        true
-
+      governanceStatus:
+        governance.status as GovernanceDecisionStatus,
+      status:
+        governance.status === "APPROVED"
+          ? "READY"
+          : "BLOCKED"
     };
-
-
-    const outcome = {
-
-      action,
-
-      success:
-        true
-
-    };
-
-    this.events.publish({
-
-  id:
-    crypto.randomUUID(),
-
-  type:
-    "OutcomeCreated",
-
-  sourceId:
-    "ARC-CYCLE",
-
-  payload:
-    outcome,
-
-  timestamp:
-    new Date()
-
-});
-
-    const memory = {
-
-      outcome,
-
-      updated:
-        true
-
-    };
-
-
-    const learning = {
-
-      memory,
-
-      learned:
-        true
-
-    };
-
-    this.events.publish({
-
-  id:
-    crypto.randomUUID(),
-
-  type:
-    "LearningCreated",
-
-  sourceId:
-    "ARC-CYCLE",
-
-  payload:
-    learning,
-
-  timestamp:
-    new Date()
-
-});
 
     return {
-
       reality,
-
       observation,
-
       knowledge,
-
       decision,
-
-      action,
-
-      outcome,
-
-      memory,
-
-      learning
-
+      governance,
+      action
     };
-
   }
-
 }

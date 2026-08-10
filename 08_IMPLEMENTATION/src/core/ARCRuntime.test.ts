@@ -1,29 +1,34 @@
-import { ARCRuntime } from "./ARCRuntime";
-
+﻿import { ARCRuntime } from "./ARCRuntime";
 
 describe("ARC Runtime", () => {
 
-
-  it("executes the complete experience loop", () => {
-
+  it("processes reality through explicit governance", () => {
 
     const runtime =
       new ARCRuntime();
 
-
     const result =
       runtime.process(
-        "Reality signal detected"
+        "Reality signal detected",
+        {
+          confidence:
+            0.9,
+          hasAuthority:
+            true,
+          hasPermission:
+            true,
+          requiresApproval:
+            true,
+          approvalGranted:
+            true
+        }
       );
 
+    expect(result.governance.status)
+      .toBe("APPROVED");
 
-    expect(
-      result
-    )
-    .toBeDefined();
-
-
+    expect(result.action.status)
+      .toBe("READY");
   });
-
 
 });
