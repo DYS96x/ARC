@@ -1,7 +1,7 @@
 ﻿# ARCH_008 — Security Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -189,47 +189,55 @@ Authority cannot be assumed.
 
 Permissions define:
 
-```text
 Actor
-
 +
-
 Resource
-
 +
-
 Action
-
 +
-
 Scope
-
 +
-
 Conditions
-```
 
 Examples:
 
-```text
-VOID
+Intelligence Capability
 
-Can analyse knowledge
+Can:
 
-Cannot modify governance
-```
+- Analyse authorised knowledge
+- Produce recommendations
+- Return confidence and explanation
 
-```text
-ARC OS
+Cannot:
 
-Can execute approved actions
-
-Cannot create constitutional rules
-```
+- Escalate its own authority
+- Bypass security controls
+- Automatically execute high-impact actions
 
 ---
 
-# Trust Boundaries
+Execution Capability
+
+Can:
+
+- Perform authorised actions
+- Operate within approved scope
+- Produce execution records
+
+Cannot:
+
+- Create its own approval
+- Change constitutional authority
+- Bypass validation or audit controls
+
+---
+
+Permissions grant specific capability.
+
+They do not transfer ownership or constitutional authority.
+
+---# Trust Boundaries
 
 ARC recognises:
 
@@ -296,12 +304,7 @@ Every relationship requires:
 
 # Execution Security
 
-ARC OS execution requires:
-
-```text
-Request
-
-↓
+Execution Capability requires:
 
 Identity Check
 
@@ -311,7 +314,11 @@ Permission Check
 
 ↓
 
-Validation
+Authority Validation
+
+↓
+
+Input Validation
 
 ↓
 
@@ -319,12 +326,21 @@ Execution
 
 ↓
 
-Record
-```
+Outcome Validation
 
----
+↓
 
-# AI Security
+Audit Record
+
+Execution Capability performs only authorised actions within approved scope.
+
+Execution does not create its own authority.
+
+Execution does not bypass governance, security, validation, or audit controls.
+
+Every significant execution must remain attributable and traceable.
+
+---# AI Security
 
 AI systems must:
 
@@ -496,30 +512,30 @@ Trust ↔ Relationship Governance
 
 ---
 
-ARC OS ↔ Security Controls
+### Execution Capability ↔ Security Controls
 
 Evidence:
 
-ARC OS execution requires identity checks, permission checks, validation, execution, and recording.
+Execution Capability requires identity checks, permission checks, authority validation, execution controls, outcome validation, and recording.
 
 Relationship type:
 
-Execution ↔ Protection
+Authorised Execution ↔ Protection
 
 ---
-
-Security Events ↔ ARC Memory
+### Security Events ↔ Knowledge and History
 
 Evidence:
 
 Security events preserve actor, action, resource, time, authority, result, and evidence.
 
+Validated security evidence becomes part of durable knowledge and historical record.
+
 Relationship type:
 
-Security Evidence ↔ Historical Knowledge
+Security Evidence ↔ Durable Knowledge
 
 ---
-
 Recovery ↔ Learning
 
 Evidence:
@@ -582,35 +598,40 @@ When does a security lesson become a permanent system rule?
 
 ---
 
-# Diagram Changes
+# Diagram Rule
 
-## Remove
+Do not represent Security Architecture as a one-way permission pipeline.
 
-Pipeline interpretation:
+Security contains governed relationships between:
 
-```text
 Identity
-
-↓
-
+↕
 Authentication
-
-↓
-
+↕
 Authority
-
-↓
-
+↕
 Permission
-
-↓
-
-Action
-
-↓
-
+↕
+Capability
+↕
+Execution
+↕
 Evidence
-
-↓
-
+↕
 Review
+↕
+Learning
+↕
+Reality
+
+Identity does not automatically grant authority.
+
+Authority does not automatically grant every permission.
+
+Permission does not automatically transfer ownership.
+
+Execution does not create its own authority.
+
+Evidence and review return security outcomes to learning.
+
+Reality remains the final external validator.
