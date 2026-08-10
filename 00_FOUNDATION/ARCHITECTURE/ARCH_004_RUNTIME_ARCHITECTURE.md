@@ -1,7 +1,7 @@
 ﻿# ARCH_004 — Runtime Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -66,111 +66,115 @@ Improvement
 
 # Runtime System Model
 
-```text
-                    User
+ARC Runtime is organised by responsibility rather than legacy system names.
 
-                     ↓
+Human / System Intent
+↕
+Context
+↕
+Knowledge
+↕
+Intelligence Support
+↕
+Governed Decision
+↕
+Workflow
+↕
+Execution
+↕
+Outcome
+↕
+Observation
+↕
+Learning
+↕
+Reality
 
-                    WOS
+Runtime relationships are reciprocal where reality demonstrates feedback.
 
-              Current Context
-
-                     ⇅
-
-              ┌─────────────┐
-
-              CAF         VOID
-
-          Understanding   Reasoning
-
-              ⇅             ⇅
-
-                    ARC
-
-              Memory Layer
-
-                     ⇅
-
-                  ARC OS
-
-              Execution Layer
-
-                     ↓
-
-                  Reality
-
-                     ↓
-
-                 Feedback
-```
-
----
-
+No position in the model automatically grants authority.
 # Runtime Flow
 
 ## Step 1 — Context Loading
 
-WOS restores:
+Runtime loads:
 
-- Current engagement
-- Objective
-- Stage
+- Current objective
+- Workflow state
 - Dependencies
-- Resume state
+- Relevant history
+- Identity context
+- Permissions
+- Previous outcomes
 
 ---
 
 ## Step 2 — Understanding
 
-CAF provides:
+Knowledge and evidence provide:
 
-- Assessment
-- Current reality
-- Gaps
-- Priorities
+- Validated facts
+- Current conditions
+- Relationships
+- Constraints
+- Known gaps
 
 ---
 
 ## Step 3 — Intelligence Support
 
-VOID provides:
+Intelligence may provide:
 
 - Analysis
 - Patterns
 - Recommendations
+- Predictions
 - Confidence
+- Explanation
+
+Intelligence support does not create execution authority.
 
 ---
 
 ## Step 4 — Decision
 
-Governed decision process determines:
+A governed decision process determines:
 
 - Direction
 - Approval
 - Ownership
+- Constraints
+- Escalation
+
+Runtime does not manufacture authority.
 
 ---
 
 ## Step 5 — Execution
 
-ARC OS performs:
+Authorised execution performs:
 
 - Approved actions
-- Automation
-- Validation
-- Recording
+- Workflow transitions
+- Integrations
+- Controlled changes
+- Operational tasks
+
+Every significant action remains attributable and traceable.
 
 ---
 
-## Step 6 — Memory Update
+## Step 6 — Evidence and History Update
 
-ARC preserves:
+Execution produces:
 
-- Artifacts
-- Knowledge
-- History
 - Outcomes
+- Evidence
+- History
+- Audit records
+- Updated workflow state
+
+Runtime does not become the permanent memory owner.
 
 ---
 
@@ -180,10 +184,12 @@ Systems improve through:
 
 - Feedback
 - Measurement
+- Comparison
 - Reality validation
 
----
+Learning may improve future knowledge, workflow, intelligence, and architecture.
 
+---
 # Runtime State Model
 
 Every active process maintains:
@@ -216,38 +222,61 @@ Learning
 
 # Runtime Boundaries
 
-Runtime must preserve:
+Runtime must preserve separation between:
 
-HOLY ARC:
+## Authority
 
-Governance
-
-ARC:
-
-Memory
-
-ARC OS:
-
-Execution
-
-WOS:
-
-State
-
-CAF:
-
-Assessment
-
-VOID:
-
-Reasoning
-
-Sprint OS:
-
-Improvement
+Determines what may happen.
 
 ---
 
+## Workflow
+
+Determines what should happen next and preserves process state.
+
+---
+
+## Execution
+
+Performs authorised actions.
+
+---
+
+## Intelligence
+
+Supports understanding and recommendation.
+
+---
+
+## Knowledge
+
+Provides validated context and preserves durable understanding.
+
+---
+
+## Runtime State
+
+Represents temporary operational state.
+
+Runtime state does not automatically become permanent knowledge.
+
+---
+
+## Analytics and Observability
+
+Measure behaviour, outcomes, health, and failure.
+
+They do not become operational truth merely because they observe it.
+
+---
+
+## Reality
+
+Validates outcomes.
+
+No internal runtime layer replaces reality as the final external validator.
+
+---
 # Runtime Communication
 
 Communication follows:
@@ -354,93 +383,117 @@ Architecture passes when:
 
 ## Known Relationships
 
-User ↔ WOS
+### Intent ↔ Context
 
-Evidence:
+Intent establishes the objective.
 
-The user provides intent and WOS restores current context, engagement state, objectives, dependencies, and resume capability.
-
-Relationship type:
-
-Intent ↔ Context
-
----
-
-WOS ↔ CAF
-
-Evidence:
-
-WOS provides active context while CAF provides assessment, understanding, gaps, and priorities.
+Context establishes the conditions under which the objective exists.
 
 Relationship type:
 
-Context ↔ Understanding
+Purpose ↔ Situation
 
 ---
 
-WOS ↔ VOID
+### Context ↔ Knowledge
 
-Evidence:
+Runtime context identifies which validated knowledge is relevant.
 
-WOS provides current state while VOID provides analysis, patterns, recommendations, and confidence.
+Knowledge improves runtime understanding.
 
 Relationship type:
 
-Context ↔ Intelligence
+State ↔ Understanding
 
 ---
 
-CAF ↔ VOID
+### Knowledge ↔ Intelligence
 
-Evidence:
+Knowledge provides trusted context.
 
-CAF provides understanding of reality and gaps.
-
-VOID transforms information into reasoning, prediction, and recommendations.
+Intelligence provides analysis, reasoning, recommendations, and predictions.
 
 Relationship type:
 
-Assessment ↔ Intelligence
+Evidence ↔ Decision Support
 
 ---
 
-ARC ↔ Runtime Systems
+### Intelligence ↔ Governed Decision
 
-Evidence:
+Intelligence may inform decisions.
 
-ARC provides memory, knowledge, artifacts, relationships, and history.
-
-Runtime systems consume and update ecosystem knowledge.
+Decision authority remains governed independently.
 
 Relationship type:
 
-Memory ↔ Active Operation
+Recommendation ↔ Authority
 
 ---
 
-ARC OS ↔ Reality
+### Decision ↔ Workflow
 
-Evidence:
+Approved decisions determine permitted progression.
 
-ARC OS performs approved actions that create measurable outcomes.
+Workflow preserves ownership, state, approvals, and transitions.
 
-Reality provides validation and feedback.
+Relationship type:
+
+Authority ↔ Process
+
+---
+
+### Workflow ↔ Execution
+
+Workflow identifies authorised work.
+
+Execution performs that work.
+
+Relationship type:
+
+Process ↔ Action
+
+---
+
+### Execution ↔ Outcome
+
+Actions create measurable outcomes.
+
+Relationship type:
+
+Action ↔ Result
+
+---
+
+### Outcome ↔ Evidence
+
+Outcomes produce evidence about what actually occurred.
+
+Relationship type:
+
+Result ↔ Observation
+
+---
+
+### Evidence ↔ Knowledge
+
+Validated evidence may strengthen, challenge, or evolve knowledge.
+
+Relationship type:
+
+Reality Feedback ↔ Understanding
+
+---
+
+### Runtime ↔ Reality
+
+Runtime creates real outcomes.
+
+Reality validates whether expectations were correct.
 
 Relationship type:
 
 Execution ↔ Reality Feedback
-
----
-
-Reality ↔ ARC Memory
-
-Evidence:
-
-Outcomes and observations return to ARC as preserved history, knowledge, and learning.
-
-Relationship type:
-
-Reality ↔ Memory Evolution
 
 ---
 
@@ -450,35 +503,35 @@ Reality ↔ Memory Evolution
 
 Investigation:
 
-How user intent becomes governed decisions.
+How does intent become sufficiently validated for governed decision-making?
 
 Question:
 
-What validation relationship determines when intent becomes an approved action?
+What evidence and authority are required before intent becomes approved action?
 
 ---
 
-## VOID Recommendation → Execution
+## Intelligence Recommendation → Execution
 
 Investigation:
 
-How intelligence confidence translates into operational permission.
+How should recommendation confidence influence decision support without becoming automatic authority?
 
 Question:
 
-What threshold converts recommendation into execution?
+What governance boundary prevents intelligence confidence from silently becoming permission?
 
 ---
 
-## Runtime State → Permanent Memory
+## Runtime State → Durable Knowledge
 
 Investigation:
 
-How temporary runtime information becomes valuable historical knowledge.
+How should temporary operational context become permanent knowledge?
 
 Question:
 
-When does active context become permanent learning?
+What validation threshold determines when runtime state should be preserved?
 
 ---
 
@@ -486,47 +539,35 @@ When does active context become permanent learning?
 
 Investigation:
 
-How runtime outcomes create future architecture improvements.
+How should repeated runtime evidence influence architecture?
 
 Question:
 
-What mechanism converts repeated runtime learning into system evolution?
+What evidence threshold justifies architectural change rather than local implementation improvement?
 
 ---
+# Diagram Rule
 
-# Diagram Changes
+Do not represent Runtime Architecture as a fixed one-way pipeline.
 
-## Remove
-
-Current interpretation:
-
-```text
-Intent
-
-↓
+Runtime contains governed movement and feedback between:
 
 Context
-
-↓
-
-Understanding
-
-↓
-
+↕
+Knowledge
+↕
+Intelligence
+↕
 Decision
-
-↓
-
+↕
+Workflow
+↕
 Execution
+↕
+Outcome
+↕
+Reality
 
-↓
+Direction represents observed interaction.
 
-Observation
-
-↓
-
-Learning
-
-↓
-
-Improvement
+It does not automatically represent ownership or authority.
