@@ -1,7 +1,7 @@
 ﻿# ARCH_009 — Observability Architecture
 
 Version: 1.0.0
-Status: Draft
+Status: Active
 Authority: ARC Constitution
 Classification: Internal
 
@@ -311,19 +311,25 @@ Important decisions preserve:
 
 # AI Observability
 
-VOID intelligence requires visibility into:
+Intelligence Capability requires visibility into:
 
 - Input context
 - Evidence used
 - Confidence
 - Recommendation
+- Prediction where applicable
 - Outcome
+- Relevant limitations
+
+Intelligence observability supports evaluation, explanation, and improvement.
+
+Observed intelligence output does not automatically become operational truth.
+
+Confidence does not create authority.
 
 AI improvement requires reality feedback.
 
----
-
-# Security Observability
+---# Security Observability
 
 Security monitoring records:
 
@@ -361,6 +367,23 @@ Learn
 
 ---
 
+# Observability Truth Boundary
+
+Observability produces evidence about system behaviour.
+
+Observation does not automatically establish operational truth.
+
+Metrics do not become authority.
+
+Logs do not become ownership.
+
+Signals do not become decisions.
+
+Observed behaviour must remain attributable to its source and validated against reality where required.
+
+Reality remains the final external validator.
+
+---
 # Observability Rules
 
 ## Rule 001
@@ -499,18 +522,17 @@ Behaviour ↔ System Understanding
 
 ---
 
-AI Observability ↔ VOID
+### AI Observability ↔ Intelligence Capability
 
 Evidence:
 
-VOID requires visibility into input context, evidence used, confidence, recommendations, and outcomes.
+Intelligence observability preserves input context, evidence used, confidence, recommendations, predictions where applicable, outcomes, and limitations.
 
 Relationship type:
 
-Intelligence ↔ Reality Feedback
+Intelligence Evidence ↔ Reality Feedback
 
 ---
-
 Security Observability ↔ Trust
 
 Evidence:
@@ -573,27 +595,32 @@ When does an observed trend become a new architectural rule?
 
 ---
 
-# Diagram Changes
+# Diagram Rule
 
-## Remove
+Do not represent Observability Architecture as a one-way monitoring pipeline.
 
-Pipeline interpretation:
+Observability contains relationships between:
 
-```text
 System Activity
-
-↓
-
+↕
 Signals
-
-↓
-
+↕
+Evidence
+↕
 Understanding
+↕
+Decision Support
+↕
+Outcome
+↕
+Feedback
+↕
+Learning
+↕
+Reality
 
-↓
+Observation does not create authority.
 
-Decision
+Evidence supports understanding.
 
-↓
-
-Improvement
+Reality validates interpretation.
