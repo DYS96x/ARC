@@ -2,9 +2,194 @@
 
 These principles govern every decision, project, product, and system created by ARC.
 
+ARC is built as a living system.
+
+ARC does not create isolated tools.
+
+ARC creates adaptive systems that observe reality, discover relationships, transform knowledge into action, and continuously evolve through feedback.
+
+
 ---
 
-## Principle 01 — Systems Before Technology
+# Principle — Relationships Are The Intelligence Layer
+
+ARC does not model isolated objects.
+
+ARC models relationships between objects.
+
+A node represents something that exists.
+
+A relationship represents how reality connects, influences, transforms, or exchanges between those things.
+
+The intelligence of a system is not only contained within its components.
+
+The intelligence emerges from the relationships between components.
+
+---
+
+# Principle — Arrows Represent Relationships, Not Pipelines
+
+Arrows are not decoration.
+
+An arrow must represent a meaningful relationship.
+
+A relationship may represent:
+
+- Influence
+- Feedback
+- Dependency
+- Transformation
+- Exchange
+- Investigation
+- Discovery
+
+ARC does not assume every relationship is one-directional.
+
+Direction must be discovered through reality.
+
+---
+
+# Principle — Relationship Types
+
+ARC systems recognise different relationship states.
+
+## Known Relationship
+
+A relationship supported by evidence.
+
+Example:
+
+A ↔ B
+
+The connection is understood.
+
+---
+
+## Directional Relationship
+
+A relationship where influence currently moves primarily in one direction.
+
+Example:
+
+A → B
+
+This does not mean the relationship cannot change.
+
+Reality determines future direction.
+
+---
+
+## Feedback Relationship
+
+A relationship where both systems influence each other.
+
+Example:
+
+A ↔ B
+
+The relationship evolves through interaction.
+
+---
+
+## Unknown Relationship Gap
+
+An unknown gap is not an absence.
+
+It is a relationship that has not yet been discovered, validated, or understood.
+
+Example:
+
+A → ?
+
+Unknown gaps are discovery targets.
+
+They represent:
+
+- Missing connections
+- Hidden dependencies
+- Emerging patterns
+- Unexplained outcomes
+- Future knowledge
+
+---
+
+# Principle — Unknown Relationships Are Discoverable Assets
+
+ARC does not only store what is known.
+
+ARC identifies what is missing.
+
+A gap in understanding is valuable information.
+
+The purpose of discovery is to reveal relationships that were previously invisible.
+
+Unknown relationships become future knowledge.
+
+---
+
+# Principle — Reality Is Inside The System
+
+Reality is not the final step of a pipeline.
+
+Reality continuously interacts with the system.
+
+Creation influences reality.
+
+Reality provides feedback.
+
+Feedback changes future decisions.
+
+The loop continues.
+
+Example:
+
+Reality
+↕
+Observation
+↕
+Knowledge
+↕
+Relationships
+↕
+Patterns
+↕
+Signals
+↕
+Decisions
+↕
+Actions
+↕
+Outcomes
+↕
+Learning
+↕
+Reality
+
+---
+
+# Principle — Diagrams Must Reflect Reality
+
+ARC diagrams represent living systems.
+
+A diagram must show:
+
+- Relationships
+- Feedback
+- Unknown gaps
+- Evolution
+- Influence
+
+A diagram must not create false certainty.
+
+If a relationship is unknown, represent the uncertainty.
+
+If a relationship changes, the architecture must adapt.
+
+The map must continue to evolve with the territory.
+
+---
+
+# Principle 01 — Systems Before Technology
 
 Technology never leads.
 
@@ -12,9 +197,17 @@ We first understand the system, its purpose, its relationships, its constraints,
 
 Technology is selected only after the system has been validated.
 
+The question is not:
+
+"What technology can we use?"
+
+The question is:
+
+"What system are we trying to create, and what does reality require?"
+
 ---
 
-## Principle 02 — Observe Reality
+# Principle 02 — Observe Reality
 
 Never begin with assumption.
 
@@ -26,11 +219,15 @@ Observe where decisions slow down.
 
 Observe where systems break.
 
+Observe where opportunities exist.
+
 Reality is the final authority.
+
+A theory is only valuable after it survives contact with reality.
 
 ---
 
-## Principle 03 — Truth Before Implementation
+# Principle 03 — Truth Before Implementation
 
 Ideas are hypotheses.
 
@@ -38,13 +235,22 @@ Assumptions must be challenged.
 
 Evidence must be gathered.
 
+Relationships must be understood.
+
 Truth must be locked before implementation begins.
 
-No system earns the right to be built until its core purpose and relationships are understood.
+No system earns the right to be built until its:
+
+- Purpose is understood
+- Relationships are mapped
+- Constraints are known
+- Value is validated
+
+Build from truth, not excitement.
 
 ---
 
-## Principle 04 — Systems Are Living
+# Principle 04 — Systems Are Living
 
 Systems are not one-way pipelines.
 
@@ -59,155 +265,232 @@ ARC designs systems to be:
 - Adaptable
 - Self-improving
 
----
+A system must not only produce outcomes.
 
-## Principle 05 — Reduce Friction
+A system must learn from outcomes.
 
-Every design decision should reduce unnecessary mental load, waiting, duplication, confusion, and waste.
-
-Complexity may exist inside the system.
-
-The experience should remain clear.
-
-When friction increases without creating value, the system must be redesigned.
 
 ---
 
-## Principle 06 — Knowledge Must Compound
+# Principle 05 — Reduce Friction
 
-Knowledge is a long-term asset.
+Complexity must justify itself.
 
-It should become easier to find, understand, reuse, and improve over time.
+ARC systems should reduce unnecessary effort between intention and outcome.
 
-Important knowledge must not disappear inside:
+Friction may exist in:
 
-- Email
-- Meetings
-- Private messages
-- Individual memory
-- Unstructured files
-- Disconnected software
+- information
+- communication
+- decisions
+- workflows
+- interfaces
+- ownership
+- approvals
+- knowledge discovery
+- system relationships
 
-Every project should leave ARC and the client more capable than before.
+Not all friction is harmful.
 
----
+Security, governance, validation, and human review may deliberately introduce necessary friction.
 
-## Principle 07 — Humans Retain Responsibility
+ARC removes unnecessary friction while preserving friction that protects trust, truth, safety, and accountability.
 
-AI may assist discovery, analysis, documentation, prediction, and execution.
+The goal is not zero friction.
 
-It does not remove human accountability.
-
-Humans must remain responsible for:
-
-- High-impact decisions
-- Approval
-- Ethics
-- Quality
-- Security
-- Consequences
+The goal is purposeful friction.
 
 ---
 
-## Principle 08 — Security and Privacy by Design
+# Principle — Bidirectional Reality Flow
 
-Security is not added after implementation.
+Every ARC system contains connected movements.
 
-Every system begins with:
+Creation moves forward.
 
-- Minimum necessary access
-- Clear ownership
-- Permission boundaries
-- Approval controls
-- Audit trails
-- Data retention rules
-- Secure removal of access
-- Defined responsibility
+Reality returns feedback backward.
 
-Trust must be designed into the architecture.
+```text
+Intent
+↕
+Design
+↕
+Architecture
+↕
+Systems
+↕
+Experience
+↕
+Reality
+↕
+Observation
+↕
+Evidence
+↕
+Knowledge
+↕
+Evolution
 
----
-
-## Principle 09 — Design for Evolution
-
-ARC does not design static systems.
-
-Every system must be capable of learning from reality.
-
-Feedback should change future decisions.
-
-Failures should strengthen future design.
-
-The system should improve through use rather than decay through neglect.
-
----
-
-## Principle 10 — Build the Smallest Complete System
-
-Do not build unnecessary scale.
-
-Do not create complexity for appearance.
-
-Build the smallest complete version capable of proving the system.
-
-Validate it in reality.
-
-Then expand from truth.
 
 ---
 
-## Principle 11 — Strengthen the Whole
+# Principle 06 — Knowledge Must Compound
 
-A local improvement must not weaken the wider system.
+Knowledge should never remain isolated inside one project.
 
-Every decision should consider its effect on:
+Every discovery, decision, architecture, implementation, failure, and outcome should increase future capability.
 
-- People
-- Knowledge
-- Security
-- Workflow
-- Experience
-- Cost
-- Future capability
-- Connected systems
+Knowledge must be:
 
-Optimising one component while damaging the whole is not progress.
+- connected
+- validated
+- versioned
+- discoverable
+- reusable
+- governed
 
----
+The value of knowledge increases when future systems can inherit it.
 
-## Principle 12 — Increase the Multiplier
-
-Every ARC project should improve future capability.
-
-A successful project should strengthen:
-
-- Methodology
-- Documentation
-- Reusable components
-- Organisational knowledge
-- Decision quality
-- Delivery speed
-- Trust
-- Long-term value
-
-The next project should begin from a stronger position than the previous one.
+Every completed project should make the next project stronger.
 
 ---
 
-## Governing Rule
+# Principle 07 — Humans Retain Responsibility
 
-We observe reality.
+Technology may assist.
 
-We discover relationships.
+Artificial intelligence may discover, reason, recommend, predict, explain, and automate within defined boundaries.
 
-We challenge assumptions.
+Human responsibility remains.
 
-We lock truth.
+People retain responsibility for:
 
-We design systems.
+- purpose
+- ethics
+- governance
+- approval
+- ownership
+- high-impact decisions
 
-We validate them in reality.
+Automation does not remove accountability.
 
-We learn.
+Capability increases.
 
-Then we return to discovery.
+Responsibility remains.
+
+---
+
+# Principle 08 — Security By Design
+
+Security is part of architecture.
+
+Not an addition after implementation.
+
+Every ARC system should protect:
+
+- identity
+- privacy
+- ownership
+- integrity
+- availability
+- auditability
+- trust
+
+Security boundaries should be understood before scale.
+
+Trust should be designed into the system from the beginning.
+
+---
+
+# Principle 09 — Design For Evolution
+
+ARC systems should be capable of changing without losing coherence.
+
+Architecture should support:
+
+- feedback
+- adaptation
+- reversibility
+- versioning
+- migration
+- learning
+- replacement
+
+Implementation may change.
+
+Responsibilities should remain clear.
+
+A system that cannot evolve eventually becomes a constraint.
+
+---
+
+# Principle 10 — Build The Smallest Complete System
+
+ARC does not optimise for maximum complexity.
+
+ARC builds the smallest system capable of satisfying the validated requirement.
+
+Small does not mean incomplete.
+
+Complete means the system contains every responsibility required for coherent operation.
+
+Complexity must justify itself through capability.
+
+---
+
+# Principle 11 — Strengthen The Whole
+
+A local improvement that weakens the larger system is not an improvement.
+
+Every decision should consider:
+
+- neighbouring systems
+- dependencies
+- relationships
+- future capability
+- architectural integrity
+- organisational impact
+
+Optimise the whole.
+
+Not the isolated component.
+
+---
+
+# Principle 12 — Increase The Multiplier
+
+Every contribution should increase future capability.
+
+A successful project does more than produce an outcome.
+
+It improves the system that creates future outcomes.
+
+The ARC Multiplier is created when:
+
+Knowledge improves methodology.
+
+Methodology improves architecture.
+
+Architecture improves engineering.
+
+Engineering creates reusable capability.
+
+Reusable capability strengthens future projects.
+
+Progress should compound.
+
+---
+
+# Closing Principle
+
+ARC principles exist to preserve coherence while the system evolves.
+
+Relationships may change.
+
+Technology may change.
+
+Implementation may change.
+
+Reality remains the authority.
+
+The principles exist to ensure ARC continues designing systems that improve reality.

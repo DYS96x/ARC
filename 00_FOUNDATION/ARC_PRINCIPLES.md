@@ -269,9 +269,40 @@ A system must not only produce outcomes.
 
 A system must learn from outcomes.
 
+
 ---
 
-# Principle 05 — Bidirectional Reality Flow
+# Principle 05 — Reduce Friction
+
+Complexity must justify itself.
+
+ARC systems should reduce unnecessary effort between intention and outcome.
+
+Friction may exist in:
+
+- information
+- communication
+- decisions
+- workflows
+- interfaces
+- ownership
+- approvals
+- knowledge discovery
+- system relationships
+
+Not all friction is harmful.
+
+Security, governance, validation, and human review may deliberately introduce necessary friction.
+
+ARC removes unnecessary friction while preserving friction that protects trust, truth, safety, and accountability.
+
+The goal is not zero friction.
+
+The goal is purposeful friction.
+
+---
+
+# Principle — Bidirectional Reality Flow
 
 Every ARC system contains connected movements.
 
@@ -299,3 +330,167 @@ Evidence
 Knowledge
 ↕
 Evolution
+
+
+---
+
+# Principle 06 — Knowledge Must Compound
+
+Knowledge should never remain isolated inside one project.
+
+Every discovery, decision, architecture, implementation, failure, and outcome should increase future capability.
+
+Knowledge must be:
+
+- connected
+- validated
+- versioned
+- discoverable
+- reusable
+- governed
+
+The value of knowledge increases when future systems can inherit it.
+
+Every completed project should make the next project stronger.
+
+---
+
+# Principle 07 — Humans Retain Responsibility
+
+Technology may assist.
+
+Artificial intelligence may discover, reason, recommend, predict, explain, and automate within defined boundaries.
+
+Human responsibility remains.
+
+People retain responsibility for:
+
+- purpose
+- ethics
+- governance
+- approval
+- ownership
+- high-impact decisions
+
+Automation does not remove accountability.
+
+Capability increases.
+
+Responsibility remains.
+
+---
+
+# Principle 08 — Security By Design
+
+Security is part of architecture.
+
+Not an addition after implementation.
+
+Every ARC system should protect:
+
+- identity
+- privacy
+- ownership
+- integrity
+- availability
+- auditability
+- trust
+
+Security boundaries should be understood before scale.
+
+Trust should be designed into the system from the beginning.
+
+---
+
+# Principle 09 — Design For Evolution
+
+ARC systems should be capable of changing without losing coherence.
+
+Architecture should support:
+
+- feedback
+- adaptation
+- reversibility
+- versioning
+- migration
+- learning
+- replacement
+
+Implementation may change.
+
+Responsibilities should remain clear.
+
+A system that cannot evolve eventually becomes a constraint.
+
+---
+
+# Principle 10 — Build The Smallest Complete System
+
+ARC does not optimise for maximum complexity.
+
+ARC builds the smallest system capable of satisfying the validated requirement.
+
+Small does not mean incomplete.
+
+Complete means the system contains every responsibility required for coherent operation.
+
+Complexity must justify itself through capability.
+
+---
+
+# Principle 11 — Strengthen The Whole
+
+A local improvement that weakens the larger system is not an improvement.
+
+Every decision should consider:
+
+- neighbouring systems
+- dependencies
+- relationships
+- future capability
+- architectural integrity
+- organisational impact
+
+Optimise the whole.
+
+Not the isolated component.
+
+---
+
+# Principle 12 — Increase The Multiplier
+
+Every contribution should increase future capability.
+
+A successful project does more than produce an outcome.
+
+It improves the system that creates future outcomes.
+
+The ARC Multiplier is created when:
+
+Knowledge improves methodology.
+
+Methodology improves architecture.
+
+Architecture improves engineering.
+
+Engineering creates reusable capability.
+
+Reusable capability strengthens future projects.
+
+Progress should compound.
+
+---
+
+# Closing Principle
+
+ARC principles exist to preserve coherence while the system evolves.
+
+Relationships may change.
+
+Technology may change.
+
+Implementation may change.
+
+Reality remains the authority.
+
+The principles exist to ensure ARC continues designing systems that improve reality.
