@@ -210,5 +210,45 @@ describe(
       }
     );
 
+
+    it(
+      "detects changed evidence identity",
+      async () => {
+
+        const boundary =
+          new VoidEvidenceIntegrityBoundary();
+
+        const evidence =
+          buildEvidence();
+
+        const protectedEvidence =
+          await boundary.protect(
+            evidence
+          );
+
+        const originalEvidenceId =
+          evidence.evidenceId;
+
+        evidence.evidenceId =
+          crypto.randomUUID();
+
+        expect(evidence.evidenceId)
+          .not.toBe(originalEvidenceId);
+
+        const verification =
+          await boundary.verify(
+            protectedEvidence
+          );
+
+        expect(verification.status)
+          .toBe("CHANGED");
+
+        expect(
+          verification.actualFingerprint
+        ).not.toBe(
+          verification.expectedFingerprint
+        );
+      }
+    );
   }
 );

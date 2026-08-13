@@ -93,8 +93,6 @@ describe(
           adapter.adapt(
             protectedA,
             {
-              evidenceId:
-                "EVIDENCE-A",
               subject:
                 "ROOM_A",
               property:
@@ -110,8 +108,6 @@ describe(
           adapter.adapt(
             protectedB,
             {
-              evidenceId:
-                "EVIDENCE-B",
               subject:
                 "ROOM_A",
               property:
@@ -122,6 +118,22 @@ describe(
                 protectedB.actualOutcome
             }
           );
+
+        expect(comparableA.evidenceId)
+          .toBe(
+            protectedA.evidenceId
+          );
+
+        expect(comparableB.evidenceId)
+          .toBe(
+            protectedB.evidenceId
+          );
+
+        expect(
+          comparableA.evidenceId
+        ).not.toBe(
+          comparableB.evidenceId
+        );
 
         const result =
           contradiction.compare(
@@ -280,8 +292,6 @@ describe(
           adapter.adapt(
             protectedA,
             {
-              evidenceId:
-                "EVIDENCE-A",
               subject:
                 "DOOR_A",
               property:
@@ -297,8 +307,6 @@ describe(
           adapter.adapt(
             protectedB,
             {
-              evidenceId:
-                "EVIDENCE-B",
               subject:
                 "DOOR_B",
               property:
@@ -309,6 +317,22 @@ describe(
                 protectedB.actualOutcome
             }
           );
+
+        expect(comparableA.evidenceId)
+          .toBe(
+            protectedA.evidenceId
+          );
+
+        expect(comparableB.evidenceId)
+          .toBe(
+            protectedB.evidenceId
+          );
+
+        expect(
+          comparableA.evidenceId
+        ).not.toBe(
+          comparableB.evidenceId
+        );
 
         const result =
           contradiction.compare(

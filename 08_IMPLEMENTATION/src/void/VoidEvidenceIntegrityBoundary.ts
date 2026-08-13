@@ -93,6 +93,8 @@ export class VoidEvidenceIntegrityBoundary {
 
     const canonical =
       JSON.stringify({
+        evidenceId:
+          evidence.evidenceId,
         decision:
           evidence.decision,
         action:

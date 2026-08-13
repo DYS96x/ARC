@@ -46,8 +46,6 @@ describe(
           adapter.adapt(
             protectedEvidence,
             {
-              evidenceId:
-                "EVIDENCE-001",
               subject:
                 "ROOM_A",
               property:
@@ -59,10 +57,15 @@ describe(
             }
           );
 
+        expect(comparable.evidenceId)
+          .toBe(
+            protectedEvidence.evidenceId
+          );
+
         expect(comparable)
           .toEqual({
             evidenceId:
-              "EVIDENCE-001",
+              protectedEvidence.evidenceId,
             subject:
               "ROOM_A",
             property:
@@ -115,8 +118,6 @@ describe(
           adapter.adapt(
             protectedEvidence,
             {
-              evidenceId:
-                "EVIDENCE-002",
               subject:
                 "DOOR_A",
               property:
@@ -171,8 +172,6 @@ describe(
           adapter.adapt(
             protectedEvidence,
             {
-              evidenceId:
-                "EVIDENCE-003",
               subject:
                 "SUBJECT-A",
               property:

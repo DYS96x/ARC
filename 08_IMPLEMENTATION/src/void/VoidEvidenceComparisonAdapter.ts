@@ -7,7 +7,6 @@ import {
 } from "./VoidEvidenceContradictionBoundary";
 
 export interface VoidEvidenceComparisonContext {
-  evidenceId: string;
   subject: string;
   property: string;
   scope: string;
@@ -19,6 +18,9 @@ export interface VoidEvidenceComparisonContext {
  *
  * Converts protected reality evidence into an explicitly
  * comparable structural representation.
+ *
+ * Evidence identity is inherited directly from the
+ * protected evidence record.
  *
  * Comparison meaning must be supplied by the caller.
  *
@@ -45,7 +47,7 @@ export class VoidEvidenceComparisonAdapter {
 
     return {
       evidenceId:
-        context.evidenceId,
+        evidence.evidenceId,
       subject:
         context.subject,
       property:

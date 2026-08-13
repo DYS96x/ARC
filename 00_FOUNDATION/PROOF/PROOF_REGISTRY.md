@@ -1,4 +1,4 @@
-﻿# ARC Proof Registry
+# ARC Proof Registry
 
 ## Purpose
 
@@ -193,5 +193,73 @@ Observed Evidence
 Proof
 
 If reality contradicts an existing proof claim, its proof state must change.
+
+Reality remains the final validator.
+
+---
+
+## PROOF-006 — Protected Evidence Identity
+
+### Claim
+
+Protected reality evidence receives an evidence identity at the VOID reality boundary.
+
+That identity is inherited by downstream VOID comparison structures rather than supplied independently by comparison context.
+
+Evidence identity is included in protected-evidence integrity verification, so mutation of the identity changes the integrity fingerprint.
+
+### Demonstrated Behaviour
+
+Current executable tests demonstrate that:
+
+- protected reality evidence receives an `evidenceId`
+- VOID is the production owner of evidence identity creation
+- comparison structures inherit the protected evidence identity
+- comparison context does not independently own evidence identity
+- evidence identity participates in the integrity fingerprint
+- changing evidence identity is detected as an integrity change
+- identity does not determine truth
+- identity does not determine source reliability
+- identity does not grant authority
+- identity does not create interpretation
+
+### Implementation Evidence
+
+- `08_IMPLEMENTATION/src/void/VoidRealityEvidenceBoundary.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceComparisonAdapter.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceIntegrityBoundary.ts`
+
+### Executable Evidence
+
+- `08_IMPLEMENTATION/src/void/VoidRealityEvidenceBoundary.test.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceComparisonAdapter.test.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceIntegrityBoundary.test.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceIntegrityPipeline.test.ts`
+
+### Reproduction
+
+From `08_IMPLEMENTATION`:
+
+`npm test -- src/void/VoidRealityEvidenceBoundary.test.ts src/void/VoidEvidenceIntegrityBoundary.test.ts src/void/VoidEvidenceComparisonAdapter.test.ts src/void/VoidEvidenceContradictionBoundary.test.ts src/void/VoidEvidenceIntegrityPipeline.test.ts --runInBand`
+
+Then:
+
+`npx tsc --noEmit`
+
+### Boundary
+
+This proof demonstrates evidence identity ownership and integrity behaviour exercised by the listed tests.
+
+It does not prove that an evidence record is true.
+
+It does not prove that a source is reliable.
+
+It does not prove semantic equivalence between evidence records.
+
+It does not grant execution authority.
+
+Interpretation remains ARC responsibility.
+
+Authority remains HOLY ARC responsibility.
 
 Reality remains the final validator.

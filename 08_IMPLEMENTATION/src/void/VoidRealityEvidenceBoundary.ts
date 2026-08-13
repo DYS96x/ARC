@@ -19,11 +19,18 @@ export interface VoidRealityEvidence {
 
 export interface ProtectedRealityEvidence
   extends Omit<VoidRealityEvidence, "provenance"> {
+  evidenceId: string;
   provenance: VoidEvidenceProvenance;
 }
 
 /**
  * VOID reality-integrity boundary.
+ *
+ * VOID establishes the identity of an evidence record
+ * when that record enters the protected reality boundary.
+ *
+ * The evidence identity identifies the record.
+ * It does not identify truth, meaning, or correctness.
  *
  * VOID preserves evidence and its provenance
  * before ARC interpretation.
@@ -56,6 +63,8 @@ export class VoidRealityEvidenceBoundary {
       new Date();
 
     return {
+      evidenceId:
+        crypto.randomUUID(),
       decision:
         evidence.decision,
       action:
