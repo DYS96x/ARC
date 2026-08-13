@@ -263,3 +263,87 @@ Interpretation remains ARC responsibility.
 Authority remains HOLY ARC responsibility.
 
 Reality remains the final validator.
+
+---
+
+## PROOF-007 — Protected Evidence Lineage Integrity
+
+### Claim
+
+VOID preserves explicit lineage relationships between protected reality evidence records using identities created by the VOID reality boundary.
+
+VOID can inspect recorded lineage for structural duplicate relationships and cyclic relationships without interpreting the meaning, truth, causality, reliability, or authority of the evidence.
+
+### Demonstrated Behaviour
+
+Current executable tests demonstrate that:
+
+- protected reality evidence identities can be used directly in lineage relationships
+- lineage preserves supplied evidence identities without creating replacement identities
+- multi-record lineage chains preserve protected evidence identity relationships
+- structurally valid lineage is reported as valid
+- duplicate lineage relationships are detected
+- direct cyclic lineage is detected
+- indirect cyclic lineage is detected
+- cyclic relationships built from real protected evidence identities are detected
+- lineage records are preserved while structural integrity issues are reported
+- VOID remains the production owner of evidence identity creation at the reality boundary
+- lineage does not determine truth
+- lineage does not determine causality
+- lineage does not determine source reliability
+- lineage does not adjust confidence
+- lineage does not recommend interpretation
+- lineage does not grant authority
+
+### Implementation Evidence
+
+- `08_IMPLEMENTATION/src/void/VoidRealityEvidenceBoundary.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceLineageBoundary.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceLineageIntegrityBoundary.ts`
+
+### Executable Evidence
+
+- `08_IMPLEMENTATION/src/void/VoidEvidenceLineageBoundary.test.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceLineageIntegrityBoundary.test.ts`
+- `08_IMPLEMENTATION/src/void/VoidEvidenceLineagePipeline.test.ts`
+- `08_IMPLEMENTATION/src/void/VoidRealityEvidenceBoundary.test.ts`
+
+### Reproduction
+
+From `08_IMPLEMENTATION`:
+
+`npm test -- src/void/VoidRealityEvidenceBoundary.test.ts src/void/VoidEvidenceIntegrityBoundary.test.ts src/void/VoidEvidenceComparisonAdapter.test.ts src/void/VoidEvidenceContradictionBoundary.test.ts src/void/VoidEvidenceIntegrityPipeline.test.ts src/void/VoidEvidenceLineageBoundary.test.ts src/void/VoidEvidenceLineageIntegrityBoundary.test.ts src/void/VoidEvidenceLineagePipeline.test.ts --runInBand`
+
+Then:
+
+`npx tsc --noEmit`
+
+### Current Demonstrated Result
+
+The current VOID regression contains:
+
+- 8 passing test suites
+- 34 passing tests
+- 0 failing tests
+
+### Boundary
+
+This proof demonstrates only the lineage preservation and structural integrity behaviour exercised by the listed executable tests.
+
+It does not prove that a lineage relationship represents real-world causality.
+
+It does not prove that related evidence is true.
+
+It does not prove that a source is reliable.
+
+It does not infer missing relationships.
+
+It does not rank or prefer evidence.
+
+It does not grant execution authority.
+
+Interpretation remains ARC responsibility.
+
+Authority remains HOLY ARC responsibility.
+
+Reality remains the final validator.
