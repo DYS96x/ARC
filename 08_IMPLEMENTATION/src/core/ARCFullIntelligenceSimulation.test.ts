@@ -66,7 +66,7 @@ describe(
     );
 
     it(
-      "learns only from a recorded observed reality outcome",
+      "learns only after observed reality validates the expected outcome",
       () => {
 
         const arc =
@@ -78,18 +78,25 @@ describe(
               "ACTION-A",
             action:
               "APPLY CHANGE",
-            result:
+            expectedOutcome:
               "Reality confirmed expected behaviour",
-            success:
-              true,
+            actualOutcome:
+              "Reality confirmed expected behaviour",
             observedAt:
               new Date()
           });
 
         expect(
-          result.outcome.success
+          result.outcome.actualOutcome
         )
-          .toBe(true);
+          .toBe(
+            "Reality confirmed expected behaviour"
+          );
+
+        expect(
+          result.validation.status
+        )
+          .toBe("VALIDATED");
 
         expect(
           result.validation.success
@@ -114,7 +121,7 @@ describe(
     );
 
     it(
-      "reduces confidence from a recorded contradictory reality outcome",
+      "reduces confidence only after observed reality invalidates the expectation",
       () => {
 
         const arc =
@@ -126,18 +133,25 @@ describe(
               "ACTION-A",
             action:
               "APPLY CHANGE",
-            result:
+            expectedOutcome:
+              "Reality confirmed expected behaviour",
+            actualOutcome:
               "Reality contradicted expectation",
-            success:
-              false,
             observedAt:
               new Date()
           });
 
         expect(
-          result.outcome.success
+          result.outcome.actualOutcome
         )
-          .toBe(false);
+          .toBe(
+            "Reality contradicted expectation"
+          );
+
+        expect(
+          result.validation.status
+        )
+          .toBe("INVALIDATED");
 
         expect(
           result.validation.success
@@ -150,5 +164,44 @@ describe(
           .toBe(0.4);
       }
     );
+
+    it(
+      "does not change confidence when observed reality is inconclusive",
+      () => {
+
+        const arc =
+          new ARCFullIntelligenceSimulation();
+
+        const result =
+          arc.recordOutcome({
+            decision:
+              "ACTION-A",
+            action:
+              "APPLY CHANGE",
+            expectedOutcome:
+              "Reality confirmed expected behaviour",
+            actualOutcome:
+              "",
+            observedAt:
+              new Date()
+          });
+
+        expect(
+          result.validation.status
+        )
+          .toBe("INCONCLUSIVE");
+
+        expect(
+          result.validation.success
+        )
+          .toBeUndefined();
+
+        expect(
+          result.confidence.confidence
+        )
+          .toBe(0.5);
+      }
+    );
+
   }
 );

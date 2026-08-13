@@ -100,10 +100,14 @@ export class ARCFullIntelligenceSimulation {
       );
 
     const validation =
-      this.validation.validate(
-        recorded.decision,
-        recorded.success
-      );
+      this.validation.validate({
+        decision:
+          recorded.decision,
+        expectedOutcome:
+          recorded.expectedOutcome,
+        actualOutcome:
+          recorded.actualOutcome
+      });
 
     const confidence =
       this.confidence.update(

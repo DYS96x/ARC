@@ -2,13 +2,13 @@
 
 describe("Action Outcome Integration", () => {
 
-  it("feeds successful reality outcomes back into memory learning", () => {
+  it("records reality observation without declaring validation success", () => {
 
     const engine =
       new ActionOutcomeIntegration();
 
     const result =
-      engine.completeAction(
+      engine.recordObservation(
         {
           id: "ACTION-001",
           decisionId: "DECISION-001",
@@ -20,7 +20,6 @@ describe("Action Outcome Integration", () => {
             new Date()
         },
         "Reality confirmed",
-        true,
         {
           id: "MEM-001",
           source:
@@ -38,22 +37,31 @@ describe("Action Outcome Integration", () => {
         }
       );
 
-    expect(result.outcome.success)
-      .toBe(true);
+    expect(
+      result.observation.actualOutcome
+    )
+      .toBe(
+        "Reality confirmed"
+      );
 
     expect(
-      result.learning.memory.confirmations
+      "success" in result.observation
     )
-      .toBe(2);
+      .toBe(false);
+
+    expect(
+      result.memory.confirmations
+    )
+      .toBe(1);
   });
 
-  it("preserves failed reality outcomes for learning", () => {
+  it("records contradictory reality without weakening memory before validation", () => {
 
     const engine =
       new ActionOutcomeIntegration();
 
     const result =
-      engine.completeAction(
+      engine.recordObservation(
         {
           id: "ACTION-002",
           decisionId: "DECISION-002",
@@ -65,7 +73,6 @@ describe("Action Outcome Integration", () => {
             new Date()
         },
         "Reality contradicted expectation",
-        false,
         {
           id: "MEM-002",
           source:
@@ -83,13 +90,22 @@ describe("Action Outcome Integration", () => {
         }
       );
 
-    expect(result.outcome.success)
-      .toBe(false);
-
-    expect(result.outcome.learning)
+    expect(
+      result.observation.actualOutcome
+    )
       .toBe(
-        "Action requires adjustment"
+        "Reality contradicted expectation"
       );
+
+    expect(
+      result.memory.confidence
+    )
+      .toBe(0.8);
+
+    expect(
+      result.memory.confirmations
+    )
+      .toBe(1);
   });
 
 });

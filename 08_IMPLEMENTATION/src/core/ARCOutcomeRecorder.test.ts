@@ -7,7 +7,7 @@ describe(
   () => {
 
     it(
-      "records an explicit observed outcome without inventing success",
+      "records observed reality evidence without inventing a verdict",
       () => {
 
         const recorder =
@@ -19,10 +19,10 @@ describe(
               "DECISION-001",
             action:
               "APPLY CHANGE",
-            result:
+            expectedOutcome:
               "Reality confirmed expected behaviour",
-            success:
-              true,
+            actualOutcome:
+              "Reality confirmed expected behaviour",
             observedAt:
               new Date()
           });
@@ -30,24 +30,33 @@ describe(
         expect(
           outcome.decision
         )
-        .toBe(
-          "DECISION-001"
-        );
+          .toBe(
+            "DECISION-001"
+          );
 
         expect(
-          outcome.success
+          outcome.expectedOutcome
         )
-        .toBe(true);
+          .toBe(
+            "Reality confirmed expected behaviour"
+          );
+
+        expect(
+          outcome.actualOutcome
+        )
+          .toBe(
+            "Reality confirmed expected behaviour"
+          );
 
         expect(
           recorder.getOutcomes().length
         )
-        .toBe(1);
+          .toBe(1);
       }
     );
 
     it(
-      "preserves an observed failure as reality evidence",
+      "preserves contradictory observed reality without interpreting it",
       () => {
 
         const recorder =
@@ -59,25 +68,27 @@ describe(
               "DECISION-002",
             action:
               "APPLY CHANGE",
-            result:
+            expectedOutcome:
+              "Positive result",
+            actualOutcome:
               "Reality contradicted expectation",
-            success:
-              false,
             observedAt:
               new Date()
           });
 
         expect(
-          outcome.success
+          outcome.actualOutcome
         )
-        .toBe(false);
+          .toBe(
+            "Reality contradicted expectation"
+          );
 
         expect(
           recorder.findByDecision(
             "DECISION-002"
           ).length
         )
-        .toBe(1);
+          .toBe(1);
       }
     );
 

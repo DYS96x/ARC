@@ -1,8 +1,8 @@
 ﻿export interface ARCObservedOutcome {
   decision: string;
   action: string;
-  result: string;
-  success: boolean;
+  expectedOutcome: string;
+  actualOutcome: string;
   observedAt: Date;
 }
 

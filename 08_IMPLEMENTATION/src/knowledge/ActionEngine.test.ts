@@ -29,7 +29,7 @@ describe("Action Engine", () => {
       .toBeUndefined();
   });
 
-  it("records a successful reality outcome", () => {
+  it("records a reality observation without declaring success", () => {
 
     const engine =
       new ActionEngine();
@@ -46,18 +46,22 @@ describe("Action Engine", () => {
           createdAt:
             new Date()
         },
-        "Reality confirmed",
-        true
+        "Reality confirmed"
       );
 
     expect(completed.actualOutcome)
       .toBe("Reality confirmed");
 
     expect(completed.success)
-      .toBe(true);
+      .toBeUndefined();
+
+    expect(completed.learning)
+      .toBe(
+        "Reality observation recorded; validation pending"
+      );
   });
 
-  it("records a failed reality outcome", () => {
+  it("records contradictory reality without declaring failure", () => {
 
     const engine =
       new ActionEngine();
@@ -74,12 +78,16 @@ describe("Action Engine", () => {
           createdAt:
             new Date()
         },
-        "Reality contradicted expectation",
-        false
+        "Reality contradicted expectation"
+      );
+
+    expect(completed.actualOutcome)
+      .toBe(
+        "Reality contradicted expectation"
       );
 
     expect(completed.success)
-      .toBe(false);
+      .toBeUndefined();
   });
 
 });

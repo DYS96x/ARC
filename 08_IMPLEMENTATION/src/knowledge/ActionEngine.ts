@@ -21,17 +21,15 @@ export class ActionEngine {
 
   complete(
     action: Action,
-    outcome: string,
-    success: boolean
+    outcome: string
   ): Action {
 
     return {
       ...action,
       actualOutcome:
         outcome,
-      success,
       learning:
-        "Outcome recorded from reality",
+        "Reality observation recorded; validation pending",
       completedAt:
         new Date()
     };
