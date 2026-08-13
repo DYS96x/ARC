@@ -1,4 +1,4 @@
-# LAW 004 — Truth
+﻿# LAW 004 — Truth
 
 Version: 1.0.0  
 Status: Ratified  
@@ -186,7 +186,7 @@ The following violate LAW 004:
 LAW 004 governs:
 
 - CAF assessments
-- VOID reasoning
+- ARC reasoning
 - ARC knowledge
 - HOLY ARC constitutional review
 - Organisational decision-making

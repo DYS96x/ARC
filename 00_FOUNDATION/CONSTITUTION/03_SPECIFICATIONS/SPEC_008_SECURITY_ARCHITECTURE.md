@@ -1,4 +1,4 @@
-# SPEC_008 — Security Architecture
+﻿# SPEC_008 — Security Architecture
 
 Version: 1.0.0  
 Status: Draft  
@@ -397,7 +397,7 @@ SPEC_008 applies to:
 - ARC knowledge systems
 - ARC OS infrastructure
 - WOS state systems
-- VOID intelligence systems
+- ARC intelligence systems
 - External integrations
 
 ---

@@ -1,4 +1,4 @@
-# DYS96 Ecosystem Architecture
+﻿# DYS96 Ecosystem Architecture
 
 Version: 1.0  
 Status: Canonical  
@@ -87,7 +87,7 @@ Provides access to:
 - Services
 - World Engine
 - Platform APIs
-- VOID intelligence
+- ARC intelligence
 
 ### WOS
 

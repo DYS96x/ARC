@@ -1,32 +1,43 @@
-# CONTRACT_007 — VOID Intelligence Contract
+# CONTRACT_007 — VOID Reality Integrity Contract
 
-Version: 1.0.0  
-Status: Draft  
-Authority: HOLY ARC Standards  
+Version: 2.0.0
+Status: Draft
+Authority: HOLY ARC Standards
 Classification: Internal
 
 ---
 
 # Contract
 
-> VOID provides intelligence capability by analysing information, identifying patterns, explaining possibilities and recommending actions while remaining subordinate to evidence, governance and human responsibility.
+> VOID protects the integrity, provenance, uncertainty, and traceability of evidence entering and returning through the ARC ecosystem.
+
+VOID protects evidence.
+
+ARC understands evidence.
+
+HOLY ARC governs authority.
+
+Reality remains final.
 
 ---
 
 # Purpose
 
-Define the relationship between VOID and systems requiring intelligence support.
+Define the responsibility boundary between VOID and systems that depend on trustworthy evidence.
 
-VOID exists to provide:
+VOID exists to protect:
 
-- Analysis
-- Reasoning
-- Pattern recognition
-- Prediction
-- Explanation
-- Recommendation
-- Confidence assessment
-- Learning support
+- evidence integrity
+- source integrity
+- provenance
+- contradiction visibility
+- uncertainty
+- manipulation detection
+- corruption detection
+- validation boundaries
+- evidence traceability
+
+VOID does not perform ARC intelligence.
 
 ---
 
@@ -34,13 +45,19 @@ VOID exists to provide:
 
 VOID owns:
 
-- Intelligence processing
-- Reasoning models
-- Analysis capability
-- Pattern discovery
-- Recommendation generation
-- Confidence estimation
-- Explanation capability
+- evidence integrity
+- provenance preservation
+- source identity
+- source integrity state
+- contradiction detection
+- manipulation detection
+- corruption detection
+- uncertainty preservation
+- integrity classification
+- validation boundaries
+- evidence traceability
+
+VOID protects the relationship between systems and reality.
 
 ---
 
@@ -48,336 +65,47 @@ VOID owns:
 
 VOID does not own:
 
-- Constitutional authority
-- Final decisions
-- Permanent memory
-- Workflow ownership
-- Execution authority
-- Reality definition
+- analysis
+- reasoning
+- pattern discovery
+- prediction
+- recommendation
+- confidence estimation
+- learning
+- persistent ecosystem memory
+- constitutional authority
+- approval authority
+- permission authority
+- workflow ownership
+- execution authority
+- final decisions
+- reality definition
+
+VOID protects evidence.
+
+VOID does not decide what the evidence should mean.
 
 ---
 
-# Intelligence Model
-
-VOID follows:
+# Reality Integrity Model
 
 ```text
-Context
-
-↓
-
-Evidence
-
-↓
-
-Analysis
-
-↓
-
-Reasoning
-
-↓
-
-Pattern Recognition
-
-↓
-
-Prediction
-
-↓
-
-Recommendation
-
-↓
-
-Human Decision
-
-↓
-
-Outcome
-
-↓
-
-Learning
-```
-
----
-
-# Required Inputs
-
-VOID requires:
-
-- Approved context
-- Relevant evidence
-- Defined objective
-- Applicable permissions
-- Known limitations
-
-VOID must understand the boundaries of available information.
-
----
-
-# VOID Outputs
-
-VOID may provide:
-
-- Analysis
-- Explanations
-- Options
-- Recommendations
-- Predictions
-- Confidence scores
-- Identified risks
-- Questions requiring investigation
-
----
-
-# Intelligence Boundaries
-
-VOID may:
-
-✅ Analyse information
-
-✅ Discover patterns
-
-✅ Explain relationships
-
-✅ Recommend actions
-
-✅ Estimate confidence
-
-VOID may not:
-
-❌ Approve itself
-
-❌ Change constitutional rules
-
-❌ Rewrite evidence
-
-❌ Remove uncertainty
-
-❌ Execute high-impact actions
-
-❌ Replace accountable humans
-
----
-
-# Evidence Relationship
-
-VOID reasoning must preserve:
-
-- Evidence sources
-- Assumptions
-- Unknowns
-- Confidence
-- Limitations
-
-A recommendation without context loses trust.
-
----
-
-# Relationship With ARC
-
-ARC provides:
-
-- Memory
-- Knowledge
-- Historical context
-
-VOID provides:
-
-- Reasoning
-- Analysis
-- Intelligence
-
-Relationship:
-
-```text
-ARC
-
-Memory
-
-⇄
-
-VOID
-
-Intelligence
-```
-
----
-
-# Relationship With WOS
-
-WOS provides:
-
-- Current context
-- Active workflow state
-- Current objectives
-
-VOID provides:
-
-- Reasoning support
-- Recommendations
-
-Relationship:
-
-```text
-WOS
-
-Context
-
-⇄
-
-VOID
-
-Reasoning
-```
-
----
-
-# Relationship With CAF
-
-CAF provides:
-
-- Organisational understanding
-- Assessment context
-
-VOID assists through:
-
-- Analysis
-- Pattern discovery
-- Explanation
-
-CAF remains responsible for assessment outcomes.
-
----
-
-# Relationship With Sprint OS
-
-Sprint OS may use VOID for:
-
-- Planning support
-- Risk analysis
-- Improvement suggestions
-
-Sprint OS remains responsible for delivery.
-
----
-
-# Learning Loop
-
-VOID improves through:
-
-```text
-Recommendation
-
-↓
-
-Human Decision
-
-↓
-
-Outcome
-
-↓
-
+Reality
+   ↓
 Observation
-
-↓
-
+   ↓
+Source
+   ↓
 Evidence
-
-↓
-
-Improved Intelligence
-```
-
----
-
-# Confidence Requirements
-
-Every significant VOID output should include:
-
-```text
-Confidence Level
-
-Supporting Evidence
-
-Assumptions
-
-Unknowns
-
-Risks
-```
-
-Confidence must remain visible.
-
----
-
-# Security Requirements
-
-VOID access requires:
-
-- Identity
-- Permission
-- Approved context
-- Auditability
-
-Intelligence must operate within defined boundaries.
-
----
-
-# Failure Handling
-
-Intelligence failures follow:
-
-```text
-Detect
-
-↓
-
-Record
-
-↓
-
-Review
-
-↓
-
-Correct
-
-↓
-
-Learn
-```
-
----
-
-# Quality Criteria
-
-This contract is satisfied when:
-
-- Recommendations are explainable.
-- Evidence is visible.
-- Confidence is clear.
-- Human responsibility remains.
-- Learning improves future reasoning.
-
----
-
-# Violations
-
-The following violate this contract:
-
-- AI acting as final authority.
-- Unsupported conclusions.
-- Hidden assumptions.
-- Silent execution.
-- Unapproved context access.
-- Removing uncertainty.
-
----
-
-# Final Principle
-
-> Intelligence expands what can be understood. Responsibility determines what should be done.
+   ↓
+Provenance
+   ↓
+Integrity Evaluation
+   ↓
+Contradiction / Manipulation Check
+   ↓
+Uncertainty Preservation
+   ↓
+Validated Evidence
+   ↓
+ARC Intelligence

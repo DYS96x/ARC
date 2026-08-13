@@ -1,4 +1,4 @@
-# LAW 005 — State
+﻿# LAW 005 — State
 
 Version: 1.0.0  
 Status: Ratified  
@@ -185,7 +185,7 @@ LAW 005 governs:
 - ARC OS execution state
 - ARC persistent memory separation
 - HOLY ARC constitutional state
-- VOID reasoning context
+- ARC reasoning context
 - Sprint OS sprint state
 - CAF assessment state
 

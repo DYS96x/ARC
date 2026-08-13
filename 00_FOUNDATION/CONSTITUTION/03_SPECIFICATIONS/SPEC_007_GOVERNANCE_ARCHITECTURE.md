@@ -1,4 +1,4 @@
-# SPEC_007 — Governance Architecture
+﻿# SPEC_007 — Governance Architecture
 
 Version: 1.0.0  
 Status: Draft  
@@ -59,7 +59,7 @@ Authority requires explicit governance.
 
 # Governance Model
 
-ARC governance follows:
+Ecosystem governance follows:
 
 ```text
 Question

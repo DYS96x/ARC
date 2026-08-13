@@ -1,4 +1,4 @@
-# LAW 001 — Responsibility
+﻿# LAW 001 — Responsibility
 
 Version: 1.0.0  
 Status: Ratified  
@@ -189,7 +189,7 @@ LAW 001 governs:
 - WOS live-state ownership
 - CAF assessment ownership
 - Sprint OS delivery ownership
-- VOID reasoning ownership
+- ARC reasoning ownership
 
 ---
 

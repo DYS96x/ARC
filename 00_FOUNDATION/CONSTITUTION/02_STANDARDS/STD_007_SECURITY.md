@@ -1,4 +1,4 @@
-# STD_007 — Security
+﻿# STD_007 — Security
 
 Version: 1.0.0  
 Status: Draft  
@@ -290,7 +290,7 @@ STD_007 applies to:
 - WOS state management
 - CAF assessments
 - Sprint OS delivery systems
-- VOID intelligence systems
+- ARC intelligence systems
 - Future ARC platforms
 
 ---

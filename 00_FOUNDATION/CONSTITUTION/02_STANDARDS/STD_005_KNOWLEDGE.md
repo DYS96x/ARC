@@ -1,4 +1,4 @@
-# STD_005 — Knowledge
+﻿# STD_005 — Knowledge
 
 Version: 1.0.0  
 Status: Draft  
@@ -161,7 +161,7 @@ A validated rule or guiding concept.
 
 ## Constitutional Knowledge
 
-Knowledge formally accepted into ARC governance.
+Knowledge formally accepted into the governed ARC knowledge system.
 
 ---
 

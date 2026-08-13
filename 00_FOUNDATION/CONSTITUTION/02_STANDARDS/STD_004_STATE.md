@@ -1,4 +1,4 @@
-# STD_004 — State
+﻿# STD_004 — State
 
 Version: 1.0.0  
 Status: Draft  
@@ -309,7 +309,7 @@ STD_004 applies to:
 - ARC OS execution state
 - Sprint OS sprint state
 - CAF assessment state
-- VOID reasoning context
+- ARC reasoning context
 - Future ARC platforms
 
 ---

@@ -1,4 +1,4 @@
-# STD_003 — Relationship
+﻿# STD_003 — Relationship
 
 Version: 1.0.0  
 Status: Draft  
@@ -325,7 +325,7 @@ STD_003 applies to:
 - WOS workflows
 - CAF assessments
 - Sprint OS delivery
-- VOID reasoning connections
+- ARC reasoning connections
 - Future ecosystem integrations
 
 ---

@@ -1,4 +1,4 @@
-# STD_008 — Quality
+﻿# STD_008 — Quality
 
 Version: 1.0.0  
 Status: Draft  
@@ -311,7 +311,7 @@ STD_008 applies to:
 - WOS workflows
 - CAF assessments
 - Sprint OS delivery
-- VOID intelligence systems
+- ARC intelligence systems
 - Future ARC platforms
 
 ---

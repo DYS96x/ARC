@@ -230,7 +230,7 @@ Data authority follows responsibility, provenance, and governance.
 
 ARC does not assign permanent ownership of canonical data architecture to individual products, engines, or implementations.
 
-## ARC governs:
+## ARC maintains:
 
 - Identity
 - Data integrity

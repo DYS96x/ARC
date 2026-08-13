@@ -1,4 +1,4 @@
-# CONTRACT_010 — Evolution Contract
+﻿# CONTRACT_010 — Evolution Contract
 
 Version: 1.0.0  
 Status: Draft  
@@ -31,7 +31,9 @@ Evolution exists to ensure:
 
 ARC does not resist change.
 
-ARC governs change.
+ARC learns from change.
+
+HOLY ARC governs constitutional change.
 
 ```text
 Reality

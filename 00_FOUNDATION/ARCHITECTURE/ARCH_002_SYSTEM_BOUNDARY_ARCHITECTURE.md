@@ -272,7 +272,7 @@ VOID may support ARC through:
 
 VOID does not:
 
-- silently redefine ARC constitutional authority
+- silently redefine HOLY ARC constitutional authority
 - automatically approve ARC changes
 - replace ARC's Intelligence Engine
 - define reality itself
@@ -319,7 +319,7 @@ FACEXOFF may produce:
 - performance evidence
 - experience outcomes
 
-FACEXOFF does not gain ARC constitutional authority through integration.
+FACEXOFF does not gain HOLY ARC constitutional authority through integration.
 
 ---
 
