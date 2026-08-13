@@ -119,10 +119,12 @@ export class ARCFullIntelligenceSimulation {
           recorded.expectedOutcome,
         actualOutcome:
           recorded.actualOutcome,
-        observedAt:
-          recorded.observedAt,
-        source:
-          "ARC_OUTCOME_RECORDER"
+        provenance: {
+          source:
+            "ARC_OUTCOME_RECORDER",
+          observedAt:
+            recorded.observedAt
+        }
       });
 
     const validation =

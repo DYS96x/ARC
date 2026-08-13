@@ -7,13 +7,16 @@ describe(
   () => {
 
     it(
-      "preserves observed reality without interpreting it",
+      "preserves evidence content and records explicit provenance",
       () => {
 
         const boundary =
           new VoidRealityEvidenceBoundary();
 
         const observedAt =
+          new Date("2026-08-13T00:00:00.000Z");
+
+        const beforeProtection =
           new Date();
 
         const evidence =
@@ -26,10 +29,15 @@ describe(
               "Positive result",
             actualOutcome:
               "Reality contradicted expectation",
-            observedAt,
-            source:
-              "REALITY-OBSERVATION"
+            provenance: {
+              source:
+                "REALITY-OBSERVATION",
+              observedAt
+            }
           });
+
+        const afterProtection =
+          new Date();
 
         expect(evidence.decision)
           .toBe("DECISION-001");
@@ -39,13 +47,25 @@ describe(
             "Reality contradicted expectation"
           );
 
-        expect(evidence.source)
+        expect(evidence.provenance.source)
           .toBe(
             "REALITY-OBSERVATION"
           );
 
-        expect(evidence.observedAt)
+        expect(evidence.provenance.observedAt)
           .toBe(observedAt);
+
+        expect(
+          evidence.provenance.receivedAt.getTime()
+        ).toBeGreaterThanOrEqual(
+          beforeProtection.getTime()
+        );
+
+        expect(
+          evidence.provenance.protectedAt.getTime()
+        ).toBeLessThanOrEqual(
+          afterProtection.getTime()
+        );
 
         expect(
           "success" in evidence
@@ -58,11 +78,15 @@ describe(
         expect(
           "status" in evidence
         ).toBe(false);
+
+        expect(
+          "integrityState" in evidence
+        ).toBe(false);
       }
     );
 
     it(
-      "does not remove uncertainty from incomplete evidence",
+      "preserves uncertainty without inventing an interpretation",
       () => {
 
         const boundary =
@@ -78,10 +102,12 @@ describe(
               "Positive result",
             actualOutcome:
               "",
-            observedAt:
-              new Date(),
-            source:
-              "REALITY-OBSERVATION"
+            provenance: {
+              source:
+                "REALITY-OBSERVATION",
+              observedAt:
+                new Date()
+            }
           });
 
         expect(evidence.actualOutcome)
@@ -94,6 +120,53 @@ describe(
         expect(
           "status" in evidence
         ).toBe(false);
+
+        expect(
+          "confidenceAdjustment" in evidence
+        ).toBe(false);
+
+        expect(
+          "integrityState" in evidence
+        ).toBe(false);
+      }
+    );
+
+    it(
+      "keeps evidence content separate from provenance metadata",
+      () => {
+
+        const boundary =
+          new VoidRealityEvidenceBoundary();
+
+        const evidence =
+          boundary.protect({
+            decision:
+              "DECISION-003",
+            action:
+              "OBSERVE RESULT",
+            expectedOutcome:
+              "Expected state",
+            actualOutcome:
+              "Observed state",
+            provenance: {
+              source:
+                "SENSOR-001",
+              observedAt:
+                new Date()
+            }
+          });
+
+        expect(
+          "source" in evidence
+        ).toBe(false);
+
+        expect(
+          "observedAt" in evidence
+        ).toBe(false);
+
+        expect(
+          evidence.provenance.source
+        ).toBe("SENSOR-001");
       }
     );
 
