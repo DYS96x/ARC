@@ -24,6 +24,10 @@ import {
   ARCObservedOutcome
 } from "./ARCOutcomeRecorder";
 
+import {
+  VoidRealityEvidenceBoundary
+} from "../void/VoidRealityEvidenceBoundary";
+
 export class ARCFullIntelligenceSimulation {
 
   private cycle:
@@ -41,6 +45,9 @@ export class ARCFullIntelligenceSimulation {
   private outcomes:
     ARCOutcomeRecorder;
 
+  private realityEvidence:
+    VoidRealityEvidenceBoundary;
+
   constructor() {
 
     this.cycle =
@@ -57,6 +64,9 @@ export class ARCFullIntelligenceSimulation {
 
     this.outcomes =
       new ARCOutcomeRecorder();
+
+    this.realityEvidence =
+      new VoidRealityEvidenceBoundary();
   }
 
   run(
@@ -99,14 +109,30 @@ export class ARCFullIntelligenceSimulation {
         observedOutcome
       );
 
-    const validation =
-      this.validation.validate({
+    const protectedEvidence =
+      this.realityEvidence.protect({
         decision:
           recorded.decision,
+        action:
+          recorded.action,
         expectedOutcome:
           recorded.expectedOutcome,
         actualOutcome:
-          recorded.actualOutcome
+          recorded.actualOutcome,
+        observedAt:
+          recorded.observedAt,
+        source:
+          "ARC_OUTCOME_RECORDER"
+      });
+
+    const validation =
+      this.validation.validate({
+        decision:
+          protectedEvidence.decision,
+        expectedOutcome:
+          protectedEvidence.expectedOutcome,
+        actualOutcome:
+          protectedEvidence.actualOutcome
       });
 
     const confidence =
@@ -118,6 +144,8 @@ export class ARCFullIntelligenceSimulation {
     return {
       outcome:
         recorded,
+      evidence:
+        protectedEvidence,
       validation,
       confidence
     };
