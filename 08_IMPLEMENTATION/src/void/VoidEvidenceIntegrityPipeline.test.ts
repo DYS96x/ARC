@@ -10,13 +10,17 @@ import {
   VoidEvidenceContradictionBoundary
 } from "./VoidEvidenceContradictionBoundary";
 
+import {
+  VoidEvidenceIntegrityBoundary
+} from "./VoidEvidenceIntegrityBoundary";
+
 describe(
   "VOID Evidence Integrity Pipeline",
   () => {
 
     it(
       "protects two observations and detects structural contradiction without adjudicating truth",
-      () => {
+      async () => {
 
         const protection =
           new VoidRealityEvidenceBoundary();
@@ -26,6 +30,9 @@ describe(
 
         const contradiction =
           new VoidEvidenceContradictionBoundary();
+
+        const integrity =
+          new VoidEvidenceIntegrityBoundary();
 
         const observedAt =
           new Date(
@@ -65,6 +72,22 @@ describe(
               observedAt
             }
           });
+
+        const integrityProtectedA =
+          await integrity.protect(
+            protectedA
+          );
+
+        const integrityProtectedB =
+          await integrity.protect(
+            protectedB
+          );
+
+        const fingerprintABefore =
+          integrityProtectedA.fingerprint;
+
+        const fingerprintBBefore =
+          integrityProtectedB.fingerprint;
 
         const comparableA =
           adapter.adapt(
@@ -106,8 +129,32 @@ describe(
             comparableB
           );
 
+        const verificationA =
+          await integrity.verify(
+            integrityProtectedA
+          );
+
+        const verificationB =
+          await integrity.verify(
+            integrityProtectedB
+          );
+
         expect(result.status)
           .toBe("CONFLICT_PRESENT");
+
+        expect(verificationA.status)
+          .toBe("UNCHANGED");
+
+        expect(verificationB.status)
+          .toBe("UNCHANGED");
+
+        expect(
+          verificationA.actualFingerprint
+        ).toBe(fingerprintABefore);
+
+        expect(
+          verificationB.actualFingerprint
+        ).toBe(fingerprintBBefore);
 
         expect(result.evidenceA.source)
           .toBe("SENSOR-A");
@@ -160,7 +207,7 @@ describe(
 
     it(
       "refuses contradiction detection when protected observations are not structurally comparable",
-      () => {
+      async () => {
 
         const protection =
           new VoidRealityEvidenceBoundary();
@@ -170,6 +217,9 @@ describe(
 
         const contradiction =
           new VoidEvidenceContradictionBoundary();
+
+        const integrity =
+          new VoidEvidenceIntegrityBoundary();
 
         const observedAt =
           new Date(
@@ -209,6 +259,22 @@ describe(
               observedAt
             }
           });
+
+        const integrityProtectedA =
+          await integrity.protect(
+            protectedA
+          );
+
+        const integrityProtectedB =
+          await integrity.protect(
+            protectedB
+          );
+
+        const fingerprintABefore =
+          integrityProtectedA.fingerprint;
+
+        const fingerprintBBefore =
+          integrityProtectedB.fingerprint;
 
         const comparableA =
           adapter.adapt(
