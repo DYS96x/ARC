@@ -19,7 +19,17 @@ export interface GovernanceDecision {
   reason: string;
 }
 
-export class ARCIntelligenceGovernanceEngine {
+/**
+ * HOLY ARC governance boundary.
+ *
+ * ARC may produce recommendations.
+ * This boundary evaluates whether a recommendation
+ * is permitted to proceed under supplied governance state.
+ *
+ * It does not create authority, permission, or approval.
+ * Those values must enter from an authorised external source.
+ */
+export class HolyArcGovernanceBoundary {
 
   evaluate(
     request: GovernanceRequest

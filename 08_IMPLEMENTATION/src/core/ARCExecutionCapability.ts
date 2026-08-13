@@ -1,6 +1,6 @@
 ﻿import {
   GovernanceDecision
-} from "../core/ARCIntelligenceGovernanceEngine";
+} from "../governance/HolyArcGovernanceBoundary";
 
 import {
   AccessDecision

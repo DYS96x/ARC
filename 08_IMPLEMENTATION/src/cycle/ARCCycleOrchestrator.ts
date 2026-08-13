@@ -1,8 +1,8 @@
 ﻿import { EventBus } from "../core/events/EventBus";
 import {
-  ARCIntelligenceGovernanceEngine,
+  HolyArcGovernanceBoundary,
   GovernanceDecisionStatus
-} from "../core/ARCIntelligenceGovernanceEngine";
+} from "../governance/HolyArcGovernanceBoundary";
 
 export interface ARCGovernanceInput {
   confidence: number;
@@ -17,7 +17,7 @@ export class ARCCycleOrchestrator {
   private events: EventBus;
 
   private governance:
-    ARCIntelligenceGovernanceEngine;
+    HolyArcGovernanceBoundary;
 
   constructor() {
 
@@ -25,7 +25,7 @@ export class ARCCycleOrchestrator {
       new EventBus();
 
     this.governance =
-      new ARCIntelligenceGovernanceEngine();
+      new HolyArcGovernanceBoundary();
   }
 
   process(

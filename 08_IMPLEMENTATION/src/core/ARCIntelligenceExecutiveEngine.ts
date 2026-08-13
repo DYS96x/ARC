@@ -1,6 +1,6 @@
 ﻿import type {
   GovernanceDecisionStatus
-} from "./ARCIntelligenceGovernanceEngine";
+} from "../governance/HolyArcGovernanceBoundary";
 
 export interface ExecutiveObjective {
   objective: string;

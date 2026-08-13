@@ -1,9 +1,9 @@
 ﻿import {
-  ARCIntelligenceGovernanceEngine
-} from "./ARCIntelligenceGovernanceEngine";
+  HolyArcGovernanceBoundary
+} from "./HolyArcGovernanceBoundary";
 
 describe(
-  "ARC Intelligence Governance Engine",
+  "HOLY ARC Governance Boundary",
   () => {
 
     it(
@@ -11,7 +11,7 @@ describe(
       () => {
 
         const engine =
-          new ARCIntelligenceGovernanceEngine();
+          new HolyArcGovernanceBoundary();
 
         const decision =
           engine.evaluate({
@@ -39,7 +39,7 @@ describe(
       () => {
 
         const engine =
-          new ARCIntelligenceGovernanceEngine();
+          new HolyArcGovernanceBoundary();
 
         const decision =
           engine.evaluate({
@@ -64,7 +64,7 @@ describe(
       () => {
 
         const engine =
-          new ARCIntelligenceGovernanceEngine();
+          new HolyArcGovernanceBoundary();
 
         const decision =
           engine.evaluate({
@@ -89,7 +89,7 @@ describe(
       () => {
 
         const engine =
-          new ARCIntelligenceGovernanceEngine();
+          new HolyArcGovernanceBoundary();
 
         const decision =
           engine.evaluate({
