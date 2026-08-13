@@ -1,0 +1,265 @@
+﻿import {
+  VoidRealityEvidenceBoundary
+} from "./VoidRealityEvidenceBoundary";
+
+import {
+  VoidEvidenceComparisonAdapter
+} from "./VoidEvidenceComparisonAdapter";
+
+import {
+  VoidEvidenceContradictionBoundary
+} from "./VoidEvidenceContradictionBoundary";
+
+describe(
+  "VOID Evidence Integrity Pipeline",
+  () => {
+
+    it(
+      "protects two observations and detects structural contradiction without adjudicating truth",
+      () => {
+
+        const protection =
+          new VoidRealityEvidenceBoundary();
+
+        const adapter =
+          new VoidEvidenceComparisonAdapter();
+
+        const contradiction =
+          new VoidEvidenceContradictionBoundary();
+
+        const observedAt =
+          new Date(
+            "2026-08-13T00:00:00.000Z"
+          );
+
+        const protectedA =
+          protection.protect({
+            decision:
+              "OBSERVATION-A",
+            action:
+              "READ SENSOR",
+            expectedOutcome:
+              "Temperature reading",
+            actualOutcome:
+              "21",
+            provenance: {
+              source:
+                "SENSOR-A",
+              observedAt
+            }
+          });
+
+        const protectedB =
+          protection.protect({
+            decision:
+              "OBSERVATION-B",
+            action:
+              "READ SENSOR",
+            expectedOutcome:
+              "Temperature reading",
+            actualOutcome:
+              "27",
+            provenance: {
+              source:
+                "SENSOR-B",
+              observedAt
+            }
+          });
+
+        const comparableA =
+          adapter.adapt(
+            protectedA,
+            {
+              evidenceId:
+                "EVIDENCE-A",
+              subject:
+                "ROOM_A",
+              property:
+                "TEMPERATURE",
+              scope:
+                "SENSOR_WINDOW_001",
+              value:
+                protectedA.actualOutcome
+            }
+          );
+
+        const comparableB =
+          adapter.adapt(
+            protectedB,
+            {
+              evidenceId:
+                "EVIDENCE-B",
+              subject:
+                "ROOM_A",
+              property:
+                "TEMPERATURE",
+              scope:
+                "SENSOR_WINDOW_001",
+              value:
+                protectedB.actualOutcome
+            }
+          );
+
+        const result =
+          contradiction.compare(
+            comparableA,
+            comparableB
+          );
+
+        expect(result.status)
+          .toBe("CONFLICT_PRESENT");
+
+        expect(result.evidenceA.source)
+          .toBe("SENSOR-A");
+
+        expect(result.evidenceB.source)
+          .toBe("SENSOR-B");
+
+        expect(result.evidenceA.observedAt)
+          .toBe(observedAt);
+
+        expect(result.evidenceB.observedAt)
+          .toBe(observedAt);
+
+        expect(result.evidenceA.value)
+          .toBe("21");
+
+        expect(result.evidenceB.value)
+          .toBe("27");
+
+        expect(
+          "winner" in result
+        ).toBe(false);
+
+        expect(
+          "truth" in result
+        ).toBe(false);
+
+        expect(
+          "correctEvidence" in result
+        ).toBe(false);
+
+        expect(
+          "preferredSource" in result
+        ).toBe(false);
+
+        expect(
+          "confidenceAdjustment" in result
+        ).toBe(false);
+
+        expect(
+          "recommendation" in result
+        ).toBe(false);
+
+        expect(
+          "explanation" in result
+        ).toBe(false);
+      }
+    );
+
+
+    it(
+      "refuses contradiction detection when protected observations are not structurally comparable",
+      () => {
+
+        const protection =
+          new VoidRealityEvidenceBoundary();
+
+        const adapter =
+          new VoidEvidenceComparisonAdapter();
+
+        const contradiction =
+          new VoidEvidenceContradictionBoundary();
+
+        const observedAt =
+          new Date(
+            "2026-08-13T01:00:00.000Z"
+          );
+
+        const protectedA =
+          protection.protect({
+            decision:
+              "OBSERVATION-A",
+            action:
+              "READ SENSOR",
+            expectedOutcome:
+              "Observed state",
+            actualOutcome:
+              "OPEN",
+            provenance: {
+              source:
+                "SENSOR-A",
+              observedAt
+            }
+          });
+
+        const protectedB =
+          protection.protect({
+            decision:
+              "OBSERVATION-B",
+            action:
+              "READ SENSOR",
+            expectedOutcome:
+              "Observed state",
+            actualOutcome:
+              "CLOSED",
+            provenance: {
+              source:
+                "SENSOR-B",
+              observedAt
+            }
+          });
+
+        const comparableA =
+          adapter.adapt(
+            protectedA,
+            {
+              evidenceId:
+                "EVIDENCE-A",
+              subject:
+                "DOOR_A",
+              property:
+                "STATE",
+              scope:
+                "OBSERVATION_001",
+              value:
+                protectedA.actualOutcome
+            }
+          );
+
+        const comparableB =
+          adapter.adapt(
+            protectedB,
+            {
+              evidenceId:
+                "EVIDENCE-B",
+              subject:
+                "DOOR_B",
+              property:
+                "STATE",
+              scope:
+                "OBSERVATION_001",
+              value:
+                protectedB.actualOutcome
+            }
+          );
+
+        const result =
+          contradiction.compare(
+            comparableA,
+            comparableB
+          );
+
+        expect(result.status)
+          .toBe("NOT_COMPARABLE");
+
+        expect(result.evidenceA.value)
+          .toBe("OPEN");
+
+        expect(result.evidenceB.value)
+          .toBe("CLOSED");
+      }
+    );
+
+  }
+);
